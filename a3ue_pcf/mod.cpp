@@ -1,5 +1,15 @@
-name = "A3 Antistasi Ultimate Extender example";
-author = "A3-Antistasi dev team, A3-Antistasi Ultimate dev team";
-tooltip = "Antistasi Ultimate Extender example";
+name = "Antistasi Ultimate Extender - Point Campfire";
+logo = "\x\A3A\addons\core\Pictures\antistasi_ultimate_logo_sw.paa";
+logoOver = "\x\A3A\addons\core\Pictures\antistasi_ultimate_logo.paa";
+logoSmall = "\x\A3A\addons\core\Pictures\antistasi_ultimate_logo_small.paa";
+picture = "\x\A3A\addons\core\Pictures\antistasi_ultimate_overview.paa";
+author = "Antistasi Ultimate Team, Socrates, Offical Antistasi Community, Point Campfire";
+description = "Small squad oriented modifications for AU";
+tooltip = "Antistasi Ultimate Extender - Point Campfire";
+tooltipOwned = "Antistasi Ultimate Extender - Point Campfire";
+overview = "<br/><t align='center' size='0.75'> An Arma 3 persistent multiplayer scenario about guerilla warfare tactics. Fork of Antistasi Plus Version focused on expanding templates, maps and features. Modified for small squad gameplay in mind </t><br/><br/>";
 actionName = "GitHub";
-action = "https://github.com/Westalgie/A3UExtender"
+action = "https://github.com/SilenceIsFatto/A3-Antistasi-Ultimate";
+hideName = 0;
+hidePicture = 0;
+dlcColor[] = {0.1765, 0.6392, 0.6235, 1};
