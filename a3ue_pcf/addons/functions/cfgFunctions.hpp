@@ -10,5 +10,14 @@ class CfgFunctions
                 file = QPATHTOFOLDER(init\fn_initVarServer.sqf);
             };
         };
+
+
+        class Revive 
+        {
+            class selfRevive 
+            {
+                file = QPATHTOFOLDER(Revive\fn_selfRevive.sqf);
+            };
+        };        
     };
 };
