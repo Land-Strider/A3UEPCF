@@ -1,53 +1,64 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <Project name="A3UE PCF">
     <Package name="A3UE PCF - Core">
-        <Key ID="STR_role_medic">
-            <Original>You have selected a Medic role.&lt;br/&gt;&lt;br/&gt;Medics do not have any bonus or penalties, but have the ability to use certain medical items for full health restoration. &lt;br/&gt;&lt;br/&gt; You also have the UAV Hacker and Engineer traits.</Original>
-            <Russian>Вы выбрали роль медика.&lt;br/&gt;&lt;br/&gt;Медики не имеют никаких бонусов или штрафов, но могут использовать определенные медицинские предметы для полного восстановления здоровья. &lt;br/&gt;&lt;br/&gt;У вас также есть навыки Оператора БПЛА и Инженера.</Russian>
-            <Chinesesimp>您选择了一个医生角色。&lt;br/&gt;&lt;br/&gt;医生没有任何加成或惩罚，但可以使用某些医疗物品来完全恢复健康。&lt;br/&gt;&lt;br/&gt;你还拥有无人机黑客和工程兵特性。</Chinesesimp>
-            <Korean>당신은 의무병 역할을 선택했습니다.&lt;br/&gt;&lt;br/&gt;의무병은 보너스나 패널티가 없지만, 완전한 회복을 위해 특정 의료 아이템을 사용할 수 있는 능력이 있습니다.&lt;br/&gt;&lt;br/&gt; UAV 해커와 공병 특성을 보유하고 있습니다.</Korean>
-            <French>Vous avez choisi le rôle de Médecin.&lt;br/&gt;&lt;br/&gt;Les Médecins n'ont pas de bonus ou de pénalités, mais ont la possibilité d'utiliser certains objets médicaux pour restaurer complètement leur santé. &lt;br/&gt;&lt;br/&gt;Vous avez également les traits Hacker UAV et Ingénieur.</French>
-            <Turkish>Bir Sağlıkçı rolü seçtiniz. &lt;br/&gt;&lt;br/&gt; Sağlıkçılar bonus veya ceza almaz, ancak bazı tıbbi eşyaları tam can yenilemek için kullanabilir. &lt;br/&gt;&lt;br/&gt; Ayrıca İHA Hacker ve Mühendis özelliklerine sahipsin.</Turkish>
-        </Key>
-        <Key ID="STR_role_teamleader">
-            <Original>You have selected a Team Leader role.&lt;br/&gt;&lt;br/&gt;Team Leaders are more lightweight units with increased camouflage capabilities who can hire AI units into their squad. &lt;br/&gt;&lt;br/&gt; You also have the UAV Hacker, Medic and Engineer traits.</Original>
-            <Russian>Вы выбрали роль лидера отряда.&lt;br/&gt;&lt;br/&gt;Лидеры отряда - это более легкие юниты с улучшенными возможностями маскировки, которые могут нанимать ИИ-юнитов в свой отряд. &lt;br/&gt;&lt;br/&gt;У вас также есть навыки Оператора БПЛА, Медика и Инженера.</Russian>
-            <Chinesesimp>你选择了一个小队长角色。&lt;br/&gt;&lt;br/&gt;队长是更轻量级的单位，具有更强的伪装能力，可以在他们的小队中雇佣 AI 单位。&lt;br/&gt;&lt;br/&gt;你还拥有无人机黑客、医疗兵和工程兵特性。</Chinesesimp>
-            <Korean>당신은 조장 역할을 선택했습니다.&lt;br/&gt;&lt;br/&gt;조장은 위장 능력이 향상된 경보병 유닛으로 인공지능 유닛을 분대에 고용할 수 있습니다.&lt;br/&gt;&lt;br/&gt;당신은 UAV 해커, 의무병, 공병 특성을 보유하고 있습니다.</Korean>
-            <French>Vous avez sélectionné un rôle de chef d'équipe.&lt;br/&gt;&lt;br/&gt;Les chefs d'équipe sont des unités plus légères avec des capacités de camouflage accrues qui peuvent engager des unités IA dans leur escouade. &lt;br/&gt;&lt;br/&gt;Vous avez aussi les traits Hacker UAV, Médecin et Ingénieur.</French>
-            <Turkish>Bir Takım Lideri rolü seçtiniz. &lt;br/&gt;&lt;br/&gt; Takım Liderleri daha hafif birliklerdir, gelişmiş kamuflaja sahiptir ve takımlarına yapay zekâ birlikleri katabilir. &lt;br/&gt;&lt;br/&gt; Ayrıca İHA Hacker, Sağlıkçı ve Mühendis özelliklerine sahipsin.</Turkish>
-        </Key>
-        <Key ID="STR_role_rifleman">
-            <Original>You have selected a Rifleman role. &lt;br/&gt;&lt;br/&gt; Riflemen have a 25% bonus on carry capacity but are easy to spot and make more noise when they move.&lt;br/&gt;&lt;br/&gt;You also have the UAV Hacker, Medic and Engineer traits.</Original>
-            <Russian>Вы выбрали роль стрелка. &lt;br/&gt;&lt;br/&gt; Стрелки имеют 25% бонус к грузоподъемности, но их легче заметить, а также они издают больше шума при движении.&lt;br/&gt;&lt;br/&gt;У вас также есть навыки Оператора БПЛА, Медика и Инженера.</Russian>
-            <Chinesesimp>你选择了步枪兵角色。&lt;br/&gt;&lt;br/&gt; 步枪兵的运载能力提升25%，但移动时容易被发现并发出更大的噪音。&lt;br/&gt;&lt;br/&gt;你还拥有无人机黑客、医疗兵和工程兵特性。</Chinesesimp>
-            <Korean>당신은 소총수 역할을 선택했습니다. &lt;br/&gt;&lt;br/&gt; 소총수는 운반량에 25%의 보너스가 있지만, 움직일 때 발견되기 더 쉽고 더 많은 소음을 냅니다.&lt;br/&gt;&lt;br/&gt;당신은 UAV 해커, 의무병, 공병 특성을 보유하고 있습니다.</Korean>
-            <French>Vous avez choisi un rôle de Fusilier. &lt;br/&gt;&lt;br/&gt; Les Fusiliers ont un bonus de 25% sur la capacité de transport mais sont faciles à repérer et font plus de bruit lorsqu'ils se déplacent.&lt;br/&gt;&lt;br/&gt;Vous avez aussi les traits Hacker UAV, Médecin et Ingénieur.</French>
-            <Turkish>Tüfekçi rolünü seçtiniz. &lt;br/&gt;&lt;br/&gt; Tüfekçiler %25 taşıma bonusu alır, ancak hareket ederken daha görünür ve gürültülüdür. &lt;br/&gt;&lt;br/&gt; Ayrıca İHA Hacker, Sağlıkçı ve Mühendis özelliklerine sahipsin.</Turkish>
-        </Key>
-        <Key ID="STR_role_grenadier">
-            <Original>You have selected a Grenadier role.&lt;br/&gt;&lt;br/&gt;Grenadiers have a slight bonus on carry capacity, but are easy to spot. &lt;br/&gt;&lt;br/&gt; You also have the UAV Hacker, Medic and Engineer traits.</Original>
-            <Russian>Вы выбрали роль Стрелка ГП.&lt;br/&gt;&lt;br/&gt;Стрелок ГП имеет небольшой бонус к переносимому весу, но является более заметным. &lt;br/&gt;&lt;br/&gt;У вас также есть навыки Оператора БПЛА, Медика и Инженера.</Russian>
-            <Chinesesimp>您选择了掷弹兵角色。&lt;br/&gt;&lt;br/&gt;掷弹兵在携带能力上有轻微的加成，但很容易被发现。&lt;br/&gt;&lt;br/&gt;你还拥有无人机黑客、医疗兵和工程兵特性。</Chinesesimp>
-            <Korean>당신은 유탄수 역할을 선택했습니다.&lt;br/&gt;&lt;br/&gt;유탄수는 운반 용량에 약간의 보너스가 주어지지만 발견되기 쉽습니다.&lt;br/&gt;&lt;br/&gt;당신은 UAV 해커, 의무병, 공병 특성을 보유하고 있습니다.</Korean>
-            <French>Vous avez choisi le rôle de Grenadier. &lt;br/&gt;&lt;br/&gt; Les Grenadiers ont un léger bonus de capacité de transport, mais sont faciles à repérer. &lt;br/&gt;&lt;br/&gt; Vous avez également les traits Hacker UAV, Médecin et Ingénieur.</French>
-            <Turkish>Bir Bombacı rolü seçtiniz. &lt;br/&gt;&lt;br/&gt; Bombacılar hafif taşıma bonusuna sahiptir, ancak kolay fark edilir. &lt;br/&gt;&lt;br/&gt; Ayrıca İHA Hacker, Sağlıkçı ve Mühendis özelliklerine sahipsin.</Turkish>
-        </Key>
+        <Container name="a3ue_pcf_parameters">
+            <Key ID="STR_params_allowFT_3">
+                <Original>Only between friendly bases and watchpost</Original>
+                <Russian>Только между дружественными базами и дозорными постами</Russian>
+                <Chinesesimp>仅限于友方基地和哨所之间</Chinesesimp>
+                <Korean>아군 기지와 감시초소 사이에서만</Korean>
+                <French>Uniquement entre les bases amicales et les postes de guet</French>
+            </Key>
+        </Container>
+        <Container name="a3ue_pcf_roleTraits">
+            <Key ID="STR_role_medic">
+                <Original>You have selected a Medic role.&lt;br/&gt;&lt;br/&gt;Medics do not have any bonus or penalties, but have the ability to use certain medical items for full health restoration. &lt;br/&gt;&lt;br/&gt; You also have the UAV Hacker and Engineer traits.</Original>
+                <Russian>Вы выбрали роль медика.&lt;br/&gt;&lt;br/&gt;Медики не имеют никаких бонусов или штрафов, но могут использовать определенные медицинские предметы для полного восстановления здоровья. &lt;br/&gt;&lt;br/&gt;У вас также есть навыки Оператора БПЛА и Инженера.</Russian>
+                <Chinesesimp>您选择了一个医生角色。&lt;br/&gt;&lt;br/&gt;医生没有任何加成或惩罚，但可以使用某些医疗物品来完全恢复健康。&lt;br/&gt;&lt;br/&gt;你还拥有无人机黑客和工程兵特性。</Chinesesimp>
+                <Korean>당신은 의무병 역할을 선택했습니다.&lt;br/&gt;&lt;br/&gt;의무병은 보너스나 패널티가 없지만, 완전한 회복을 위해 특정 의료 아이템을 사용할 수 있는 능력이 있습니다.&lt;br/&gt;&lt;br/&gt; UAV 해커와 공병 특성을 보유하고 있습니다.</Korean>
+                <French>Vous avez choisi le rôle de Médecin.&lt;br/&gt;&lt;br/&gt;Les Médecins n'ont pas de bonus ou de pénalités, mais ont la possibilité d'utiliser certains objets médicaux pour restaurer complètement leur santé. &lt;br/&gt;&lt;br/&gt;Vous avez également les traits Hacker UAV et Ingénieur.</French>
+                <Turkish>Bir Sağlıkçı rolü seçtiniz. &lt;br/&gt;&lt;br/&gt; Sağlıkçılar bonus veya ceza almaz, ancak bazı tıbbi eşyaları tam can yenilemek için kullanabilir. &lt;br/&gt;&lt;br/&gt; Ayrıca İHA Hacker ve Mühendis özelliklerine sahipsin.</Turkish>
+            </Key>
+            <Key ID="STR_role_teamleader">
+                <Original>You have selected a Team Leader role.&lt;br/&gt;&lt;br/&gt;Team Leaders are more lightweight units with increased camouflage capabilities who can hire AI units into their squad. &lt;br/&gt;&lt;br/&gt; You also have the UAV Hacker, Medic and Engineer traits.</Original>
+                <Russian>Вы выбрали роль лидера отряда.&lt;br/&gt;&lt;br/&gt;Лидеры отряда - это более легкие юниты с улучшенными возможностями маскировки, которые могут нанимать ИИ-юнитов в свой отряд. &lt;br/&gt;&lt;br/&gt;У вас также есть навыки Оператора БПЛА, Медика и Инженера.</Russian>
+                <Chinesesimp>你选择了一个小队长角色。&lt;br/&gt;&lt;br/&gt;队长是更轻量级的单位，具有更强的伪装能力，可以在他们的小队中雇佣 AI 单位。&lt;br/&gt;&lt;br/&gt;你还拥有无人机黑客、医疗兵和工程兵特性。</Chinesesimp>
+                <Korean>당신은 조장 역할을 선택했습니다.&lt;br/&gt;&lt;br/&gt;조장은 위장 능력이 향상된 경보병 유닛으로 인공지능 유닛을 분대에 고용할 수 있습니다.&lt;br/&gt;&lt;br/&gt;당신은 UAV 해커, 의무병, 공병 특성을 보유하고 있습니다.</Korean>
+                <French>Vous avez sélectionné un rôle de chef d'équipe.&lt;br/&gt;&lt;br/&gt;Les chefs d'équipe sont des unités plus légères avec des capacités de camouflage accrues qui peuvent engager des unités IA dans leur escouade. &lt;br/&gt;&lt;br/&gt;Vous avez aussi les traits Hacker UAV, Médecin et Ingénieur.</French>
+                <Turkish>Bir Takım Lideri rolü seçtiniz. &lt;br/&gt;&lt;br/&gt; Takım Liderleri daha hafif birliklerdir, gelişmiş kamuflaja sahiptir ve takımlarına yapay zekâ birlikleri katabilir. &lt;br/&gt;&lt;br/&gt; Ayrıca İHA Hacker, Sağlıkçı ve Mühendis özelliklerine sahipsin.</Turkish>
+            </Key>
+            <Key ID="STR_role_rifleman">
+                <Original>You have selected a Rifleman role. &lt;br/&gt;&lt;br/&gt; Riflemen have a 25% bonus on carry capacity but are easy to spot and make more noise when they move.&lt;br/&gt;&lt;br/&gt;You also have the UAV Hacker, Medic and Engineer traits.</Original>
+                <Russian>Вы выбрали роль стрелка. &lt;br/&gt;&lt;br/&gt; Стрелки имеют 25% бонус к грузоподъемности, но их легче заметить, а также они издают больше шума при движении.&lt;br/&gt;&lt;br/&gt;У вас также есть навыки Оператора БПЛА, Медика и Инженера.</Russian>
+                <Chinesesimp>你选择了步枪兵角色。&lt;br/&gt;&lt;br/&gt; 步枪兵的运载能力提升25%，但移动时容易被发现并发出更大的噪音。&lt;br/&gt;&lt;br/&gt;你还拥有无人机黑客、医疗兵和工程兵特性。</Chinesesimp>
+                <Korean>당신은 소총수 역할을 선택했습니다. &lt;br/&gt;&lt;br/&gt; 소총수는 운반량에 25%의 보너스가 있지만, 움직일 때 발견되기 더 쉽고 더 많은 소음을 냅니다.&lt;br/&gt;&lt;br/&gt;당신은 UAV 해커, 의무병, 공병 특성을 보유하고 있습니다.</Korean>
+                <French>Vous avez choisi un rôle de Fusilier. &lt;br/&gt;&lt;br/&gt; Les Fusiliers ont un bonus de 25% sur la capacité de transport mais sont faciles à repérer et font plus de bruit lorsqu'ils se déplacent.&lt;br/&gt;&lt;br/&gt;Vous avez aussi les traits Hacker UAV, Médecin et Ingénieur.</French>
+                <Turkish>Tüfekçi rolünü seçtiniz. &lt;br/&gt;&lt;br/&gt; Tüfekçiler %25 taşıma bonusu alır, ancak hareket ederken daha görünür ve gürültülüdür. &lt;br/&gt;&lt;br/&gt; Ayrıca İHA Hacker, Sağlıkçı ve Mühendis özelliklerine sahipsin.</Turkish>
+            </Key>
+            <Key ID="STR_role_grenadier">
+                <Original>You have selected a Grenadier role.&lt;br/&gt;&lt;br/&gt;Grenadiers have a slight bonus on carry capacity, but are easy to spot. &lt;br/&gt;&lt;br/&gt; You also have the UAV Hacker, Medic and Engineer traits.</Original>
+                <Russian>Вы выбрали роль Стрелка ГП.&lt;br/&gt;&lt;br/&gt;Стрелок ГП имеет небольшой бонус к переносимому весу, но является более заметным. &lt;br/&gt;&lt;br/&gt;У вас также есть навыки Оператора БПЛА, Медика и Инженера.</Russian>
+                <Chinesesimp>您选择了掷弹兵角色。&lt;br/&gt;&lt;br/&gt;掷弹兵在携带能力上有轻微的加成，但很容易被发现。&lt;br/&gt;&lt;br/&gt;你还拥有无人机黑客、医疗兵和工程兵特性。</Chinesesimp>
+                <Korean>당신은 유탄수 역할을 선택했습니다.&lt;br/&gt;&lt;br/&gt;유탄수는 운반 용량에 약간의 보너스가 주어지지만 발견되기 쉽습니다.&lt;br/&gt;&lt;br/&gt;당신은 UAV 해커, 의무병, 공병 특성을 보유하고 있습니다.</Korean>
+                <French>Vous avez choisi le rôle de Grenadier. &lt;br/&gt;&lt;br/&gt; Les Grenadiers ont un léger bonus de capacité de transport, mais sont faciles à repérer. &lt;br/&gt;&lt;br/&gt; Vous avez également les traits Hacker UAV, Médecin et Ingénieur.</French>
+                <Turkish>Bir Bombacı rolü seçtiniz. &lt;br/&gt;&lt;br/&gt; Bombacılar hafif taşıma bonusuna sahiptir, ancak kolay fark edilir. &lt;br/&gt;&lt;br/&gt; Ayrıca İHA Hacker, Sağlıkçı ve Mühendis özelliklerine sahipsin.</Turkish>
+            </Key>
             <Key ID="STR_role_autorifleman">
-            <Original>You have selected an Autorifleman role.&lt;br/&gt;&lt;br/&gt;Autoriflemen have a slight bonus on carry capacity, but make more noise when they move. &lt;br/&gt;&lt;br/&gt; You also have the UAV Hacker, Medic and Engineer traits.</Original>
-            <Russian>Вы выбрали роль Пулеметчика.&lt;br/&gt;&lt;br/&gt;Пулеметчик имеет небольшой бонус к переносимому весу, но сильнее шумит при движении. &lt;br/&gt;&lt;br/&gt;У вас также есть навыки Оператора БПЛА, Медика и Инженера.</Russian>
-            <Chinesesimp>您选择了自动步枪兵角色。&lt;br/&gt;&lt;br/&gt;自动步枪兵在携带能力上有轻微的加成，但是移动时会发出更大的噪音。&lt;br/&gt;&lt;br/&gt;你还拥有无人机黑客、医疗兵和工程兵特性。</Chinesesimp>
-            <Korean>당신은 자동소총수 역할을 선택했습니다,&lt;br/&gt;&lt;br/&gt;자동소총수는 운반 용량에 약간의 보너스가 주어지지만 이동할 때 소음이 더 큽니다.&lt;br/&gt;&lt;br/&gt;당신은 UAV 해커, 의무병, 공병 특성을 보유하고 있습니다.</Korean>
-            <French>Vous avez choisi le rôle de Fusilier-mitrailleur. &lt;br/&gt;&lt;br/&gt; Les Fusiliers-mitrailleurs ont un léger bonus de capacité de transport, mais font plus de bruit en se déplaçant.  &lt;br/&gt;&lt;br/&gt; Vous avez également les traits Hacker UAV, Médecin et Ingénieur.</French>
-            <Turkish>Bir Otomatik Tüfekçi rolü seçtiniz. &lt;br/&gt;&lt;br/&gt; Otomatik Tüfekçiler hafif taşıma bonusuna sahiptir, ancak hareket ederken daha fazla ses çıkarır. &lt;br/&gt;&lt;br/&gt; Ayrıca İHA Hacker, Sağlıkçı ve Mühendis özelliklerine sahipsin.</Turkish>
-        </Key>
+                <Original>You have selected an Autorifleman role.&lt;br/&gt;&lt;br/&gt;Autoriflemen have a slight bonus on carry capacity, but make more noise when they move. &lt;br/&gt;&lt;br/&gt; You also have the UAV Hacker, Medic and Engineer traits.</Original>
+                <Russian>Вы выбрали роль Пулеметчика.&lt;br/&gt;&lt;br/&gt;Пулеметчик имеет небольшой бонус к переносимому весу, но сильнее шумит при движении. &lt;br/&gt;&lt;br/&gt;У вас также есть навыки Оператора БПЛА, Медика и Инженера.</Russian>
+                <Chinesesimp>您选择了自动步枪兵角色。&lt;br/&gt;&lt;br/&gt;自动步枪兵在携带能力上有轻微的加成，但是移动时会发出更大的噪音。&lt;br/&gt;&lt;br/&gt;你还拥有无人机黑客、医疗兵和工程兵特性。</Chinesesimp>
+                <Korean>당신은 자동소총수 역할을 선택했습니다,&lt;br/&gt;&lt;br/&gt;자동소총수는 운반 용량에 약간의 보너스가 주어지지만 이동할 때 소음이 더 큽니다.&lt;br/&gt;&lt;br/&gt;당신은 UAV 해커, 의무병, 공병 특성을 보유하고 있습니다.</Korean>
+                <French>Vous avez choisi le rôle de Fusilier-mitrailleur. &lt;br/&gt;&lt;br/&gt; Les Fusiliers-mitrailleurs ont un léger bonus de capacité de transport, mais font plus de bruit en se déplaçant.  &lt;br/&gt;&lt;br/&gt; Vous avez également les traits Hacker UAV, Médecin et Ingénieur.</French>
+                <Turkish>Bir Otomatik Tüfekçi rolü seçtiniz. &lt;br/&gt;&lt;br/&gt; Otomatik Tüfekçiler hafif taşıma bonusuna sahiptir, ancak hareket ederken daha fazla ses çıkarır. &lt;br/&gt;&lt;br/&gt; Ayrıca İHA Hacker, Sağlıkçı ve Mühendis özelliklerine sahipsin.</Turkish>
+            </Key>
             <Key ID="STR_role_engineer">
-            <Original>You have selected an Engineer role.&lt;br/&gt;&lt;br/&gt;Engineers do not have any stat bonuses or penalties, but have the ability to use repair kits for vehicle repairs and can hack drones. &lt;br/&gt;&lt;br/&gt; You also have the UAV Hacker and Medic traits.</Original>
-            <Russian>Вы выбрали роль инженера.&lt;br/&gt;&lt;br/&gt;Инженеры не имеют бонусов и штрафов, но имеют возможность использовать ремкомплекты для более основательного ремонта техники, а также взламывать дроны БПЛА. &lt;br/&gt;&lt;br/&gt;  У вас также есть навыки Оператора БПЛА и Медика.</Russian>
-            <Chinesesimp>您选择了工程师角色。&lt;br/&gt;&lt;br/&gt;工程师没有任何奖励或惩罚，但可以使用维修工具包进行车辆维修，还可以破解无人机。 你还拥有无人机黑客和医疗兵特性。&lt;br/&gt;&lt;br/&gt; </Chinesesimp>
-            <Korean>당신은 공병 역할을 선택했습니다.&lt;br/&gt;&lt;br/&gt;공병은 보너스나 패널티가 없지만 차량 수리를 위해 도구모음을 사용할 수 있으며 무인기를 해킹할 수 있습니다. 당신은 UAV 해커와 의무병 특성을 보유하고 있습니다. &lt;br/&gt;&lt;br/&gt; </Korean>
-            <French>Vous avez choisi un rôle d'ingénieur.&lt;br/&gt;&lt;br/&gt;Les ingénieurs n'ont pas de bonus ou de pénalités, mais ils ont la possibilité d'utiliser des kits de réparation pour réparer les véhicules, et ils peuvent également pirater les drones. &lt;br/&gt;&lt;br/&gt; Vous avez aussi les traits Hacker UAV et Médecin. </French>
-            <Turkish>Bir Mühendis rolü seçtiniz. &lt;br/&gt;&lt;br/&gt; Mühendisler bonus veya ceza almaz, ancak onarım kitleri ile araç tamiri yapabilir ve dronları hackleyebilir. &lt;br/&gt;&lt;br/&gt; Ayrıca İHA Hacker ve Sağlıkçı özelliklerine sahipsin.</Turkish>
-        </Key>
+                <Original>You have selected an Engineer role.&lt;br/&gt;&lt;br/&gt;Engineers do not have any stat bonuses or penalties, but have the ability to use repair kits for vehicle repairs and can hack drones. &lt;br/&gt;&lt;br/&gt; You also have the UAV Hacker and Medic traits.</Original>
+                <Russian>Вы выбрали роль инженера.&lt;br/&gt;&lt;br/&gt;Инженеры не имеют бонусов и штрафов, но имеют возможность использовать ремкомплекты для более основательного ремонта техники, а также взламывать дроны БПЛА. &lt;br/&gt;&lt;br/&gt;  У вас также есть навыки Оператора БПЛА и Медика.</Russian>
+                <Chinesesimp>您选择了工程师角色。&lt;br/&gt;&lt;br/&gt;工程师没有任何奖励或惩罚，但可以使用维修工具包进行车辆维修，还可以破解无人机。 你还拥有无人机黑客和医疗兵特性。&lt;br/&gt;&lt;br/&gt; </Chinesesimp>
+                <Korean>당신은 공병 역할을 선택했습니다.&lt;br/&gt;&lt;br/&gt;공병은 보너스나 패널티가 없지만 차량 수리를 위해 도구모음을 사용할 수 있으며 무인기를 해킹할 수 있습니다. 당신은 UAV 해커와 의무병 특성을 보유하고 있습니다. &lt;br/&gt;&lt;br/&gt; </Korean>
+                <French>Vous avez choisi un rôle d'ingénieur.&lt;br/&gt;&lt;br/&gt;Les ingénieurs n'ont pas de bonus ou de pénalités, mais ils ont la possibilité d'utiliser des kits de réparation pour réparer les véhicules, et ils peuvent également pirater les drones. &lt;br/&gt;&lt;br/&gt; Vous avez aussi les traits Hacker UAV et Médecin. </French>
+                <Turkish>Bir Mühendis rolü seçtiniz. &lt;br/&gt;&lt;br/&gt; Mühendisler bonus veya ceza almaz, ancak onarım kitleri ile araç tamiri yapabilir ve dronları hackleyebilir. &lt;br/&gt;&lt;br/&gt; Ayrıca İHA Hacker ve Sağlıkçı özelliklerine sahipsin.</Turkish>
+            </Key>
+        </Container>
     </Package>
 </Project>

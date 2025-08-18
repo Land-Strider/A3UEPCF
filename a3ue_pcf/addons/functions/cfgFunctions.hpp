@@ -25,6 +25,15 @@ class CfgFunctions
             {
                 file = QPATHTOFOLDER(Revive\fn_selfRevive.sqf);
             };
-        };        
+        };
+
+        class Dialogs 
+        {
+            class fastTravelRadio 
+            {
+                file = QPATHTOFOLDER(Dialogs\fn_fastTravelRadio.sqf);
+            };
+        };
+            
     };
 };
