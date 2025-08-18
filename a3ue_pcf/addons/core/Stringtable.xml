@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Project name="A3UE PCF">
+	<Package name="A3UE PCF - Core">
+		<Container name="a3ue_pcf_parameters">
+            <Key ID="STR_params_allowFT_3">
+                <Original>Only between friendly bases and watchpost</Original>
+                <Russian>Только между дружественными базами и дозорными постами</Russian>
+                <Chinesesimp>仅限于友方基地和哨所之间</Chinesesimp>
+                <Korean>아군 기지와 감시초소 사이에서만</Korean>
+                <French>Uniquement entre les bases amicales et les postes de guet</French>
+            </Key>
+		</Container>
+	</Package>
+</Project>

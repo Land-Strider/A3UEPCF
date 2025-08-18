@@ -113,8 +113,8 @@ class Params
     class limitedFT: BasicParams
     {
         title = $STR_params_allowFT;
-        values[] = {0,1,2,3};
-        texts[] = {$STR_params_allowFT_0, $STR_params_allowFT_1, $STR_params_allowFT_2, $STR_params_civ_traffic_none};
+        values[] = {0,1,2,3,4};
+        texts[] = {$STR_params_allowFT_0, $STR_params_allowFT_1, $STR_params_allowFT_2, $STR_params_allowFT_3, $STR_params_civ_traffic_none};
         default = 0;
     };
     class civTraffic: BasicParams
