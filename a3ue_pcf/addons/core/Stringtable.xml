@@ -3,11 +3,12 @@
     <Package name="A3UE PCF - Core">
         <Container name="a3ue_pcf_parameters">
             <Key ID="STR_params_allowFT_3">
-                <Original>Only between friendly bases and watchpost</Original>
-                <Russian>Только между дружественными базами и дозорными постами</Russian>
-                <Chinesesimp>仅限于友方基地和哨所之间</Chinesesimp>
-                <Korean>아군 기지와 감시초소 사이에서만</Korean>
-                <French>Uniquement entre les bases amicales et les postes de guet</French>
+                <Original>Only between strongholds and watchposts</Original>
+                <Russian>Только между укреплениями и наблюдательными постами</Russian>
+                <Chinesesimp>仅限于据点和哨所之间</Chinesesimp>
+                <Korean>요새와 감시초소 사이에서만 가능</Korean>
+                <French>Uniquement entre les places fortes et les postes de guet</French>
+                <Turkish>Yalnızca korunaklı üsler ve gözetleme noktaları arasında</Turkish>
             </Key>
         </Container>
         <Container name="a3ue_pcf_roleTraits">
@@ -58,6 +59,16 @@
                 <Korean>당신은 공병 역할을 선택했습니다.&lt;br/&gt;&lt;br/&gt;공병은 보너스나 패널티가 없지만 차량 수리를 위해 도구모음을 사용할 수 있으며 무인기를 해킹할 수 있습니다. 당신은 UAV 해커와 의무병 특성을 보유하고 있습니다. &lt;br/&gt;&lt;br/&gt; </Korean>
                 <French>Vous avez choisi un rôle d'ingénieur.&lt;br/&gt;&lt;br/&gt;Les ingénieurs n'ont pas de bonus ou de pénalités, mais ils ont la possibilité d'utiliser des kits de réparation pour réparer les véhicules, et ils peuvent également pirater les drones. &lt;br/&gt;&lt;br/&gt; Vous avez aussi les traits Hacker UAV et Médecin. </French>
                 <Turkish>Bir Mühendis rolü seçtiniz. &lt;br/&gt;&lt;br/&gt; Mühendisler bonus veya ceza almaz, ancak onarım kitleri ile araç tamiri yapabilir ve dronları hackleyebilir. &lt;br/&gt;&lt;br/&gt; Ayrıca İHA Hacker ve Sağlıkçı özelliklerine sahipsin.</Turkish>
+            </Key>
+        </Container>
+        <Container name="a3ue_pcf_battle_menu">
+            <Key ID="STR_A3A_Dialogs_fast_travel_limited_to_between_military_destinations">
+                <Original>Fast travel is limited between HQ, Airbases, Military Bases, Outposts and Watchposts. You must depart from one!</Original>
+                <Russian>Быстрое перемещение ограничено штабом, авиабазами, военными базами, заставами и наблюдательными постами. Вы должны отправляться от одного из них!</Russian>
+                <Chinesesimp>快速旅行仅限于总部、空军基地、军事基地、前哨和哨所之间。您必须从其中之一出发！</Chinesesimp>
+                <Korean>빠른 이동은 본부, 공군 기지, 군사 기지, 전초 기지 및 감시초소 사이에서만 가능합니다. 반드시 그중 하나에서 출발해야 합니다!</Korean>
+                <French>Le voyage rapide est limité au QG, aux bases aériennes, aux bases militaires, aux avant-postes et aux postes d’observation. Vous devez partir de l’un d’entre eux !</French>
+                <Turkish>Hızlı seyahat yalnızca Karargâh, Hava Üsleri, Askerî Üsler, Karakollar ve Gözetleme Noktaları arasında yapılabilir. Yola bunlardan birinden çıkmak gerekli!</Turkish>
             </Key>
         </Container>
     </Package>

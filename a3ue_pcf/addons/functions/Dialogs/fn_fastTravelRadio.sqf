@@ -136,7 +136,7 @@ if (limitedFT == 3) then {
 };
 
 if (_checkForPlayer && limitedFT == 3 && (!_isValidTargetLocation or !_withinBoundaries)) exitWith {
-	[localize "STR_A3A_Dialogs_fast_travel_header", localize "STR_A3A_Dialogs_fast_travel_limited_to_between_destinations"] call SCRT_fnc_misc_deniedHint;
+	[localize "STR_A3A_Dialogs_fast_travel_header", localize "STR_A3A_Dialogs_fast_travel_limited_to_between_military_destinations"] call SCRT_fnc_misc_deniedHint;
 };
 
 
