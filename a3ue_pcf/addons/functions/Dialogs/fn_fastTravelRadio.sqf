@@ -126,8 +126,9 @@ if (_checkForPlayer && limitedFT == 2 && (!_isValidTargetLocation or !_withinBou
 };
 
 // PCF: Mode 3: only friendly bases + watchposts
+// PCF: citiesX is substructed from Synd_HQ
 if (limitedFT == 3) then {
-	private _rebelLocations = (Synd_HQ + airportsX + milbases + watchpostsFIA + outposts) select { sidesX getVariable _x == teamPlayer };
+	private _rebelLocations = (["Synd_HQ"] - citiesX - airportsX + milbases + watchpostsFIA + outposts) select { sidesX getVariable _x == teamPlayer };
 	private _nearestPosition = [_rebelLocations, player] call BIS_Fnc_nearestPosition;
 	private _distanceToNearest = player distance getMarkerPos _nearestPosition;
 	_isValidTargetLocation = _base in _rebelLocations;
