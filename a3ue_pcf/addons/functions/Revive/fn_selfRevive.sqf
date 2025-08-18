@@ -28,7 +28,7 @@ player setVariable ["incapacitated", false, true];
 player setDamage 0.5;
 player removeItem selectRandom _hasFAKs;
 
-private _timeout = missionNamespace getVariable ["A3A_selfReviveTimeout", 999];
+private _timeout = missionNamespace getVariable ["A3A_selfReviveTimeout", 30];
 player setVariable ["A3A_selfReviveTimeout", _timeout];
 
 [_hintTitle, localize "STR_A3A_selfRevive_success"] call A3A_fnc_customHint;

@@ -11,6 +11,13 @@ class CfgFunctions
             };
         };
 
+        class OrgPlayers {
+            class unitTraits {
+            file = QPATHTOFOLDER(OrgPlayers\fn_unitTraits.sqf);
+
+            };
+        };
+
 
         class Revive 
         {
