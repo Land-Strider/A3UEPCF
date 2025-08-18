@@ -110,6 +110,20 @@ if (_base == traderMarker && {isTraderQuestAssigned || !isTraderQuestCompleted})
 private _rebelMarkers = if (!isNil "traderMarker") then {["Synd_HQ", traderMarker]} else {["Synd_HQ"]};
 private _isValidTargetLocation = (_base in (_rebelMarkers + airportsX + milbases));
 
+if ((sidesX getVariable [_base,sideUnknown]) in [Occupants, Invaders]) exitWith {
+	[localize "STR_A3A_Dialogs_fast_travel_header", localize "STR_A3A_Dialogs_fast_travel_no_enemy_zone"] call SCRT_fnc_misc_deniedHint; 
+	openMap [false,false];
+};
+if (_base in forcedSpawn) exitWith {
+	[localize "STR_A3A_Dialogs_fast_travel_header", localize "STR_A3A_Dialogs_fast_travel_no_enemy_attack"] call SCRT_fnc_misc_deniedHint; 
+	openMap [false,false];
+};
+
+if ([getMarkerPos _base] call A3A_fnc_enemyNearCheck) exitWith {
+	[localize "STR_A3A_Dialogs_fast_travel_header", localize "STR_A3A_Dialogs_fast_travel_no_enemy_surrounding"] call A3A_fnc_customHint; 
+	openMap [false,false];
+};
+
 if (_checkForPlayer && limitedFT == 1 && !_isValidTargetLocation) exitWith {
 	[localize "STR_A3A_Dialogs_fast_travel_header", localize "STR_A3A_Dialogs_fast_travel_limited"] call SCRT_fnc_misc_deniedHint;
 };
@@ -140,19 +154,7 @@ if (_checkForPlayer && limitedFT == 3 && (!_isValidTargetLocation or !_withinBou
 };
 
 
-if ((sidesX getVariable [_base,sideUnknown]) in [Occupants, Invaders]) exitWith {
-	[localize "STR_A3A_Dialogs_fast_travel_header", localize "STR_A3A_Dialogs_fast_travel_no_enemy_zone"] call SCRT_fnc_misc_deniedHint; 
-	openMap [false,false];
-};
-if (_base in forcedSpawn) exitWith {
-	[localize "STR_A3A_Dialogs_fast_travel_header", localize "STR_A3A_Dialogs_fast_travel_no_enemy_attack"] call SCRT_fnc_misc_deniedHint; 
-	openMap [false,false];
-};
 
-if ([getMarkerPos _base] call A3A_fnc_enemyNearCheck) exitWith {
-	[localize "STR_A3A_Dialogs_fast_travel_header", localize "STR_A3A_Dialogs_fast_travel_no_enemy_surrounding"] call A3A_fnc_customHint; 
-	openMap [false,false];
-};
 
 if (_positionTel distance getMarkerPos _base < 50) then {
 	private _positionX = [getMarkerPos _base, 10, random 360] call BIS_Fnc_relPos;
