@@ -79,5 +79,15 @@
                 <Turkish>Geçerli bir hızlı seyahat çıkış noktasına yakın değilsiniz!</Turkish>
             </Key>
         </Container>
+        <Container name="a3ue_pcf_markers">
+            <Key ID="STR_localizar_Synd_HQ">
+                <Original>Rebel HQ</Original>
+                <Russian>Штаб повстанцев</Russian>
+                <Chinesesimp>反叛者总部</Chinesesimp>
+                <Korean>반군 본부</Korean>
+                <French>QG des rebelles</French>
+                <Turkish>İsyancı Karargâhı</Turkish>
+            </Key>
+        </Container>
     </Package>
 </Project>
