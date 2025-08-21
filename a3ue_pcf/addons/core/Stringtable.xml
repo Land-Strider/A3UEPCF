@@ -63,12 +63,20 @@
         </Container>
         <Container name="a3ue_pcf_battle_menu">
             <Key ID="STR_A3A_Dialogs_fast_travel_limited_to_between_military_destinations">
-                <Original>Fast travel is limited between HQ, Airbases, Military Bases, Outposts and Watchposts. You must depart from one!</Original>
-                <Russian>Быстрое перемещение ограничено штабом, авиабазами, военными базами, заставами и наблюдательными постами. Вы должны отправляться от одного из них!</Russian>
-                <Chinesesimp>快速旅行仅限于总部、空军基地、军事基地、前哨和哨所之间。您必须从其中之一出发！</Chinesesimp>
-                <Korean>빠른 이동은 본부, 공군 기지, 군사 기지, 전초 기지 및 감시초소 사이에서만 가능합니다. 반드시 그중 하나에서 출발해야 합니다!</Korean>
-                <French>Le voyage rapide est limité au QG, aux bases aériennes, aux bases militaires, aux avant-postes et aux postes d’observation. Vous devez partir de l’un d’entre eux !</French>
-                <Turkish>Hızlı seyahat yalnızca Karargâh, Hava Üsleri, Askerî Üsler, Karakollar ve Gözetleme Noktaları arasında yapılabilir. Yola bunlardan birinden çıkmak gerekli!</Turkish>
+                <Original>Fast travel is limited between HQ, Airbases, Military Bases, Outposts and Watchposts. Also, you must depart from one!</Original>
+                <Russian>Быстрое перемещение ограничено между штабом, авиабазами, военными базами, аванпостами и сторожевыми постами. Также вы должны отправляться из одного из них!</Russian>
+                <Chinesesimp>快速旅行仅限于总部、空军基地、军事基地、前哨和警戒哨之间。此外，你必须从其中一个出发！</Chinesesimp>
+                <Korean>빠른 이동은 본부, 공군기지, 군사기지, 전초기지 및 감시초소 사이에서만 가능합니다. 또한 반드시 그중 하나에서 출발해야 합니다!</Korean>
+                <French>Le voyage rapide est limité entre le QG, les bases aériennes, les bases militaires, les avant-postes et les postes d’observation. Vous devez également partir de l’un d’eux !</French>
+                <Turkish>Hızlı seyahat yalnızca karargâh, hava üsleri, askeri üsler, ileri karakollar ve gözetleme noktaları arasında mümkündür. Ayrıca bunlardan birinden başlamalısınız!</Turkish>
+            </Key>
+            <Key ID="STR_A3A_Dialogs_fast_travel_not_a_valid_depart_zone">
+                <Original>You are not near a valid Fast Travel departure zone! &lt;br/&gt;&lt;br/&gt; Nearest valid zone: %1 (%2 m)"</Original>
+                <Russian>Вы не рядом с допустимой зоной отправления для быстрого перемещения!</Russian>
+                <Chinesesimp>你不在有效的快速旅行出发区域附近！</Chinesesimp>
+                <Korean>유효한 빠른 이동 출발 지점 근처에 있지 않습니다!</Korean>
+                <French>Vous n’êtes pas près d’une zone de départ valide pour le voyage rapide !</French>
+                <Turkish>Geçerli bir hızlı seyahat çıkış noktasına yakın değilsiniz!</Turkish>
             </Key>
         </Container>
     </Package>
