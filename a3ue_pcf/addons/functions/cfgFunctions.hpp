@@ -3,6 +3,13 @@ class CfgFunctions
     //be careful when overwriting functions as version updates can break your extension
     class A3A 
     {
+        class Base 
+        {
+            class localizar 
+            {
+                file = QPATHTOFOLDER(Base\fn_localizar.sqf)
+            };
+        };
         class init 
         {
             class initVarServer 
@@ -13,8 +20,7 @@ class CfgFunctions
 
         class OrgPlayers {
             class unitTraits {
-            file = QPATHTOFOLDER(OrgPlayers\fn_unitTraits.sqf);
-
+                file = QPATHTOFOLDER(OrgPlayers\fn_unitTraits.sqf);
             };
         };
 
