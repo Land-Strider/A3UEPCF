@@ -9,6 +9,9 @@ class CfgFunctions
             {
                 file = QPATHTOFOLDER(Base\fn_localizar.sqf)
             };
+            class mrkUpdate {
+                file = QPATHTOFOLDER(Base\fn_mrkUpdate.sqf)
+            };
         };
         class init 
         {

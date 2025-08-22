@@ -88,6 +88,56 @@
                 <French>QG des rebelles</French>
                 <Turkish>İsyancı Karargâhı</Turkish>
             </Key>
+            <Key ID="STR_airbase">
+                <Original>%1 %2 Airbase</Original>
+                <Russian>Авиабаза %1 %2</Russian>
+                <Chinesesimp>%1 %2 空军基地</Chinesesimp>
+                <Korean>%1 %2 공군 기지</Korean>
+                <French>Base aérienne %1 %2</French>
+            </Key>
+            <Key ID="STR_milbase">
+                <Original>%1 %2 Military Base</Original>
+                <Russian>Военная база %1</Russian>
+                <Chinesesimp>%1 军事基地</Chinesesimp>
+                <Korean>%1 군사 기지</Korean>
+                <French>%1 Base militaire</French>
+            </Key>
+            <Key ID="STR_outpost">
+                <Original>%1 %2 Outpost</Original>
+                <Russian>Аванпост %1</Russian>
+                <Chinesesimp>%1 哨站</Chinesesimp>
+                <Korean>%1 전초 기지</Korean>
+                <French>%1 Avant-poste</French>
+            </Key>
+            <Key ID="STR_factory">
+                <Original>%1 Factory</Original>
+                <Russian>Фабрика</Russian>
+                <Chinesesimp>工厂</Chinesesimp>
+                <Korean>공장</Korean>
+                <French>Usine</French>
+            </Key>
+            <Key ID="STR_resources">
+                <Original>%1 Resources</Original>
+                <Russian>Штаб повстанцев %1</Russian>
+                <Chinesesimp>%1 反叛者总部</Chinesesimp>
+                <Korean>%1 반군 본부</Korean>
+                <French>%1 QG des rebelles</French>
+                <Turkish>%1 İsyancı Karargâhı</Turkish>
+            </Key>
+            <Key ID="STR_port_sea">
+                <Original>%1 Sea Port</Original>
+                <Russian>Морской порт</Russian>
+                <Chinesesimp>海港</Chinesesimp>
+                <Korean>항구</Korean>
+                <French>Port maritime</French>
+            </Key>
+            <Key ID="STR_port_river">
+                <Original>%1 River Port</Original>
+                <Russian>Речной порт</Russian>
+                <Chinesesimp>河港</Chinesesimp>
+                <Korean>강항</Korean>
+                <French>Port fluvial</French>
+            </Key>
         </Container>
     </Package>
 </Project>
