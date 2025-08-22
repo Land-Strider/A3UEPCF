@@ -61,17 +61,18 @@ private _rebelMarkers = if (!isNil "traderMarker") then {["Synd_HQ", traderMarke
 //PCF Early Fast Travel departure zone validity check variable and start
 private _nearestPosition = ""; 		//PCF these 2 variables are declared outside the if 2 or if 3 scopes to be accsible by departure distance checkers under each.
 private _distanceToNearest = -1;	//PCF these 2 variables are declared outside the if 2 or if 3 scopes to be accsible by departure distance checkers under each.
-private _withinBoundariesEarly = true;
+private _withinBoundaries = true;
+private _rebelLocations = "";
 
 //PCF Early Fast Travel departure zone validity check for option 2
 if (limitedFT == 2) then {
-	private _rebelLocations = (_rebelMarkers + airportsX + milbases) select { sidesX getVariable _x == teamPlayer };
+	_rebelLocations = (_rebelMarkers + airportsX + milbases) select { sidesX getVariable _x == teamPlayer };
 	_nearestPosition = [_rebelLocations, player] call BIS_Fnc_nearestPosition;
 	_distanceToNearest = player distance getMarkerPos _nearestPosition;
-	_withinBoundariesEarly = _distanceToNearest < 50;	
+	_withinBoundaries = _distanceToNearest < 50;	
 };
 
-if (_checkForPlayer && limitedFT == 2 && (!_withinBoundariesEarly)) exitWith {
+if (_checkForPlayer && limitedFT == 2 && (!_withinBoundaries)) exitWith {
 	private _nameOrigin = [_nearestPosition] call A3A_fnc_localizar;
 	[localize "STR_A3A_Dialogs_fast_travel_header", 
 	format [localize "STR_A3A_Dialogs_fast_travel_not_a_valid_depart_zone", str _nameOrigin, round _distanceToNearest]] 
@@ -81,13 +82,13 @@ if (_checkForPlayer && limitedFT == 2 && (!_withinBoundariesEarly)) exitWith {
 //PCF Early Fast Travel departure zone validity check for option 3
 
 if (limitedFT == 3) then {
-	private _rebelLocations = (["Synd_HQ"] - citiesX + airportsX + milbases + watchpostsFIA + outposts) select { sidesX getVariable _x == teamPlayer };
+	_rebelLocations = (["Synd_HQ"] - citiesX + airportsX + milbases + watchpostsFIA + outposts) select { sidesX getVariable _x == teamPlayer };
 	_nearestPosition = [_rebelLocations, getPos player] call BIS_Fnc_nearestPosition;
 	_distanceToNearest = player distance getMarkerPos _nearestPosition;
-	_withinBoundariesEarly = _distanceToNearest < 50;
+	_withinBoundaries = _distanceToNearest < 50;
 };
 
-if (_checkForPlayer && limitedFT == 3 && (!_withinBoundariesEarly)) exitWith {
+if (_checkForPlayer && limitedFT == 3 && (!_withinBoundaries)) exitWith {
 	private _nameOrigin = [_nearestPosition] call A3A_fnc_localizar;
 	[localize "STR_A3A_Dialogs_fast_travel_header", 
 	format [ localize "STR_A3A_Dialogs_fast_travel_not_a_valid_depart_zone", str _nameOrigin, round _distanceToNearest]] //Parameter arguments are set in the string entry
@@ -169,13 +170,6 @@ if (_checkForPlayer && limitedFT == 1 && !_isValidTargetLocation) exitWith {
 	[localize "STR_A3A_Dialogs_fast_travel_header", localize "STR_A3A_Dialogs_fast_travel_limited"] call SCRT_fnc_misc_deniedHint;
 };
 
-private _withinBoundaries = true;
-if (limitedFT == 2) then {
-	private _rebelLocations = (_rebelMarkers + airportsX + milbases) select { sidesX getVariable _x == teamPlayer };
-	private _nearestPosition = [_rebelLocations, player] call BIS_Fnc_nearestPosition;
-	private _distanceToNearest = player distance getMarkerPos _nearestPosition;
-	_withinBoundaries = _distanceToNearest < 50;	
-};
 if (_checkForPlayer && limitedFT == 2 && (!_isValidTargetLocation or !_withinBoundaries)) exitWith {
 	[localize "STR_A3A_Dialogs_fast_travel_header", localize "STR_A3A_Dialogs_fast_travel_limited_to_between_destinations"] call SCRT_fnc_misc_deniedHint;
 };
@@ -183,19 +177,12 @@ if (_checkForPlayer && limitedFT == 2 && (!_isValidTargetLocation or !_withinBou
 // PCF: Mode 3: only friendly bases + watchposts
 // PCF: citiesX is substructed from Synd_HQ
 if (limitedFT == 3) then {
-	private _rebelLocations = (["Synd_HQ"] - citiesX + airportsX + milbases + watchpostsFIA + outposts) select { sidesX getVariable _x == teamPlayer };
-	private _nearestPosition = [_rebelLocations, player] call BIS_Fnc_nearestPosition;
-	private _distanceToNearest = player distance getMarkerPos _nearestPosition;
 	_isValidTargetLocation = _base in _rebelLocations;
-	_withinBoundaries = _distanceToNearest < 50;
 };
 
 if (_checkForPlayer && limitedFT == 3 && (!_isValidTargetLocation or !_withinBoundaries)) exitWith {
 	[localize "STR_A3A_Dialogs_fast_travel_header", localize "STR_A3A_Dialogs_fast_travel_limited_to_between_military_destinations"] call SCRT_fnc_misc_deniedHint;
 };
-
-
-
 
 if (_positionTel distance getMarkerPos _base < 50) then {
 	private _positionX = [getMarkerPos _base, 10, random 360] call BIS_Fnc_relPos;
