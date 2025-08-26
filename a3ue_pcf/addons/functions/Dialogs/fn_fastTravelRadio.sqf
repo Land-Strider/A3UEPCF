@@ -63,19 +63,20 @@ private _nearestPosition = ""; 		//PCF these 2 variables are declared outside th
 private _distanceToNearest = -1;	//PCF these 2 variables are declared outside the if 2 or if 3 scopes to be accsible by departure distance checkers under each.
 private _withinBoundaries = true;
 private _rebelLocations = "";
+private _fastTravelDepartureRadius = PCF_LimitedFTDepartureDistance; //PCF depature distance check assigned to a parameter
 
 //PCF Early Fast Travel departure zone validity check for option 2
 if (limitedFT == 2) then {
 	_rebelLocations = (_rebelMarkers + airportsX + milbases) select { sidesX getVariable _x == teamPlayer };
 	_nearestPosition = [_rebelLocations, player] call BIS_Fnc_nearestPosition;
 	_distanceToNearest = player distance getMarkerPos _nearestPosition;
-	_withinBoundaries = _distanceToNearest < 50;	
+	_withinBoundaries = _distanceToNearest < _fastTravelDepartureRadius;	
 };
 
 if (_checkForPlayer && limitedFT == 2 && (!_withinBoundaries)) exitWith {
 	private _nameOrigin = [_nearestPosition] call A3A_fnc_localizar;
 	[localize "STR_A3A_Dialogs_fast_travel_header", 
-	format [localize "STR_A3A_Dialogs_fast_travel_not_a_valid_depart_zone", str _nameOrigin, round _distanceToNearest]] 
+	format [localize "STR_a3ue_pcf_Dialogs_fast_travel_not_a_valid_depart_zone", str _nameOrigin, round (_distanceToNearest - _fastTravelDepartureRadius)]] 
 	call SCRT_fnc_misc_deniedHint;
 };
 
@@ -85,13 +86,13 @@ if (limitedFT == 3) then {
 	_rebelLocations = (["Synd_HQ"] - citiesX + airportsX + milbases + watchpostsFIA + outposts) select { sidesX getVariable _x == teamPlayer };
 	_nearestPosition = [_rebelLocations, getPos player] call BIS_Fnc_nearestPosition;
 	_distanceToNearest = player distance getMarkerPos _nearestPosition;
-	_withinBoundaries = _distanceToNearest < 50;
+	_withinBoundaries = _distanceToNearest < _fastTravelDepartureRadius;
 };
 
 if (_checkForPlayer && limitedFT == 3 && (!_withinBoundaries)) exitWith {
 	private _nameOrigin = [_nearestPosition] call A3A_fnc_localizar;
 	[localize "STR_A3A_Dialogs_fast_travel_header", 
-	format [ localize "STR_A3A_Dialogs_fast_travel_not_a_valid_depart_zone", str _nameOrigin, round _distanceToNearest]] //Parameter arguments are set in the string entry
+	format [ localize "STR_a3ue_pcf_Dialogs_fast_travel_not_a_valid_depart_zone", str _nameOrigin, round (_distanceToNearest - _fastTravelDepartureRadius)]] //Parameter arguments are set in the string entry
 	call SCRT_fnc_misc_deniedHint;
 };
 //PCF Early Fast Travel departure zone validity check end
@@ -181,7 +182,7 @@ if (limitedFT == 3) then {
 };
 
 if (_checkForPlayer && limitedFT == 3 && (!_isValidTargetLocation or !_withinBoundaries)) exitWith {
-	[localize "STR_A3A_Dialogs_fast_travel_header", localize "STR_A3A_Dialogs_fast_travel_limited_to_between_military_destinations"] call SCRT_fnc_misc_deniedHint;
+	[localize "STR_A3A_Dialogs_fast_travel_header", localize "STR_a3ue_pcf_Dialogs_fast_travel_limited_to_between_military_destinations"] call SCRT_fnc_misc_deniedHint;
 };
 
 if (_positionTel distance getMarkerPos _base < 50) then {

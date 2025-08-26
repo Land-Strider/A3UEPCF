@@ -36,16 +36,16 @@ if (_marker in airportsX) then {
 
 private _mrkText = call {
     private _nearestTown = [citiesX, _marker] call BIS_Fnc_nearestPosition;
-    if (_marker in airportsX) exitWith { format [localize "STR_airbase", _faction get "name", _nearestTown] };
-    if (_marker in outposts) exitWith { format [localize "STR_outpost", _faction get "name", _nearestTown] };
-    if (_marker in resourcesX) exitWith {format [localize "STR_resources", _nearestTown]};
-    if (_marker in factories) exitWith {format [localize "STR_factory", _nearestTown]};
-    if (_marker in milbases) exitWith { format [localize "STR_milbase", _faction get "name", _nearestTown] };
+    if (_marker in airportsX) exitWith { format [localize "STR_a3ue_pcf_airbase", _faction get "name", _nearestTown] };
+    if (_marker in outposts) exitWith { format [localize "STR_a3ue_pcf_outpost", _faction get "name", _nearestTown] };
+    if (_marker in resourcesX) exitWith {format [localize "STR_a3ue_pcf_resources", _nearestTown]};
+    if (_marker in factories) exitWith {format [localize "STR_a3ue_pcf_factory", _nearestTown]};
+    if (_marker in milbases) exitWith { format [localize "STR_a3ue_pcf_milbase", _faction get "name", _nearestTown] };
     if (_marker in seaports) exitWith {
         if (toLowerANSI worldName in ["enoch", "vn_khe_sanh", "esseker"]) then {
-            format [localize "STR_port_river", _nearestTown]
+            format [localize "STR_a3ue_pcf_port_river", _nearestTown]
         } else {
-            format [localize "STR_port_sea", _nearestTown]
+            format [localize "STR_a3ue_pcf_port_sea", _nearestTown]
         };
     };
     ""; // city

@@ -25,6 +25,12 @@ FIX_LINE_NUMBERS()
 private _type = typeOf player;
 private _text = "";
 
+/*PCF - missionNamespace setVariable is at fn_setupLoadGame.sqf - checkbox at game setup to enable/disable traits for all roles.
+Disabled in favor bool of parameter dropbox option, kept till checkbox paramter option is tried.
+Requires changes to ids.inc, setupDialog.hpp, fn_setupLoadgameTab.sqf to work.*/
+
+//private _traitsEnabled = missionNamespace getVariable ["A3UE_PCF_ExtendedTraits", false]; 
+
 if(roleDescription player isEqualTo "@STR_role_default_commander_role_name" || {roleDescription player isEqualTo "Default Commander"}) then {
     player setUnitTrait ["camouflageCoef",0.8];
     player setUnitTrait ["audibleCoef",0.8];
@@ -42,51 +48,92 @@ if(roleDescription player isEqualTo "@STR_role_default_commander_role_name" || {
 			player setUnitTrait ["audibleCoef",0.8]; 
 			player setUnitTrait ["loadCoef",1.2]; 
 			player setUnitTrait ["medic", true]; ///why not?
-			player setUnitTrait ["UAVHacker",true]; //PCF
-			player setUnitTrait ["engineer", true]; //PCF
-			_text = localize "STR_role_medic"
+
+			//PCF Extended role traits
+			if (PCF_ExtendedTraits) then
+				{
+					player setUnitTrait ["UAVHacker",true]; 
+					player setUnitTrait ["Engineer", true]; 
+					_text = localize "STR_a3ue_pcf_role_teamleader_with_traits"; 
+				} else {
+					_text = localize "STR_a3ue_pcf_role_medic";
+				};
+			
 		}; 
     	case "I_G_Soldier_TL_F": {
 			player setUnitTrait ["camouflageCoef",0.8]; 
 			player setUnitTrait ["audibleCoef",0.8]; 
 			player setUnitTrait ["loadCoef",1.4]; 
-			player setUnitTrait ["medic", true];	//PCF
-			player setUnitTrait ["UAVHacker",true]; //PCF
-			player setUnitTrait ["engineer", true]; //PCF
-			_text = localize "STR_role_teamleader"
+
+			//PCF Extended role traits
+			if (PCF_ExtendedTraits) then
+				{
+					player setUnitTrait ["medic", true];
+					player setUnitTrait ["UAVHacker",true];
+					player setUnitTrait ["engineer", true];
+					_text = localize "STR_a3ue_pcf_role_teamleader_with_traits";
+				} else {
+					_text = localize "STR_a3ue_pcf_role_teamleader";
+				};
 		}; 
     	case "I_G_Soldier_F":  {
 			player setUnitTrait ["audibleCoef",1.15]; 
 			player setUnitTrait ["camouflageCoef",1.15]; 
 			player setUnitTrait ["loadCoef",0.7]; 
-			player setUnitTrait ["medic", true];	//PCF
-			player setUnitTrait ["UAVHacker",true]; //PCF
-			player setUnitTrait ["engineer", true]; //PCF
-			_text = localize "STR_role_rifleman"
+
+			//PCF Extended role traits
+			if (PCF_ExtendedTraits) then
+				{
+					player setUnitTrait ["medic", true];
+					player setUnitTrait ["UAVHacker",true];
+					player setUnitTrait ["engineer", true];
+					_text = localize "STR_a3ue_pcf_role_rifleman_with_traits";
+				} else {
+					_text = localize "STR_a3ue_pcf_role_rifleman"
+				};
 		}; 
     	case "I_G_Soldier_GL_F": {
             player setUnitTrait ["camouflageCoef",1.2];
             player setUnitTrait ["loadCoef",0.8];
-			player setUnitTrait ["medic", true];	//PCF
-			player setUnitTrait ["UAVHacker",true]; //PCF
-			player setUnitTrait ["engineer", true]; //PCF
-            _text = localize "STR_role_grenadier"
+
+			//PCF Extended role traits
+			if (PCF_ExtendedTraits) then
+				{
+					player setUnitTrait ["medic", true];
+					player setUnitTrait ["UAVHacker",true];
+					player setUnitTrait ["engineer", true];
+					_text = localize "STR_a3ue_pcf_role_grenadier_with_traits";
+				} else {
+					_text = localize "STR_a3ue_pcf_role_grenadier"
+				};
         };
     	case "I_G_Soldier_AR_F": {
             player setUnitTrait ["audibleCoef",1.2];
             player setUnitTrait ["loadCoef",0.8];
-			player setUnitTrait ["medic", true];	//PCF
-			player setUnitTrait ["UAVHacker",true]; //PCF
-			player setUnitTrait ["engineer", true]; //PCF
-            _text = localize "STR_role_autorifleman"
+
+			//PCF Extended role traits
+			if (PCF_ExtendedTraits) then
+				{
+					player setUnitTrait ["medic", true];
+					player setUnitTrait ["UAVHacker",true];
+					player setUnitTrait ["engineer", true];
+					_text = localize "STR_a3ue_pcf_role_autorifleman_with_traits";
+				} else {
+					_text = localize "STR_a3ue_pcf_role_autorifleman"
+				};
         };
     	case "I_G_engineer_F":  {
 			player setUnitTrait ["UAVHacker",true]; 
 			player setUnitTrait ["explosiveSpecialist", true]; ///why not?
-			player setUnitTrait ["medic", true];	//PCF
-			player setUnitTrait ["UAVHacker",true]; //PCF
-			player setUnitTrait ["engineer", true]; //PCF
-			_text = localize "STR_role_engineer"
+
+			//PCF Extended role traits
+			if (PCF_ExtendedTraits) then
+				{
+					player setUnitTrait ["medic", true];
+					_text = localize "STR_a3ue_pcf_role_engineer_with_traits";
+				} else {
+					_text = localize "STR_a3ue_pcf_role_engineer"
+				};
 		}; 
     };
 };

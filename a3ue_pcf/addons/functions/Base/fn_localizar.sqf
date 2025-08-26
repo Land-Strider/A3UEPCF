@@ -10,7 +10,7 @@ if (_siteX in citiesX) then {
 
 	switch (true) do {
 		case (_siteX in "Synd_HQ"): {
-			_textX = format [localize "STR_localizar_Synd_HQ"];
+			_textX = format [localize "STR_a3ue_pcf_localizar_Synd_HQ"];
 		};
 		case (_siteX in airportsX): {
 			_textX = format [localize "STR_localizar_airbase",_city];

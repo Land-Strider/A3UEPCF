@@ -68,6 +68,30 @@ class Params
 
     */
 
+    //PCF Params start
+    class PCFParams
+    {
+        type = "PCF";        // Matches the tab name / _shownTypes entry
+        lockOnSave = 0;      // 0 = players can change it before starting
+    };
+    class PCF_LimitedFTDepartureDistance: PCFParams
+    {
+        title = $STR_a3ue_pcf_params_limitedFT_departure_distance;
+        values[] = {25,50,75,100,150};
+        texts[]  = {"25","50","75","100","150"};
+        default  = 50;
+        lockOnSave = 0;
+    };
+    class PCF_ExtendedTraits: PCFParams
+    {
+        title = $STR_a3ue_pcf_params_extended_traits;
+        values[] = {0,1};
+        texts[]  = {"No","Yes"};
+        default  = 1;
+        lockOnSave = 0;
+    };
+    //PCF Params end
+
     class BasicParams
     {
         type = "Basic";
@@ -114,7 +138,7 @@ class Params
     {
         title = $STR_params_allowFT;
         values[] = {0,1,2,3,4};
-        texts[] = {$STR_params_allowFT_0, $STR_params_allowFT_1, $STR_params_allowFT_2, $STR_params_allowFT_3, $STR_params_civ_traffic_none};
+        texts[] = {$STR_params_allowFT_0, $STR_params_allowFT_1, $STR_params_allowFT_2, $STR_a3ue_pcf_params_allowFT_3, $STR_params_civ_traffic_none};
         default = 0;
     };
     class civTraffic: BasicParams
