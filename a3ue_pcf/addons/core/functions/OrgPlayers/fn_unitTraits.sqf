@@ -19,7 +19,7 @@ Example:
     [] spawn A3A_fnc_unitTraits;
 */
 
-#include "..\script_component.hpp"
+#include "..\..\script_component.hpp"
 FIX_LINE_NUMBERS()
 
 private _type = typeOf player;

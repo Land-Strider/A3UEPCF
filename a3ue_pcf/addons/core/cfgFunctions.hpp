@@ -7,23 +7,23 @@ class CfgFunctions
         {
             class localizar 
             {
-                file = QPATHTOFOLDER(Base\fn_localizar.sqf)
+                file = QPATHTOFOLDER(functions\Base\fn_localizar.sqf)
             };
             class mrkUpdate {
-                file = QPATHTOFOLDER(Base\fn_mrkUpdate.sqf)
+                file = QPATHTOFOLDER(functions\Base\fn_mrkUpdate.sqf)
             };
         };
         class init 
         {
             class initVarServer 
             {
-                file = QPATHTOFOLDER(init\fn_initVarServer.sqf);
+                file = QPATHTOFOLDER(functions\init\fn_initVarServer.sqf);
             };
         };
 
         class OrgPlayers {
             class unitTraits {
-                file = QPATHTOFOLDER(OrgPlayers\fn_unitTraits.sqf);
+                file = QPATHTOFOLDER(functions\OrgPlayers\fn_unitTraits.sqf);
             };
         };
 
@@ -32,7 +32,7 @@ class CfgFunctions
         {
             class selfRevive 
             {
-                file = QPATHTOFOLDER(Revive\fn_selfRevive.sqf);
+                file = QPATHTOFOLDER(functions\Revive\fn_selfRevive.sqf);
             };
         };
 
@@ -40,7 +40,7 @@ class CfgFunctions
         {
             class fastTravelRadio 
             {
-                file = QPATHTOFOLDER(Dialogs\fn_fastTravelRadio.sqf);
+                file = QPATHTOFOLDER(functions\Dialogs\fn_fastTravelRadio.sqf);
             };
         };
             

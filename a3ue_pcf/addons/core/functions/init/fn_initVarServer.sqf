@@ -4,7 +4,7 @@
  * We also initialise anything in here that we don't want a client that's joining to overwrite, as JIP happens before initVar.
  */
 scriptName "initVarServer.sqf";
-#include "..\script_component.hpp"
+#include "..\..\script_component.hpp"
 FIX_LINE_NUMBERS()
 Info("initVarServer started");
 
@@ -280,7 +280,7 @@ if (A3A_hasTFAR) then
 	if (isServer) then
 	{
 		[] spawn {
-            #include "..\script_component.hpp"
+            #include "..\..\script_component.hpp"
 FIX_LINE_NUMBERS()
 			waitUntil {sleep 1; !isNil "TF_server_addon_version"};
             Info("Initializing TFAR settings");
