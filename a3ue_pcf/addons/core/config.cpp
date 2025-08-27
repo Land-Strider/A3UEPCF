@@ -16,7 +16,15 @@ class CfgPatches
     };
 };
 
-
-class A3A {
+class A3A 
+{
     #include "Params.hpp"
+    #if __A3_DEBUG__
+        #include "CfgFunctions.hpp"
+    #endif
 };
+
+#if __A3_DEBUG__
+#else
+    #include "CfgFunctions.hpp"
+#endif

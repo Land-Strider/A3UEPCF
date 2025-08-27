@@ -22,6 +22,8 @@ Example:
 #include "..\..\script_component.hpp"
 FIX_LINE_NUMBERS()
 
+Info("unitTraits.sqf initializing..."); //PCF
+
 private _type = typeOf player;
 private _text = "";
 

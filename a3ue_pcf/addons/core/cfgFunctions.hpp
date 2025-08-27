@@ -7,10 +7,10 @@ class CfgFunctions
         {
             class localizar 
             {
-                file = QPATHTOFOLDER(functions\Base\fn_localizar.sqf)
+                file = QPATHTOFOLDER(functions\Base\fn_localizar.sqf);
             };
             class mrkUpdate {
-                file = QPATHTOFOLDER(functions\Base\fn_mrkUpdate.sqf)
+                file = QPATHTOFOLDER(functions\Base\fn_mrkUpdate.sqf);
             };
         };
         class init 
