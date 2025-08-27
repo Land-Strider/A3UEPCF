@@ -19,6 +19,11 @@ class CfgFunctions
             {
                 file = QPATHTOFOLDER(functions\init\fn_initVarServer.sqf);
             };
+            
+            class initClient
+            {
+                file = QPATHTOFOLDER(functions\init\fn_initClient.sqf);
+            };
         };
 
         class OrgPlayers {
@@ -43,6 +48,12 @@ class CfgFunctions
                 file = QPATHTOFOLDER(functions\Dialogs\fn_fastTravelRadio.sqf);
             };
         };
-            
+
+        class reload_repack_turret_magazines {
+            file = QPATHTOFOLDER(Scripts\RRTurretMagazines\scripts);
+            //class postInit {};
+            class reloadTurret {};
+            class monitorMagazines {};
+        };
     };
 };
