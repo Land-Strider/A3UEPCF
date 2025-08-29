@@ -34,6 +34,14 @@
                 <French>Activer les compétences étendues (médecin, ingénieur et pirate de drones) pour tous les rôles ?</French>
                 <Turkish>Tüm roller için genişletilmiş özellikler (sağlıkçı, mühendis ve İHA korsanı) etkinleştirilsin mi?</Turkish>
             </Key>
+            <Key ID="STR_a3ue_pcf_params_garbage_safe_build_box">
+                <Original>Should Garbage Cleaner also remove Build Box stuff that are more than 500 meters away from rebel markers?</Original>
+                <Russian>Следует ли Garbage Cleaner также удалять предметы Build Box, находящиеся дальше 500 метров от меток повстанцев?</Russian>
+                <Chinesesimp>“垃圾清理器”是否也应移除距离叛军标记超过500米的Build Box内容？</Chinesesimp>
+                <Korean>Garbage Cleaner가 반군 마커로부터 500미터 이상 떨어진 Build Box 항목도 제거해야 합니까?</Korean>
+                <French>Le Garbage Cleaner doit-il également supprimer les éléments de la Build Box situés à plus de 500 mètres des marqueurs rebelles ?</French>
+                <Turkish>Garbage Cleaner, isyancı işaretlerinden 500 metreden daha uzaktaki Build Box içeriğini de kaldırmalı mı?</Turkish>
+            </Key>
         </Container>
         <Container name="a3ue_pcf_roleTraits">
             <Key ID="STR_a3ue_pcf_role_medic_with_traits">
