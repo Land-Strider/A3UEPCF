@@ -5,12 +5,23 @@ class CfgFunctions
     {
         class Base 
         {
+            class garbageCleaner 
+            {
+                file = QPATHTOFOLDER(functions\Base\fn_garbageCleaner.sqf);
+            };
             class localizar 
             {
                 file = QPATHTOFOLDER(functions\Base\fn_localizar.sqf);
             };
             class mrkUpdate {
                 file = QPATHTOFOLDER(functions\Base\fn_mrkUpdate.sqf);
+            };
+        };
+        class Dialogs 
+        {
+            class fastTravelRadio 
+            {
+                file = QPATHTOFOLDER(functions\Dialogs\fn_fastTravelRadio.sqf);
             };
         };
         class init 
@@ -26,8 +37,6 @@ class CfgFunctions
                 file = QPATHTOFOLDER(functions\OrgPlayers\fn_unitTraits.sqf);
             };
         };
-
-
         class Revive 
         {
             class selfRevive 
@@ -35,14 +44,12 @@ class CfgFunctions
                 file = QPATHTOFOLDER(functions\Revive\fn_selfRevive.sqf);
             };
         };
-
-        class Dialogs 
+        class Save 
         {
-            class fastTravelRadio 
+            class saveLoop 
             {
-                file = QPATHTOFOLDER(functions\Dialogs\fn_fastTravelRadio.sqf);
+                file = QPATHTOFOLDER(functions\Save\fn_saveLoop.sqf);
             };
-        };
-            
+        }; 
     };
 };

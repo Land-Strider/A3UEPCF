@@ -90,6 +90,14 @@ class Params
         default  = 1;
         lockOnSave = 0;
     };
+    class PCF_GarbageSafeBuildBox: PCFParams
+    {
+        title = $STR_a3ue_pcf_params_garbage_safe_build_box;
+        values[] = {0,1};
+        texts[]  = {"No","Yes"};
+        default  = 1;
+        lockOnSave = 0;
+    };
     //PCF Params end
 
     class BasicParams
