@@ -69,10 +69,10 @@ if !(isServer) then {
 // Server/client version check
 waitUntil { sleep 0.1; !isNil "initZonesDone" };
 if (isNil "A3A_serverVersion") then { A3A_serverVersion = "pre-2.2" };
-// if (A3A_clientVersion != A3A_serverVersion) exitWith {
-//     private _errorStr = format [localize "STR_A3A_feedback_serverinfo_mismatch", A3A_serverVersion, A3A_clientVersion];
-//     [localize "STR_A3A_feedback_serverinfo", _errorStr] call A3A_fnc_customHint;
-// };
+if (A3A_clientVersion != A3A_serverVersion) exitWith {
+    private _errorStr = format [localize "STR_A3A_feedback_serverinfo_mismatch", A3A_serverVersion, A3A_clientVersion];
+    [localize "STR_A3A_feedback_serverinfo", _errorStr] call A3A_fnc_customHint;
+};
 
 // Show server startup state hints
 if (isNil "A3A_startupState") then { A3A_startupState = "waitserver" };
