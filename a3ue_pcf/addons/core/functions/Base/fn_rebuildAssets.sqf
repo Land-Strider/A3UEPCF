@@ -49,31 +49,31 @@ switch (true) do {
 	};
 	// PCF Start
 	// Repair resources
-	case (_resourceDead != ""): {
+       case (PCF_EnableResourceRebuild && _resourceDead != ""): {
 		private _buildings = nearestObjects [_position, _repairTypes, 250,  true];
 		{
 			[_x] remoteExec ["A3A_fnc_repairRuinedBuilding", 2]; // Repair each building
 		} forEach _buildings;
 
-		[_resourceDead] remoteExec ["A3A_fnc_rebuildResource", 2];
+	       [_resourceDead] remoteExec ["A3A_fnc_rebuildResource", 2];
 
-		private _name = [_site] call A3A_fnc_localizar;
-		[
-			localize "STR_notifiers_success_type",
-			localize "STR_notifiers_rebuild_assets_header",
-			parseText format [localize "STR_notifiers_rebuild_assets_success", _name],
-			30
-		] spawn SCRT_fnc_ui_showMessage;
-	};
+	       private _name = [_site] call A3A_fnc_localizar;
+	       [
+		       localize "STR_notifiers_success_type",
+		       localize "STR_notifiers_rebuild_assets_header",
+		       parseText format [localize "STR_notifiers_rebuild_assets_success", _name],
+		       30
+	       ] spawn SCRT_fnc_ui_showMessage;
+       };
 	// Repair factories
-	case (_factoryDead != ""): {
+       case (PCF_EnableResourceRebuild && _factoryDead != ""): {
 		private _buildings = nearestObjects [_position, _repairTypes, 250,  true];
 		{
 			[_x] remoteExec ["A3A_fnc_repairRuinedBuilding", 2]; // Repair each building
 		} forEach _buildings;
 
 
-		[_factoryDead] remoteExec ["A3A_fnc_rebuildFactory", 2];
+	       [_factoryDead] remoteExec ["A3A_fnc_rebuildFactory", 2];
 
 		private _name = [_site] call A3A_fnc_localizar;
 		[
