@@ -42,6 +42,13 @@
                 <French>Le Garbage Cleaner doit-il également supprimer les éléments de la Build Box situés à plus de 500 mètres des marqueurs rebelles ?</French>
                 <Turkish>Garbage Cleaner, isyancı işaretlerinden 500 metreden daha uzaktaki Build Box içeriğini de kaldırmalı mı?</Turkish>
             </Key>
+            <Key ID="STR_a3ue_pcf_params_enable_resource_rebuild">
+                <Original>Enable factory and resource rebuilding</Original>
+                <German>Fabrik- und Ressourcenwiederaufbau aktivieren</German>
+                <French>Activer la reconstruction des usines et des ressources</French>
+                <Spanish>Habilitar reconstrucción de fábricas y recursos</Spanish>
+                <Turkish>Fabrika ve kaynak yeniden inşasını etkinleştir</Turkish>
+            </Key>
         </Container>
         <Container name="a3ue_pcf_roleTraits">
             <Key ID="STR_a3ue_pcf_role_medic_with_traits">

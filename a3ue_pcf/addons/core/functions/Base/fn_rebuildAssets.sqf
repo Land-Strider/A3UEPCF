@@ -43,29 +43,29 @@ switch (true) do {
 		] spawn SCRT_fnc_ui_showMessage;
 	};
 
-	case (_resourceDead != ""): {
-		[_resourceDead] remoteExec ["A3A_fnc_rebuildResource", 2];
+       case (PCF_EnableResourceRebuild && _resourceDead != ""): {
+	       [_resourceDead] remoteExec ["A3A_fnc_rebuildResource", 2];
 
-		private _name = [_site] call A3A_fnc_localizar;
-		[
-			localize "STR_notifiers_success_type",
-			localize "STR_notifiers_rebuild_assets_header",
-			parseText format [localize "STR_notifiers_rebuild_assets_success", _name],
-			30
-		] spawn SCRT_fnc_ui_showMessage;
-	};
+	       private _name = [_site] call A3A_fnc_localizar;
+	       [
+		       localize "STR_notifiers_success_type",
+		       localize "STR_notifiers_rebuild_assets_header",
+		       parseText format [localize "STR_notifiers_rebuild_assets_success", _name],
+		       30
+	       ] spawn SCRT_fnc_ui_showMessage;
+       };
 
-	case (_factoryDead != ""): {
-		[_factoryDead] remoteExec ["A3A_fnc_rebuildFactory", 2];
+       case (PCF_EnableResourceRebuild && _factoryDead != ""): {
+	       [_factoryDead] remoteExec ["A3A_fnc_rebuildFactory", 2];
 
-		private _name = [_site] call A3A_fnc_localizar;
-		[
-			localize "STR_notifiers_success_type",
-			localize "STR_notifiers_rebuild_assets_header",
-			parseText format [localize "STR_notifiers_rebuild_assets_success", _name],
-			30
-		] spawn SCRT_fnc_ui_showMessage;
-	};
+	       private _name = [_site] call A3A_fnc_localizar;
+	       [
+		       localize "STR_notifiers_success_type",
+		       localize "STR_notifiers_rebuild_assets_header",
+		       parseText format [localize "STR_notifiers_rebuild_assets_success", _name],
+		       30
+	       ] spawn SCRT_fnc_ui_showMessage;
+       };
 
 	case (!isNull _antennaDead): {
 		private _militaryBuildings = nearestObjects [_position, A3A_buildingWhitelist, 500,  true];
