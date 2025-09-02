@@ -9,12 +9,26 @@ class CfgFunctions
             {
                 file = QPATHTOFOLDER(functions\Base\fn_garbageCleaner.sqf);
             };
+
             class localizar 
             {
                 file = QPATHTOFOLDER(functions\Base\fn_localizar.sqf);
             };
+
             class mrkUpdate {
                 file = QPATHTOFOLDER(functions\Base\fn_mrkUpdate.sqf);
+            };
+
+            class rebuildAssets {
+                file = QPATHTOFOLDER(functions\Base\fn_rebuildAssets.sqf);
+            };
+            
+            class rebuildResource {
+                file = QPATHTOFOLDER(functions\Base\fn_rebuildResource.sqf);
+            };
+
+            class rebuildFactory {
+                file = QPATHTOFOLDER(functions\Base\fn_rebuildFactory.sqf);
             };
         };
         class Dialogs 

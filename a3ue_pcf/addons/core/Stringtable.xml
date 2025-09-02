@@ -220,5 +220,87 @@
                 <French>Port fluvial</French>
             </Key>
         </Container>
+        <Container name="a3ue_pcf_localizar">
+            <Key ID="STR_a3ue_pcf_localizar_airbase">
+                <Original>%1 Airbase</Original>
+                <Russian>Авиабаза %1</Russian>
+                <Chinesesimp>%1 空军基地</Chinesesimp>
+                <Korean>%1 공군 기지</Korean>
+                <French>Base aérienne %1</French>
+                <Turkish>%1 Hava Üssü</Turkish>
+            </Key>
+            <Key ID="STR_a3ue_pcf_localizar_milbase">
+                <Original>%1 Military Base</Original>
+                <Russian>%1 Военная база</Russian>
+                <Chinesesimp>%1 军事基地</Chinesesimp>
+                <Korean>%1 군사 기지</Korean>
+                <French>%1 Base militaire</French>
+                <Turkish>%1 Askeri Üs</Turkish>
+            </Key>
+            <Key ID="STR_a3ue_pcf_localizar_resource">
+                <Original>%1 Resource</Original>
+                <Russian>%1 Ресурс</Russian>
+                <Chinesesimp>%1 资源点</Chinesesimp>
+                <Korean>%1 자원채취소</Korean>
+                <French>%1 Ressource</French>
+                <Turkish>%1 Kaynak</Turkish>
+            </Key>
+            <Key ID="STR_a3ue_pcf_localizar_factory">
+                <Original>%1 Factory</Original>
+                <Russian>%1 Фабрика</Russian>
+                <Chinesesimp>%1 工厂</Chinesesimp>
+                <Korean>%1 공장</Korean>
+                <French>%1 Usine</French>
+                <Turkish>%1 Fabrika</Turkish>
+            </Key>
+            <Key ID="STR_a3ue_pcf_localizar_outpost">
+                <Original>%1 Outpost</Original>
+                <Russian>%1 Аванпост</Russian>
+                <Chinesesimp>%1 哨站</Chinesesimp>
+                <Korean>%1 전초 기지</Korean>
+                <French>%1 Avant-poste</French>
+                <Turkish>%1 Karakol</Turkish>
+            </Key>
+            <Key ID="STR_a3ue_pcf_localizar_seaport">
+                <Original>%1 Seaport</Original>
+                <Russian>%1 Морской порт</Russian>
+                <Chinesesimp>%1 海港</Chinesesimp>
+                <Korean>%1 항구</Korean>
+                <French>%1 Port maritime</French>
+                <Turkish>%1 Liman</Turkish>
+            </Key>
+            <Key ID="STR_a3ue_pcf_localizar_riverport">
+                <Original>%1 River Port</Original>
+                <Russian>%1 Речной порт</Russian>
+                <Chinesesimp>%1 河港</Chinesesimp>
+                <Korean>%1 강항</Korean>
+                <French>%1 Port fluvial</French>
+                <Turkish>%1 Nehir Limanı</Turkish>
+            </Key>
+            <Key ID="STR_a3ue_pcf_localizar_roadblock">
+                <Original>%1 Roadblock</Original>
+                <Russian>%1 Блокпост</Russian>
+                <Chinesesimp>%1 路障</Chinesesimp>
+                <Korean>%1 검문소</Korean>
+                <French>%1 Barrage routier</French>
+                <Turkish>%1 Çevirme Noktası</Turkish>
+            </Key>
+            <Key ID="STR_a3ue_pcf_localizar_outskirts">
+                <Original>%1 Outskirts</Original>
+                <Russian>%1 Окрестности</Russian>
+                <Chinesesimp>%1 郊区</Chinesesimp>
+                <Korean>%1 외곽</Korean>
+                <French>%1 Périphérie</French>
+                <Turkish>%1 Kenar Mahallesi</Turkish>
+            </Key>
+            <Key ID="STR_a3ue_pcf_localizar_supportcorridor">
+                <Original>their support corridor</Original>
+                <Russian>рядом с их коридором поддержки</Russian>
+                <Chinesesimp>他们的支援通道</Chinesesimp>
+                <Korean>그들의 지원 경로</Korean>
+                <French>leur couloir de soutien</French>
+                <Turkish>onların destek koridoru</Turkish>
+            </Key>
+        </Container>
     </Package>
 </Project>
