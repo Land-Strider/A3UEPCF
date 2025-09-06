@@ -38,8 +38,22 @@ private _mrkText = call {
     private _nearestTown = [citiesX, _marker] call BIS_Fnc_nearestPosition;
     if (_marker in airportsX) exitWith { format [localize "STR_a3ue_pcf_airbase", _faction get "name", _nearestTown] };
     if (_marker in outposts) exitWith { format [localize "STR_a3ue_pcf_outpost", _faction get "name", _nearestTown] };
-    if (_marker in resourcesX) exitWith {format [localize "STR_a3ue_pcf_resources", _nearestTown]};
-    if (_marker in factories) exitWith {format [localize "STR_a3ue_pcf_factory", _nearestTown]};
+    if (_marker in resourcesX) exitWith {
+        if (PCF_EnableResourceUpgrade) then {
+            private _upgradeLevel = missionNamespace getVariable [format["A3UE_ResourceUpgradeLevel_%1", _marker], 0];
+            format ["%1: %2", format [localize "STR_a3ue_pcf_resources", _nearestTown], _upgradeLevel]
+        } else {
+            format [localize "STR_a3ue_pcf_resources", _nearestTown]
+        };
+    };
+    if (_marker in factories) exitWith {
+        if (PCF_EnableResourceUpgrade) then {
+            private _upgradeLevel = missionNamespace getVariable [format["A3UE_FactoryUpgradeLevel_%1", _marker], 0];
+            format ["%1: %2", format [localize "STR_a3ue_pcf_factory", _nearestTown], _upgradeLevel]
+        } else {
+            format [localize "STR_a3ue_pcf_factory", _nearestTown]
+        };
+    };
     if (_marker in milbases) exitWith { format [localize "STR_a3ue_pcf_milbase", _faction get "name", _nearestTown] };
     if (_marker in seaports) exitWith {
         if (toLowerANSI worldName in ["enoch", "vn_khe_sanh", "esseker"]) then {

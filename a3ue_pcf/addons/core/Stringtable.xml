@@ -49,6 +49,20 @@
                 <Spanish>Habilitar reconstrucción de fábricas y recursos</Spanish>
                 <Turkish>Fabrika ve kaynak yeniden inşasını etkinleştir</Turkish>
             </Key>
+            <Key ID="STR_a3ue_pcf_params_enable_resource_upgrade">
+                <Original>Enable factory and resource upgrading</Original>
+                <German>Fabrik- und Ressourcenaufrüstungen aktivieren</German>
+                <French>Activer la mise à niveau des usines et des ressources</French>
+                <Spanish>Habilitar la mejora de fábricas y recursos</Spanish>
+                <Turkish>Fabrika ve kaynak yükseltmelerini etkinleştir</Turkish>
+            </Key>
+            <Key ID="STR_a3ue_pcf_params_resource_upgrade_cost">
+                <Original>The increment step for each upgrade cost</Original>
+                <German>Der Erhöhungswert für jede Aufrüstungskosten</German>
+                <French>Le pas d'incrément pour chaque coût de mise à niveau</French>
+                <Spanish>El paso de incremento para cada costo de mejora</Spanish>
+                <Turkish>Her yükseltme maliyeti için artış adımı</Turkish>
+            </Key>
         </Container>
         <Container name="a3ue_pcf_roleTraits">
             <Key ID="STR_a3ue_pcf_role_medic_with_traits">
@@ -198,19 +212,19 @@
                 <French>%1 Avant-poste</French>
             </Key>
             <Key ID="STR_a3ue_pcf_factory">
-                <Original>%1 Factory</Original>
-                <Russian>Фабрика</Russian>
-                <Chinesesimp>工厂</Chinesesimp>
-                <Korean>공장</Korean>
-                <French>Usine</French>
+                <Original>%1 Factory %2</Original>
+                <Russian>Фабрика %1</Russian>
+                <Chinesesimp>%1 工厂</Chinesesimp>
+                <Korean>%1 공장</Korean>
+                <French>Usine %1</French>
             </Key>
             <Key ID="STR_a3ue_pcf_resources">
-                <Original>%1 Resources</Original>
-                <Russian>Штаб повстанцев %1</Russian>
-                <Chinesesimp>%1 反叛者总部</Chinesesimp>
-                <Korean>%1 반군 본부</Korean>
-                <French>%1 QG des rebelles</French>
-                <Turkish>%1 İsyancı Karargâhı</Turkish>
+                <Original>%1 Resources %2</Original>
+                <Russian>Штаб повстанцев %1 %2</Russian>
+                <Chinesesimp>%1 反叛者总部 %2</Chinesesimp>
+                <Korean>%1 반군 본부 %2</Korean>
+                <French>%1 QG des rebelles %2</French>
+                <Turkish>%1 İsyancı Karargâhı %2</Turkish>
             </Key>
             <Key ID="STR_a3ue_pcf_port_sea">
                 <Original>%1 Sea Port</Original>
@@ -307,6 +321,64 @@
                 <Korean>그들의 지원 경로</Korean>
                 <French>leur couloir de soutien</French>
                 <Turkish>onların destek koridoru</Turkish>
+            </Key>
+        </Container>
+        <Container name="a3ue_pcf_commander_menu">
+            <Key ID="STR_antistasi_dialogs_hq_button_upgrade_assets_text">
+                <Original>Upgrade Assets</Original>
+                <Russian>Улучшить активы</Russian>
+                <Chinesesimp>升级资产</Chinesesimp>
+                <Korean>자산 업그레이드</Korean>
+                <French>Améliorer les ressources</French>
+                <Turkish>Varlıkları Yükselt</Turkish>
+            </Key>
+            <Key ID="STR_antistasi_dialogs_hq_button_upgrade_assets_tooltip">
+                <Original>Upgrades factories or resources on selected marker.</Original>
+                <Russian>Улучшает фабрики или ресурсы на выбранном маркере.</Russian>
+                <Chinesesimp>在选定的标记上升级工厂或资源。</Chinesesimp>
+                <Korean>선택한 마커에 있는 공장이나 자원을 업그레이드합니다.</Korean>
+                <French>Améliore les usines ou les ressources sur le marqueur sélectionné.</French>
+                <Turkish>Seçilen işaretçi üzerinde fabrikaları veya kaynakları yükseltir.</Turkish>
+            </Key>
+            <Key ID="STR_notifiers_upgrade_assets_header">
+                <Original>Upgrade Assets</Original>
+                <Russian>Улучшить активы</Russian>
+                <Chinesesimp>升级资产</Chinesesimp>
+                <Korean>자산 업그레이드</Korean>
+                <French>Améliorer les ressources</French>
+                <Turkish>Varlıkları Yükselt</Turkish>
+            </Key>
+            <Key ID="STR_notifiers_upgrade_assets_success">
+                <Original>%1 upgraded.</Original>
+                <Russian>%1 восстановлен.</Russian>
+                <Chinesesimp>重建 %1。</Chinesesimp>
+                <Korean>%1이(가) 재건축되었습니다.</Korean>
+                <French>%1 reconstruit.</French>
+                <Turkish>%1 yükseltildi.</Turkish>
+            </Key>
+            <Key ID="STR_notifiers_upgrade_assets_already_max">
+                <Original>%1 is already at max upgrade level.</Original>
+                <Russian>%1 уже имеет максимальный уровень улучшения.</Russian>
+                <Chinesesimp>%1 已经达到最高升级等级。</Chinesesimp>
+                <Korean>%1은(는) 이미 최대 업그레이드 단계에 있습니다.</Korean>
+                <French>%1 est déjà au niveau de mise à niveau maximum.</French>
+                <Turkish>%1 zaten en yüksek yükseltme seviyesinde.</Turkish>
+            </Key>
+            <Key ID="STR_notifiers_upgrade_assets_info">
+                <Original>Click on friendly factory or resource markers to increase yield from them.&lt;br/&gt;Cost: %1%2.</Original>
+                <Russian>Нажмите на дружественные маркеры фабрик или ресурсов, чтобы увеличить их производительность.&lt;br/&gt;Стоимость: %1%2.</Russian>
+                <Chinesesimp>点击友军工厂或资源标记以提高它们的产量。&lt;br/&gt;成本：%1%2。</Chinesesimp>
+                <Korean>아군 공장이나 자원 마커를 클릭하여 생산량을 증가시킵니다.&lt;br/&gt;비용: %1%2.</Korean>
+                <French>Cliquez sur les marqueurs d'usines ou de ressources alliées pour augmenter leur rendement.&lt;br/&gt;Coût : %1%2.</French>
+                <Turkish>Üretimi artırmak için dost fabrika veya kaynak işaretlerine tıklayın.&lt;br/&gt;Maliyet: %1%2.</Turkish>
+            </Key>
+            <Key ID="STR_notifiers_upgrade_assets_not_enough_money">
+                <Original>Not enough money to upgrade assets.&lt;br/&gt;Cost: %1%2</Original>
+                <Russian>Недостаточно денег для улучшения активов.&lt;br/&gt;Стоимость: %1%2</Russian>
+                <Chinesesimp>没有足够的钱来升级资产。&lt;br/&gt;成本：%1%2</Chinesesimp>
+                <Korean>자산을 업그레이드할 돈이 부족합니다.&lt;br/&gt;비용: %1%2</Korean>
+                <French>Pas assez d'argent pour améliorer les actifs.&lt;br/&gt;Coût : %1%2</French>
+                <Turkish>Varlıkları yükseltmek için yeterli para yok.&lt;br/&gt;Maliyet: %1%2</Turkish>
             </Key>
         </Container>
     </Package>

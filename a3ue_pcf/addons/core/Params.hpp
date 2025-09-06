@@ -106,6 +106,22 @@ class Params
         default  = 1;
         lockOnSave = 0;
     };
+    class PCF_EnableResourceUpgrade: PCFParams
+    {
+        title = $STR_a3ue_pcf_params_enable_resource_upgrade;
+        values[] = {0,1};
+        texts[]  = {"No","Yes"};
+        default  = 1;
+        lockOnSave = 1;
+    };
+    class PCF_ResourceUpgradeCost: PCFParams
+    {
+        title = $STR_a3ue_pcf_params_resource_upgrade_cost;
+        values[] = {3000,5000,10000,15000,20000};
+        texts[]  = {"3000","5000","10000","15000","20000"};
+        default  = 10000;
+        lockOnSave = 0;
+    };
     //PCF Params end
 
     class BasicParams

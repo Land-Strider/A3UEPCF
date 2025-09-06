@@ -135,6 +135,33 @@ if (isNil "unlockedVehicleTypes") then {
 
 diag_log format["Saving revealed zones: %1", _revealedZones];
 diag_log format["Saving unlocked vehicle types: %1", unlockedVehicleTypes];
+
+// PCF Resource and Factory Upgrade System Save Start
+if (PCF_EnableResourceUpgrade) then {
+    Info("PCF: Saving Resource and Factory Upgrade data");
+    
+    // Save Resource Levels Array (contains [markerName, upgradeLevel] pairs)
+    private _resourceLevels = missionNamespace getVariable ["A3UE_ResourceLevels", []];
+    ["A3UE_ResourceLevels", _resourceLevels] call A3A_fnc_setStatVariable;
+    
+    // Save Factory Levels Array (contains [markerName, upgradeLevel] pairs)
+    private _factoryLevels = missionNamespace getVariable ["A3UE_FactoryLevels", []];
+    ["A3UE_FactoryLevels", _factoryLevels] call A3A_fnc_setStatVariable;
+    
+    // Save total upgrade counters
+    private _totalRebelResourceUpgrades = missionNamespace getVariable ["A3UE_TotalRebelResourceUpgrades", 0];
+    ["A3UE_TotalRebelResourceUpgrades", _totalRebelResourceUpgrades] call A3A_fnc_setStatVariable;
+    
+    private _totalRebelFactoryUpgrades = missionNamespace getVariable ["A3UE_TotalRebelFactoryUpgrades", 0];
+    ["A3UE_TotalRebelFactoryUpgrades", _totalRebelFactoryUpgrades] call A3A_fnc_setStatVariable;
+    
+    private _totalRebelUpgrades = missionNamespace getVariable ["A3UE_TotalRebelUpgrades", 0];
+    ["A3UE_TotalRebelUpgrades", _totalRebelUpgrades] call A3A_fnc_setStatVariable;
+    
+    Info("PCF: Resource and Factory Upgrade data saved successfully");
+};
+// PCF Resource and Factory Upgrade System Save End
+
 //Antistasi Ultimate variables ^
 
 private ["_hrBackground","_resourcesBackground","_veh","_typeVehX","_weaponsX","_ammunition","_items","_backpcks","_containers","_arrayEst","_posVeh","_dierVeh","_prestigeOPFOR","_prestigeBLUFOR","_city","_dataX","_markersX","_garrison","_arrayMrkMF","_positionOutpost","_typeMine","_posMine","_detected","_typesX","_exists","_friendX"];

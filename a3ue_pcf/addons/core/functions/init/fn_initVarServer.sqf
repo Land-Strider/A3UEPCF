@@ -35,6 +35,76 @@ private _declareServerVariable = {
 ////////////////////////////////////////
 Info("initialising general server variables");
 
+// After DECLARE_SERVER_VAR definitions, before the DLC setup
+
+//PCF Global Factory and Resource Levels Start
+
+//PCF Resource and Factory Upgrade Server Init Start
+if (PCF_EnableResourceUpgrade) then {
+	// Resources upgrading
+	[] spawn {
+		waitUntil {
+			sleep 1;
+			!isNil "resourcesX" && {count resourcesX > 0}
+		};
+		if (isNil {missionNamespace getVariable "A3UE_ResourceLevels"}) then {
+			private _ResourceLevels = [];
+			private _rebelResourceCount = 0;
+			
+			{
+				private _owner = sidesX getVariable [_x, sideUnknown];
+				if (_owner == teamPlayer) then {
+					_rebelResourceCount = _rebelResourceCount + 1;
+				};
+				// Store as [markerName, upgradeLevel] pairs
+				_ResourceLevels pushBack [_x, 0];
+				missionNamespace setVariable [format["A3UE_ResourceUpgradeLevel_%1", _x], 0, true];
+			} forEach resourcesX;
+			
+			missionNamespace setVariable ["A3UE_ResourceLevels", _ResourceLevels, true];
+			missionNamespace setVariable ["A3UE_TotalRebelResourceUpgrades", 0, true];
+			
+			// Debug output
+			diag_log format ["A3UE: Resource Locations: %1", resourcesX];
+			diag_log format ["A3UE: Resource Levels Array: %1", _ResourceLevels];
+			Info_1("Resource levels initialized for %1 locations", count resourcesX);
+		};
+	};
+
+	// Factories upgrading
+	[] spawn {
+		waitUntil {
+			sleep 1;
+			!isNil "factories" && {count factories > 0}
+		};
+		if (isNil {missionNamespace getVariable "A3UE_FactoryLevels"}) then {
+			private _factoryLevels = [];
+			private _rebelFactoryCount = 0;
+			
+			{
+				private _owner = sidesX getVariable [_x, sideUnknown];
+				if (_owner == teamPlayer) then {
+					_rebelFactoryCount = _rebelFactoryCount + 1;
+				};
+				// Store as [markerName, upgradeLevel] pairs
+				_factoryLevels pushBack [_x, 0];
+				missionNamespace setVariable [format["A3UE_FactoryUpgradeLevel_%1", _x], 0, true];
+			} forEach factories;
+			
+			missionNamespace setVariable ["A3UE_FactoryLevels", _factoryLevels, true];
+			missionNamespace setVariable ["A3UE_TotalRebelFactoryUpgrades", 0, true];
+			
+			Info_1("Factory levels initialized for %1 locations", count factories);
+		};
+		
+		if (isNil {missionNamespace getVariable "A3UE_TotalRebelUpgrades"}) then {
+			missionNamespace setVariable ["A3UE_TotalRebelUpgrades", 0, true];
+		};
+	};
+};
+//PCF Resource and Factory Upgrade Server Init End
+
+
 //time to delete dead bodies, vehicles etc..
 DECLARE_SERVER_VAR(cleantime, 3600);
 //initial spawn distance. Less than 1Km makes parked vehicles spawn in your nose while you approach.

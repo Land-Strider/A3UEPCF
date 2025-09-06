@@ -15,6 +15,10 @@ class CfgFunctions
                 file = QPATHTOFOLDER(functions\Base\fn_localizar.sqf);
             };
 
+            class markerChange {
+                file = QPATHTOFOLDER(functions\Base\fn_markerChange.sqf);
+            };
+
             class mrkUpdate {
                 file = QPATHTOFOLDER(functions\Base\fn_mrkUpdate.sqf);
             };
@@ -29,6 +33,18 @@ class CfgFunctions
 
             class rebuildFactory {
                 file = QPATHTOFOLDER(functions\Base\fn_rebuildFactory.sqf);
+            };
+
+            class upgradeAssets {
+                file = QPATHTOFOLDER(functions\Base\fn_upgradeAssets.sqf);
+            };
+
+            class upgradeFactory {
+                file = QPATHTOFOLDER(functions\Base\fn_upgradeFactory.sqf);
+            };
+
+            class upgradeResource {
+                file = QPATHTOFOLDER(functions\Base\fn_upgradeResource.sqf);
             };
         };
         class Dialogs 
@@ -49,6 +65,11 @@ class CfgFunctions
             {
                 file = QPATHTOFOLDER(functions\init\fn_initClient.sqf);
             };
+
+            class resourcecheck
+            {
+                file = QPATHTOFOLDER(functions\init\fn_resourcecheck.sqf);
+            };
         };
 
         class OrgPlayers {
@@ -65,6 +86,11 @@ class CfgFunctions
         };
         class Save 
         {
+            class LoadServer 
+            {
+                file = QPATHTOFOLDER(functions\Save\fn_LoadServer.sqf);
+            };
+
             class saveLoop 
             {
                 file = QPATHTOFOLDER(functions\Save\fn_saveLoop.sqf);
