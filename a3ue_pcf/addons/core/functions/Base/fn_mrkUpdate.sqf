@@ -41,7 +41,7 @@ private _mrkText = call {
     if (_marker in resourcesX) exitWith {
         if (PCF_EnableResourceUpgrade) then {
             private _upgradeLevel = missionNamespace getVariable [format["A3UE_ResourceUpgradeLevel_%1", _marker], 0];
-            format ["%1: %2", format [localize "STR_a3ue_pcf_resources", _nearestTown], _upgradeLevel]
+            format ["%1- L%2 ", format [localize "STR_a3ue_pcf_resources", _nearestTown], _upgradeLevel]
         } else {
             format [localize "STR_a3ue_pcf_resources", _nearestTown]
         };
@@ -49,7 +49,7 @@ private _mrkText = call {
     if (_marker in factories) exitWith {
         if (PCF_EnableResourceUpgrade) then {
             private _upgradeLevel = missionNamespace getVariable [format["A3UE_FactoryUpgradeLevel_%1", _marker], 0];
-            format ["%1: %2", format [localize "STR_a3ue_pcf_factory", _nearestTown], _upgradeLevel]
+            format ["%1- L%2 ", format [localize "STR_a3ue_pcf_factory", _nearestTown], _upgradeLevel]
         } else {
             format [localize "STR_a3ue_pcf_factory", _nearestTown]
         };

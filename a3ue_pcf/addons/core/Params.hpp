@@ -169,7 +169,7 @@ class Params
     class limitedFT: BasicParams
     {
         title = $STR_params_allowFT;
-        values[] = {0,1,2,3,4};
+        values[] = {0,1,2,3,4};     //PCF added option 3 as stronholds (HQ, Airbases, MilBases, Outposts) and Observation Posts only.
         texts[] = {$STR_params_allowFT_0, $STR_params_allowFT_1, $STR_params_allowFT_2, $STR_a3ue_pcf_params_allowFT_3, $STR_params_civ_traffic_none};
         default = 0;
     };
@@ -556,8 +556,8 @@ class Params
     class maxConstructions: PlusParams
     {
         title = $STR_params_maxConstructions;
-        values[] = {0,50,100,250,300};
-        texts[] = {"0","50","100","250","300"};
+        values[] = {0,50,100,250,300,500,750,1000,5000};                    //PCF added 500, 750, 1000 and 5000. No performance test done.
+        texts[] = {"0","50","100","250","300","500","750","1000","5000"};   //PCF added 500, 750, 1000 and 5000. No performance test done.
         default = 100;
     };
     class maxSupportPoints: PlusParams

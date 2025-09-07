@@ -52,7 +52,7 @@ private _conditions = [
 ];
 
 while {true} do {
-	nextTick = time + 30;
+	nextTick = time + 600;
 	waitUntil {sleep 15; time >= nextTick};
     waitUntil {sleep 10; A3A_activePlayerCount > 0};
 
