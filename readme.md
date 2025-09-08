@@ -1,4 +1,13 @@
-# Arma 3 Antistasi Ultimate - Point Campfire Extension
+<div align="center">
+  <h1>Point Campfire</h1>
+  <h3>An Antistasi Ultimate Extender</h3>
+  <p>
+    <i>An Arma 3 Antistasi Ultimate Extender mod designed to suit the needs of our own friends-group <br> and hopefully useful for small servers with fewer than 10 players.</i>
+    <br/>
+  </p>
+</div>
+
+### The scope of this extension:
 
 An AU Extension made with the **small squad / private friends-only servers such as our own in mind**. Expect a bunch of changes that may look like made to cheese the gameplay, but also know that almost all of these changes are **optional with a parameter toggle**. The aim is to provide servers with few players the opportunity to do most activities in some way, <ins>lessening the disadvantage of not having multiple people for any kind of role or activity</ins>.
 
@@ -6,7 +15,7 @@ Also this project has some quality of life features that we ourselves seek out, 
 
 Lastly, this extension heavily modifies the base Antistasi Ultimate code rather than using new files for the most part. Thus, <ins>expect this extender to break or not reflect the content any time the base Antistasi Ultimate mod is updated</ins>. We'll try to figure out a way to keep this extender update-proof later, but for now expect this extender to be updated for new version of the Antistasi Ultimate a few days after the base mod is updated.
 
-## Current changes this extender brings are:
+### Current changes this extender brings are:
  - **_All Traits for All Roles:_** Allowing all roles to have the Engineer, Medic and the UAV hacker traits, so that small squads can handle more situations without needing more people.
  - **_More Persistent Build Box Saving:_** Allowing persistent saving of Build Box constructions anywhere, not just near bases or mission areas, so that small teams can spend less time fortifying frequent battle grounds (e.g convoy ambush positions).
  - **_More Persistent Zeus Saving:_** Allowing persistent saving of more types (Building + Things, ThingX, Static) of Zeus objects and much larger amount (..., 300 max plus 500, 750, 1000, 5000 options) of them, so that you can have your Mediterranean coffee shops or barbecue grills to give character to your bases.
