@@ -122,6 +122,14 @@ class Params
         default  = 10000;
         lockOnSave = 0;
     };
+    class PCF_ConvoyStarDelay: PCFParams
+    {
+        title = $STR_a3ue_pcf_params_convoy_star_delay;
+        values[] = {1,2,3,4,5};
+        texts[]  = {"5 /10 (Default)","10 / 15","15 / 20","20 / 25","25 / 30"};
+        default  = 2;
+        lockOnSave = 0;
+    };
     //PCF Params end
 
     class BasicParams

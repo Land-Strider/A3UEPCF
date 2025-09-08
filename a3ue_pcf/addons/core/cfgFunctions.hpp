@@ -72,6 +72,12 @@ class CfgFunctions
             };
         };
 
+        class Missions {
+            class convoy {
+                file = QPATHTOFOLDER(functions\Missions\fn_convoy.sqf);
+            };
+        };
+
         class OrgPlayers {
             class unitTraits {
                 file = QPATHTOFOLDER(functions\OrgPlayers\fn_unitTraits.sqf);
