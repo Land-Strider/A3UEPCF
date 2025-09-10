@@ -63,12 +63,19 @@
                 <Spanish>El paso de incremento para cada costo de mejora</Spanish>
                 <Turkish>Her yükseltme maliyeti için artış adımı</Turkish>
             </Key>
-            <Key ID="STR_a3ue_pcf_params_convoy_star_delay">
+            <Key ID="STR_a3ue_pcf_params_convoy_start_delay">
                 <Original>Convoy departure delay additional minutes for easy and hard difficulty convoys</Original>
                 <German>Zusätzliche Minuten für die Abfahrtsverzögerung von Konvois bei schwierigen und einfachen Schwierigkeitsgraden</German>
                 <French>Délai de départ du convoi en minutes supplémentaires pour les types de convoi de difficulté facile et difficile</French>
                 <Spanish>Retraso en la salida del convoy en minutos adicionales para los tipos de convoy de dificultad fácil y difícil</Spanish>
                 <Turkish>Kolay ve zor zorluk tipi konvoylar için konvoy kalkış gecikmesi ek dakikaları</Turkish>
+            </Key>
+            <Key ID="STR_a3ue_pcf_params_aa_post_spawn_distance">
+                <Original>Spawn distance for AA posts against enemy air units</Original>
+                <German>Spawn-Abstand für AA-Posten gegen feindliche Luftstreitkräfte</German>
+                <French>Distance de spawn pour les postes AA contre les unités aériennes ennemies</French>
+                <Spanish>Distancia de aparición para los puestos de AA contra unidades aéreas enemigas</Spanish>
+                <Turkish>AA noktalarının düşman hava birimlerine karşı doğma mesafesi</Turkish>
             </Key>
         </Container>
         <Container name="a3ue_pcf_roleTraits">

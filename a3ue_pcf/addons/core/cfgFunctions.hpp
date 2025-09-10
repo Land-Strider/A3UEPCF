@@ -5,6 +5,11 @@ class CfgFunctions
     {
         class Base 
         {
+            class distance 
+            {
+                file = QPATHTOFOLDER(functions\Base\fn_distance.sqf);
+            };
+
             class garbageCleaner 
             {
                 file = QPATHTOFOLDER(functions\Base\fn_garbageCleaner.sqf);

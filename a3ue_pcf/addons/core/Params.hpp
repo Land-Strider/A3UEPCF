@@ -122,11 +122,19 @@ class Params
         default  = 10000;
         lockOnSave = 0;
     };
-    class PCF_ConvoyStarDelay: PCFParams
+    class PCF_ConvoyStartDelay: PCFParams
     {
-        title = $STR_a3ue_pcf_params_convoy_star_delay;
+        title = $STR_a3ue_pcf_params_convoy_start_delay;
         values[] = {1,2,3,4,5};
         texts[]  = {"5 /10 (Default)","10 / 15","15 / 20","20 / 25","25 / 30"};
+        default  = 2;
+        lockOnSave = 0;
+    };
+        class PCF_AAPostSpawnDistance: PCFParams
+    {
+        title = $STR_a3ue_pcf_params_aa_post_spawn_distance;
+        values[] = {1,2,3,4,5};
+        texts[]  = {"1x","2x","3x","4x","5x"};
         default  = 2;
         lockOnSave = 0;
     };
