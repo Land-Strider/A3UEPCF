@@ -7,15 +7,18 @@
   </p>
 </div>
 
-### The scope of this extension:
+<div>
+<h2> The scope of this extension:</h2>
 
 An AU Extension made with the **small squad / private friends-only servers such as our own in mind**. Expect a bunch of changes that may look like made to cheese the gameplay, but also know that almost all of these changes are **optional with a parameter toggle**. The aim is to provide servers with few players the opportunity to do most activities in some way, <ins>lessening the disadvantage of not having multiple people for any kind of role or activity</ins>.
 
 Also this project has some quality of life features that we ourselves seek out, such as appending nearby town names to POI markers on the map, but may turn up unwanted due to preference or machine performance differences. We'll try to keep everything optional with a parameter toggle so you can pick features you wanna have. After all, this extender is made for private servers in mind.
 
 Lastly, this extension heavily modifies the base Antistasi Ultimate code rather than using new files for the most part. Thus, <ins>expect this extender to break or not reflect the content any time the base Antistasi Ultimate mod is updated</ins>. We'll try to figure out a way to keep this extender update-proof later, but for now expect this extender to be updated for new version of the Antistasi Ultimate a few days after the base mod is updated.
+</div>
+<div>
+<h2> Current changes this extender brings are:</h2>
 
-### Current changes this extender brings are:
  - **_All Traits for All Roles:_** Allowing all roles to have the Engineer, Medic and the UAV hacker traits, so that small squads can handle more situations without needing more people.
    
  - **_More Persistent Build Box Saving:_** Allowing persistent saving of Build Box constructions anywhere, not just near bases or mission areas, so that small teams can spend less time fortifying frequent battle grounds (e.g convoy ambush positions).
@@ -43,5 +46,5 @@ Tied to a parameter option, reel AA emplacements can now spawn in up to x5 large
  - **_Limited FT QoL:_** Limited Fast Travel options (the new one above and the one implemented in Antistasi) now check if the player is within a valid departure zone immediately upon clicking on the Battle Menu > Fast Travel button, instead of making the player first select a target location on the map even when the player can't depart from their current position. A QoL feature that reduces unnecessary menu clicks.
    
  - **_More Limited FT QoL:_** Limited Fast Travel options now show the distance to the nearest valid departure marker name and the distance to it when the player isn't within one upon clicking Battle Menu > Fast Travel button.
-
+</div>
 For now, that's all. Please check the [Issues](https://github.com/Land-Strider/A3UEPCF/issues) to see what more is planned.
