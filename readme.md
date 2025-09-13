@@ -47,4 +47,5 @@ Tied to a parameter option, reel AA emplacements can now spawn in up to x5 large
    
  - **_More Limited FT QoL:_** Limited Fast Travel options now show the distance to the nearest valid departure marker name and the distance to it when the player isn't within one upon clicking Battle Menu > Fast Travel button.
 </div>
+
 For now, that's all. Please check the [Issues](https://github.com/Land-Strider/A3UEPCF/issues) to see what more is planned.
