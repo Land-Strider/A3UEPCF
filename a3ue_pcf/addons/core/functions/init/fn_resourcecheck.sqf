@@ -65,15 +65,15 @@ while {true} do {
 
 	_suppBoost = 0.5 * (1+ ({sidesX getVariable [_x,sideUnknown] == teamPlayer} count seaports));
 
-	//PCF Factory upgrade income boost check start
+	// PCF Factory upgrade income boost check start
 	if (PCF_EnableResourceUpgrade) then {
 		private _currentRebelFactoryUpgrades = missionNamespace getVariable ["A3UE_TotalRebelFactoryUpgrades", 0];
 		_resBoost = 1 + (0.25*({(sidesX getVariable [_x,sideUnknown] == teamPlayer) and !(_x in destroyedSites)} count factories));
 		_resBoost = _resBoost + (0.25 * _currentRebelFactoryUpgrades);
-	} else {
+	} else { // Antistasi default
 		_resBoost = 1 + (0.25*({(sidesX getVariable [_x,sideUnknown] == teamPlayer) and !(_x in destroyedSites)} count factories));
 	};
-	//PCF Factory upgrade income boost check end
+	// PCF Factory upgrade income boost check end
 	{
 		private _city = _x;
 		private _resAddCity = 0;
@@ -141,7 +141,7 @@ while {true} do {
 	if (lossCondition isNotEqualTo 1) then {
 		call A3A_fnc_checkLossCondition;
 	};
-	//PCF Resource upgrade income check start
+	// PCF Resource upgrade income check start
 	if (PCF_EnableResourceUpgrade) then {
 		private _currentRebelResourceUpgrades = missionNamespace getVariable ["A3UE_TotalRebelResourceUpgrades", 0];
 		
@@ -153,7 +153,7 @@ while {true} do {
 		} forEach resourcesX;
 		_resAdd = (_resAdd + (300 * _currentRebelResourceUpgrades)) * _resBoost;
 
-	} else {
+	} else { // Antistasi default
 		{
 			if (sidesX getVariable [_x,sideUnknown] == teamPlayer and {!(_x in destroyedSites)}) then
 			{
@@ -161,7 +161,7 @@ while {true} do {
 			};
 		} forEach resourcesX;
 	};
-	//PCF Resource upgrade income check end
+	// PCF Resource upgrade income check end
 
 	_resAdd = [_resAdd] call SCRT_fnc_common_rebelSalary;
 

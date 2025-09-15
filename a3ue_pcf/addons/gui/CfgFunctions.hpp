@@ -5,10 +5,6 @@ class CfgFunctions
     {
         class SetupGUI 
         {
-            class setupLoadgameTab 
-            {
-                file = QPATHTOFOLDER(functions\SetupGUI\fn_setupLoadgameTab.sqf);
-            };
             class setupParamsTab {
                 file = QPATHTOFOLDER(functions\SetupGUI\fn_setupParamsTab.sqf);
             };

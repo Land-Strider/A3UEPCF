@@ -89,7 +89,7 @@ else
 	private _type = "Other";
 	switch (true) do
 	{
-	    case (_markerX in airportsX): {_type = "Airport"};
+		case (_markerX in airportsX): {_type = "Airport"};
 		case (_markerX in outposts): {_type = "Outpost"};
 		case (_markerX in milbases): {_type = "MilitaryBase"};
 		case (_markerX in citiesX): {_type = "City"};
@@ -216,7 +216,7 @@ switch (true) do {
 	};
 	case (_markerX in seaports): {
 		if (_winner == teamPlayer) then {
-        	Debug("aggroEvent | Rebels took a seaport");
+			Debug("aggroEvent | Rebels took a seaport");
 			if (_loser == Occupants) then
 			{
 				_prestigeOccupants = [20, 120];
@@ -409,7 +409,8 @@ Debug_1("Finished marker change at %1", _markerX);
 
 
 Info_1("Starting marker upgrade level change at %1", _markerX);
-//PCF Marker Change Factory level gain or loss start
+
+// PCF Marker Change Factory level gain or loss start
 // --- Update Rebel Factory Upgrades ---
 if (PCF_EnableResourceUpgrade) then {
 private _allFactoryLevels = missionNamespace getVariable ["A3UE_FactoryLevels", []];
@@ -507,4 +508,4 @@ if (_markerX in resourcesX) then {
 [_markerX] call A3A_fnc_mrkUpdate;
 Info_1("Finished marker upgrade level change at %1", _markerX);
 };
-//PCF Marker Change Factory level gain or loss end
+// PCF Marker Change Factory level gain or loss end

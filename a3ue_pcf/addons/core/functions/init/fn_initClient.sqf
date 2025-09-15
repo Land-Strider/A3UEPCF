@@ -629,9 +629,10 @@ if (magRepack) then {
 if (saveZeusBuildings) then {
     Info("Initializing Curator Persistent Save.");
 	{
+        // PCF extended from "Building" type only to include "Thing", "ThingX" and "Static" to allow more buildables to be saved.
 		_x addEventHandler ["CuratorObjectPlaced", {
 			params ["_curator", "_entity"];
-			if !(_entity isKindOf "ThingX" || _entity isKindOf "Thing" || _entity isKindOf "Building" || _entity isKindOf "Static") exitWith {};
+			if !(_entity isKindOf "ThingX" || _entity isKindOf "Thing" || _entity isKindOf "Building" || _entity isKindOf "Static") exitWith {}; 
 			[_entity] remoteExecCall ["SCRT_fnc_build_saveConstruction", 2];
 		}];
 		_x addEventHandler ["CuratorObjectEdited", {

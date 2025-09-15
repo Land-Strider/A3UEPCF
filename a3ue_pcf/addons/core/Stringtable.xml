@@ -77,6 +77,13 @@
                 <Spanish>Distancia de aparición para los puestos de AA contra unidades aéreas enemigas</Spanish>
                 <Turkish>AA noktalarının düşman hava birimlerine karşı doğma mesafesi</Turkish>
             </Key>
+            <Key ID="STR_a3ue_pcf_params_map_marker_verbose_name">
+                <Original>Should nearby town names be appended to map markers?</Original>
+                <German>Sollen die Namen nahegelegener Städte an die Kartenmarker angehängt werden?</German>
+                <French>Les noms des villes voisines doivent-ils être ajoutés aux marqueurs de la carte?</French>
+                <Spanish>¿Se deben agregar los nombres de las ciudades cercanas a los marcadores del mapa?</Spanish>
+                <Turkish>Yakınlardaki şehir adları harita işaretçilerine eklenmeli mi?</Turkish>
+            </Key>
         </Container>
         <Container name="a3ue_pcf_roleTraits">
             <Key ID="STR_a3ue_pcf_role_medic_with_traits">

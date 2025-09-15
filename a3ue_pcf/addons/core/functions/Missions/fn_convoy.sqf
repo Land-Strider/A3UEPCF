@@ -26,14 +26,14 @@ private _reinforcementsX = [];
 // Prevent duplicate convoys
 missionNamespace setVariable ["A3A_convoyInProgress", true, true];
 
-//PCF Convoy Start Delay parameter tie in start
+// PCF Convoy Start Delay parameter tie in start
 // Setup start time
 if (PCF_ConvoyStartDelay == 1) then { if (_startDelay < 0) then { _startDelay = random 5 + ([10, 5] select _difficult) };};      // start delay, 5-10 or 15-20 mins real time,   Antistasi default
 if (PCF_ConvoyStartDelay == 2) then { if (_startDelay < 0) then { _startDelay = random 5 + ([15, 10] select _difficult) };};     // start delay, 10-15 or 15-20 mins real time,  PCF default start delay
 if (PCF_ConvoyStartDelay == 3) then { if (_startDelay < 0) then { _startDelay = random 5 + ([20, 15] select _difficult) };};     // start delay, 15-20 or 20-25 mins real time,  Realistic extra option
 if (PCF_ConvoyStartDelay == 4) then { if (_startDelay < 0) then { _startDelay = random 5 + ([25, 20] select _difficult) };};     // start delay, 20-25 or 25-30 mins real time,  Loose option
 if (PCF_ConvoyStartDelay == 5) then { if (_startDelay < 0) then { _startDelay = random 5 + ([30, 25] select _difficult) };};     // start delay, 25-30 or 30-35 mins real time,  Solo prep option
-//PCF Convoy Start Delay parameter tie in end
+// PCF Convoy Start Delay parameter tie in end
 
 private _startDateNum = dateToNumber date + _startDelay * timeMultiplier / (365*24*60);
 private _startDate = numberToDate [date select 0, _startDateNum];

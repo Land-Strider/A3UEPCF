@@ -37,9 +37,7 @@ Info("initialising general server variables");
 
 // After DECLARE_SERVER_VAR definitions, before the DLC setup
 
-//PCF Global Factory and Resource Levels Start
-
-//PCF Resource and Factory Upgrade Server Init Start
+// PCF Resource and Factory Upgrade Server Init Start
 if (PCF_EnableResourceUpgrade) then {
 	// Resources upgrading
 	[] spawn {
@@ -103,7 +101,6 @@ if (PCF_EnableResourceUpgrade) then {
 	};
 };
 //PCF Resource and Factory Upgrade Server Init End
-
 
 //time to delete dead bodies, vehicles etc..
 DECLARE_SERVER_VAR(cleantime, 3600);

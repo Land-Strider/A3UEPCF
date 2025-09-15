@@ -26,20 +26,20 @@ A3A_buildingsToSave = A3A_buildingsToSave select {
 
 	// Delete if outside mission distance (temporary)
 	if (_x distance2d markerPos "Synd_HQ" > distanceMission) then { 
-		//PCF parameter tie-in start
+		// PCF parameter tie-in start - true means Antstasi default behavior
 		if (PCF_GarbageSafeBuildBox) 
 			then { 
 				Debug("Deleting Build Box constrcuted buildngs outside mission distance");
 				deleteVehicle _x; continueWith false; } 
 			else { continueWith true };
 	};
-		//PCF parameter tie-in end
+		// PCF parameter tie-in end
 
 	// Delete if not within a rebel marker
 	private _building = _x;
 	private _indexes = _rebMarkers inAreaArrayIndexes [getPosATL _x, 500, 500];
 	if (-1 != _indexes findIf { _building inArea _rebMarkers#_x } ) then { continueWith true } 
-	//PCF parameter tie-in start
+	// PCF parameter tie-in start - true means Antstasi default behavior
 	else {
 	if (PCF_GarbageSafeBuildBox) then { 
 		Debug("Destroying Build Box constructed buildings that are 500 meters away from any rebel marker...");
@@ -49,7 +49,7 @@ A3A_buildingsToSave = A3A_buildingsToSave select {
 			Debug("Skipped the destruction of Build Box constructed buildings that are 500 meters away from any rebel marker per GarbageSafeBuildBox parameter value.");
 			};
 	};
-	//PCF parameter tie-in end
+	// PCF parameter tie-in end
 };
 
 Debug("Moving dead solders out of vehicles...")

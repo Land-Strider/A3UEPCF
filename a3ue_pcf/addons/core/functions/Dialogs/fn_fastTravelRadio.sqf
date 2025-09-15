@@ -55,17 +55,17 @@ if (_units findIf {
 	[localize "STR_A3A_Dialogs_fast_travel_header", localize "STR_A3A_Dialogs_fast_travel_no_multiple"] call SCRT_fnc_misc_deniedHint;
 };
 
-//PCF moved privtae _rebelMarkers definition here from ~90 lines below for early Fast Travel departure validity check for option 2
+// PCF moved privtae _rebelMarkers definition here from ~90 lines below for early Fast Travel departure validity check for option 2
 private _rebelMarkers = if (!isNil "traderMarker") then {["Synd_HQ", traderMarker]} else {["Synd_HQ"]};
 
-//PCF Early Fast Travel departure zone validity check variable and start
+// PCF Early Fast Travel departure zone validity check variable and start
 private _nearestPosition = ""; 		//PCF these 2 variables are declared outside the if 2 or if 3 scopes to be accsible by departure distance checkers under each.
 private _distanceToNearest = -1;	//PCF these 2 variables are declared outside the if 2 or if 3 scopes to be accsible by departure distance checkers under each.
 private _withinBoundaries = true;
 private _rebelLocations = "";
 private _fastTravelDepartureRadius = PCF_LimitedFTDepartureDistance; //PCF depature distance check assigned to a parameter
 
-//PCF Early Fast Travel departure zone validity check for option 2
+// PCF Early Fast Travel departure zone validity check for option 2
 if (limitedFT == 2) then {
 	_rebelLocations = (_rebelMarkers + airportsX + milbases) select { sidesX getVariable _x == teamPlayer };
 	_nearestPosition = [_rebelLocations, player] call BIS_Fnc_nearestPosition;
@@ -80,7 +80,7 @@ if (_checkForPlayer && limitedFT == 2 && (!_withinBoundaries)) exitWith {
 	call SCRT_fnc_misc_deniedHint;
 };
 
-//PCF Early Fast Travel departure zone validity check for option 3
+// PCF Early Fast Travel departure zone validity check for option 3
 
 if (limitedFT == 3) then {
 	_rebelLocations = (["Synd_HQ"] - citiesX + airportsX + milbases + watchpostsFIA + outposts) select { sidesX getVariable _x == teamPlayer };
@@ -95,7 +95,7 @@ if (_checkForPlayer && limitedFT == 3 && (!_withinBoundaries)) exitWith {
 	format [ localize "STR_a3ue_pcf_Dialogs_fast_travel_not_a_valid_depart_zone", str _nameOrigin, round (_distanceToNearest - _fastTravelDepartureRadius)]] //Parameter arguments are set in the string entry
 	call SCRT_fnc_misc_deniedHint;
 };
-//PCF Early Fast Travel departure zone validity check end
+// PCF Early Fast Travel departure zone validity check end
 
 
 positionTel = [];
@@ -150,7 +150,7 @@ if (_base == traderMarker && {isTraderQuestAssigned || !isTraderQuestCompleted})
 	[localize "STR_A3A_Dialogs_fast_travel_header", localize "STR_A3A_Dialogs_fast_travel_trader_locked"] call SCRT_fnc_misc_deniedHint;
 };
 
-//PCF private _rebelmarkers defnition moved up ~90 lines for early Fast Travel departure validty check for option 2
+// PCF private _rebelmarkers defnition moved up ~90 lines for early Fast Travel departure validty check for option 2
 private _isValidTargetLocation = (_base in (_rebelMarkers + airportsX + milbases));
 
 if ((sidesX getVariable [_base,sideUnknown]) in [Occupants, Invaders]) exitWith {

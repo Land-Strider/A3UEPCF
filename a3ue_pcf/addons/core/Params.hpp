@@ -68,7 +68,7 @@ class Params
 
     */
 
-    //PCF Params start
+    // PCF Params start
     class PCFParams
     {
         type = "PCF";        // Matches the tab name / _shownTypes entry
@@ -130,7 +130,7 @@ class Params
         default  = 2;
         lockOnSave = 0;
     };
-        class PCF_AAPostSpawnDistance: PCFParams
+    class PCF_AAPostSpawnDistance: PCFParams
     {
         title = $STR_a3ue_pcf_params_aa_post_spawn_distance;
         values[] = {1,2,3,4,5};
@@ -138,7 +138,15 @@ class Params
         default  = 2;
         lockOnSave = 0;
     };
-    //PCF Params end
+    class PCF_MapMarkerVerboseName: PCFParams
+    {
+        title = $STR_a3ue_pcf_params_map_marker_verbose_name;
+        values[] = {0,1};
+        texts[]  = {"No","Yes"};
+        default  = 1;
+        lockOnSave = 0;
+    };
+    // PCF Params end
 
     class BasicParams
     {

@@ -195,7 +195,6 @@ class A3A_SetupDialog : A3A_TabbedDialog
                     w = 26 * GRID_W;
                     h = 4 * GRID_H;
                 };
-                //PCF Extended Traits Checkbox End
                 class CopyGameCheck: A3A_Checkbox {
                     idc = A3A_IDC_SETUP_COPYGAMECHECKBOX;
                     onCheckedChanged = "['copyGameCheck'] call A3A_fnc_setupLoadgameTab";
