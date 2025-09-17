@@ -146,6 +146,14 @@ class Params
         default  = 1;
         lockOnSave = 0;
     };
+    class PCF_EmplacementShortName: PCFParams
+    {
+        title = $STR_a3ue_pcf_params_emplacement_short_name;
+        values[] = {0,1};
+        texts[]  = {"No","Yes"};
+        default  = 1;
+        lockOnSave = 0;
+    };
     // PCF Params end
 
     class BasicParams

@@ -90,9 +90,14 @@ class CfgFunctions
         };
         class Save 
         {
-            class LoadServer 
+            class loadServer 
             {
-                file = QPATHTOFOLDER(functions\Save\fn_LoadServer.sqf);
+                file = QPATHTOFOLDER(functions\Save\fn_loadServer.sqf);
+            };
+
+            class loadStat 
+            {
+                file = QPATHTOFOLDER(functions\Save\fn_loadStat.sqf);
             };
 
             class saveLoop 

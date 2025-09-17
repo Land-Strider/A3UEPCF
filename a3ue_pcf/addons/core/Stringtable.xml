@@ -84,6 +84,13 @@
                 <Spanish>¿Se deben agregar los nombres de las ciudades cercanas a los marcadores del mapa?</Spanish>
                 <Turkish>Yakınlardaki şehir adları harita işaretçilerine eklenmeli mi?</Turkish>
             </Key>
+            <Key ID="STR_a3ue_pcf_params_emplacement_short_name">
+                <Original>Should emplacement marker names be shortened?</Original>
+                <German>Sollen die Namen der Emplacementsmarker verkürzt werden?</German>
+                <French>Les noms des marqueurs d'emplacement doivent-ils être abrégés?</French>
+                <Spanish>¿Se deben acortar los nombres de los marcadores de emplazamiento?</Spanish>
+                <Turkish>Mevzi işaretçi adları kısaltılmalı mı?</Turkish>
+            </Key>
         </Container>
         <Container name="a3ue_pcf_roleTraits">
             <Key ID="STR_a3ue_pcf_role_medic_with_traits">
@@ -260,6 +267,54 @@
                 <Chinesesimp>河港</Chinesesimp>
                 <Korean>강항</Korean>
                 <French>Port fluvial</French>
+            </Key>
+            <Key ID="STR_a3ue_pcf_marker_aa_empl_short">
+                <Original>AA</Original>
+                <Russian>ЗА</Russian>
+                <Chinesesimp>防空</Chinesesimp>
+                <Korean>대공</Korean>
+                <French>AA</French>
+                <Turkish>US</Turkish>
+            </Key>
+            <Key ID="STR_a3ue_pcf_marker_at_empl_short">
+                <Original>AT</Original>
+                <Russian>ПТ</Russian>
+                <Chinesesimp>反坦克</Chinesesimp>
+                <Korean>대전차</Korean>
+                <French>AT</French>
+                <Turkish>AT</Turkish>
+            </Key>
+            <Key ID="STR_a3ue_pcf_marker_hmg_empl_short">
+                <Original>HMG</Original>
+                <Russian>КПВТ</Russian>
+                <Chinesesimp>重机枪</Chinesesimp>
+                <Korean>중기관총</Korean>
+                <French>Mitrailleuse lourde</French>
+                <Turkish>AMT</Turkish>
+            </Key>
+            <Key ID="STR_a3ue_pcf_marker_mortar_empl_short">
+                <Original>Mortar</Original>
+                <Russian>Миномёт</Russian>
+                <Chinesesimp>迫击炮</Chinesesimp>
+                <Korean>박격포</Korean>
+                <French>Mortier</French>
+                <Turkish>Havan</Turkish>
+            </Key>
+            <Key ID="STR_a3ue_pcf_marker_roadblock_short">
+                <Original>Roadblock</Original>
+                <Russian>Блокпост</Russian>
+                <Chinesesimp>路障</Chinesesimp>
+                <Korean>도로 차단물</Korean>
+                <French>Barrage routier</French>
+                <Turkish>Çevirme</Turkish>
+            </Key>
+            <Key ID="STR_a3ue_pcf_marker_watchpost_short">
+                <Original>OP</Original>
+                <Russian>НП</Russian>
+                <Chinesesimp>观察哨</Chinesesimp>
+                <Korean>관측소</Korean>
+                <French>PO</French>
+                <Turkish>GN</Turkish>
             </Key>
         </Container>
         <Container name="a3ue_pcf_localizar">
