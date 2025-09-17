@@ -7,10 +7,10 @@
   </p>
 </div>
 
-![A3UE - PCF mod image wide](images/A3UE - PCF Wide.png)
+![A3UE - PCF mod image wide](images/A3UE_PCF_Wide.png)
 
 <picture>
-  <img source=images/A3UE - PCF Wide.png>
+  <img source=images/A3UE_PCF_Wide.png>
 </picture>
 
 <div>
