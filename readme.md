@@ -6,12 +6,7 @@
     <br/>
   </p>
 </div>
-
-![A3UE - PCF mod image wide](images/A3UE_PCF_Wide.png)
-
-<picture>
-  <img source=images/A3UE_PCF_Wide.png>
-</picture>
+<img src="images/A3UE_PCF_Wide.png">
 
 <div>
 <h2> The scope of this extension:</h2>
