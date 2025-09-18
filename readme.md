@@ -29,6 +29,7 @@ This project also introduces quality-of-life features we found useful, like addi
   - [All Traits for All Roles](#all-traits-for-all-roles)
   - [Enhanced Persistent Saving](#enhanced-persistent-saving)
   - [Better Rebel AA Emplacements](#better-rebel-aa-emplacements)
+  - [Mission Improvements](#mission-improvements)
   - [Factory \& Resource Management](#factory--resource-management)
   - [Map Enhancements](#map-enhancements)
   - [Limited Fast Travel Improvements](#limited-fast-travel-improvements)
@@ -47,6 +48,9 @@ This project also introduces quality-of-life features we found useful, like addi
 ### Better Rebel AA Emplacements
 -   **Description:** A parameter option allows rebel AA emplacements to spawn up to 5x farther out around all enemy aircraft, including fixed-wing CAS and paradrop planes.
 -   **Goal:** This parameter multiplies the value of the "Spawn Distance" option in the Basic Parameters menu, giving you more control over your anti-air defense radius.
+
+### Mission Improvements
+-   **Customizable Convoy Departure Delay:** A parameter option to increase convoy departure delay times with 5 minute steps, up to 35 minutes. More time to prepare for convoy ambushes.
 
 ### Factory & Resource Management
 -   **Rebuilding:** Reconstruct destroyed rebel factories and resources for a flat cost of 5,000 money units using the "Rebuild Assets" button in the Commander Menu (`Y` > Commander > HQ Tab). You no longer have to wait for the enemy to retake the location before you can rebuild.
