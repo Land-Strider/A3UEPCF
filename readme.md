@@ -60,7 +60,7 @@ This project also introduces quality-of-life features we found useful, like addi
         -   The cost of each upgrade increases globally with every purchase. This prevents exponential economic growth in the late game.
         -   Losing an upgraded marker reduces your total upgrade count, lowering the cost of the next upgrade.
         -   To encourage holding territory, a marker's upgrade level decreases by one if lost to the enemy. The level is not lost if you recapture it.
-
+        -   _Important Note: At the moment, this feature breaks when a leveled factory or resource is lost during game play without this mod on. While you can still continue playing with this mod on or off, expect broken factory or resource upgrading and income on the affected markers._
 ### Map Enhancements
 -   **Town Names on Markers:** A parameter option to append the nearest town's name to map markers (e.g., "AAF Outpost" becomes "AAF Neochori Outpost"). This also updates related text, like convoy descriptions, for better clarity.
 -   **Shorter Emplacement Names:** An optional feature to shorten emplacement map markers to a simple icon and text (e.g., "Roadblock", "OP", "AA"). This helps reduce map clutter, especially when combined with the town names feature.
