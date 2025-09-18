@@ -16,7 +16,7 @@ An AU Extension made with **small squads and private friends-only servers in min
 
 This project also introduces quality-of-life features we found useful, like adding town names to map markers. We strive to make everything optional, allowing you to customize your experience.
 
-**Important:** This extension heavily modifies the base Antistasi Ultimate code. Consequently, it may break or fail to reflect new content when the base mod is updated. We are exploring ways to make it more robust against updates, but for now, expect a delay of a few days for compatibility patches after a new Antistasi Ultimate version is released.
+**Important:** This extension heavily modifies the base Antistasi Ultimate code. Consequently, it may break or fail to reflect new content when the base mod is updated. We are exploring ways to make it more robust against updates, but <ins>for now, expect a delay of a few days for compatibility patches after a new Antistasi Ultimate version is released.</ins>
 
 ---
 
