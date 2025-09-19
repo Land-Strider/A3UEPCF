@@ -34,6 +34,14 @@
                 <French>Activer les compétences étendues (médecin, ingénieur et pirate de drones) pour tous les rôles ?</French>
                 <Turkish>Tüm roller için genişletilmiş özellikler (sağlıkçı, mühendis ve İHA korsanı) etkinleştirilsin mi?</Turkish>
             </Key>
+            <Key ID="STR_a3ue_pcf_params_more_role_specializations">
+                <Original>Combat Life Saver role self-revive cooldown in minutes</Original>
+                <Russian>Время восстановления роли Спасателя в бою в минутах</Russian>
+                <Chinesesimp>Combat Life Saver角色自我复活冷却时间（分钟）</Chinesesimp>
+                <Korean>Combat Life Saver 역할의 자가 부활 쿨타임(분)</Korean>
+                <French>Temps de récupération pour l'auto-réanimation du rôle Combat Life Saver (en minutes)</French>
+                <Turkish>Combat Life Saver rolü için kendini yeniden canlandırma bekleme süresi (dakika)</Turkish>
+            </Key>
             <Key ID="STR_a3ue_pcf_params_garbage_safe_build_box">
                 <Original>Should Garbage Cleaner also remove Build Box stuff that are more than 500 meters away from rebel markers?</Original>
                 <Russian>Следует ли Garbage Cleaner также удалять предметы Build Box, находящиеся дальше 500 метров от меток повстанцев?</Russian>

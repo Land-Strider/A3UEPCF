@@ -88,6 +88,15 @@ class CfgFunctions
                 file = QPATHTOFOLDER(functions\OrgPlayers\fn_unitTraits.sqf);
             };
         };
+
+        class Revive
+        {
+            class selfRevive 
+            {
+                file = QPATHTOFOLDER(functions\Revive\fn_selfRevive.sqf);
+            };
+        };
+
         class Save 
         {
             class loadServer 
