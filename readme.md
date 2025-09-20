@@ -27,6 +27,7 @@ This project also introduces quality-of-life features we found useful, like addi
 - [Features](#features)
   - [Table of Contents](#table-of-contents)
   - [All Traits for All Roles](#all-traits-for-all-roles)
+  - [More Role Specializations](#more-role-specializations)
   - [Enhanced Persistent Saving](#enhanced-persistent-saving)
   - [Better Rebel AA Emplacements](#better-rebel-aa-emplacements)
   - [Mission Improvements](#mission-improvements)
@@ -40,6 +41,9 @@ This project also introduces quality-of-life features we found useful, like addi
 ### All Traits for All Roles
 -   **Description:** Allows all roles to have the Engineer, Medic, and UAV Hacker traits.
 -   **Goal:** Enables small squads to be more versatile and handle diverse situations without needing more players for specialized roles.
+
+### More Role Specializations:
+-  **CLS Shorter Self-Revive**: A parameter option allowing Combat Life Saver roles to have shorter self-revive cooldowns, while retaining the same "You are not feeling great" duration.
 
 ### Enhanced Persistent Saving
 -   **Persistent Build Box Saving:** Persistently save constructions from the Build Box anywhere on the map, not just near bases or mission areas. This helps small teams fortify frequently contested locations like convoy ambush spots without repetitive setup.
