@@ -56,6 +56,10 @@ This project also introduces quality-of-life features we found useful, like addi
 ### Mission Improvements
 -   **Customizable Convoy Departure Delay:** A parameter option to increase convoy departure delay times with 5 minute steps, up to 35 minutes. More time to prepare for convoy ambushes.
 
+### Enemy Unconscious Chance: 
+-   Added a new parameter to set the chance for enemy units to become unconscious instead of dead. 
+-   Head shots are more likely to cause immediate death when the base chance is below 100%.
+
 ### Factory & Resource Management
 -   **Rebuilding:** Reconstruct destroyed rebel factories and resources for a flat cost of 5,000 money units using the "Rebuild Assets" button in the Commander Menu (`Y` > Commander > HQ Tab). You no longer have to wait for the enemy to retake the location before you can rebuild.
 -   **Upgrading:** A new "Upgrade Assets" feature allows you to increase the yield of your factories and resources, making a "tall" gameplay strategy (holding a few highly-developed locations) more viable.
