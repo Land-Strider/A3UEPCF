@@ -99,6 +99,13 @@
                 <Spanish>¿Se deben acortar los nombres de los marcadores de emplazamiento?</Spanish>
                 <Turkish>Mevzi işaretçi adları kısaltılmalı mı?</Turkish>
             </Key>
+            <Key ID="STR_a3ue_pcf_params_enemy_unconscious_chance">
+                <Original>Chance for enemy units to become unconscious instead of dead</Original>
+                <German>Chance, dass feindliche Einheiten bewusstlos statt tot werden</German>
+                <French>Chance que les unités ennemies deviennent inconscientes au lieu de mourir</French>
+                <Spanish>Probabilidad de que las unidades enemigas se vuelvan inconscientes en lugar de muertas</Spanish>
+                <Turkish>Düşman birliklerinin ölmek yerine bayılma şansı</Turkish>
+            </Key>
         </Container>
         <Container name="a3ue_pcf_roleTraits">
             <Key ID="STR_a3ue_pcf_role_medic_with_traits">

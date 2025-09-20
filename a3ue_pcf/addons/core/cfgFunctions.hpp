@@ -91,6 +91,11 @@ class CfgFunctions
 
         class Revive
         {
+            class handleDamageAAF 
+            {
+                file = QPATHTOFOLDER(functions\Revive\fn_handleDamageAAF.sqf);
+            };
+
             class selfRevive 
             {
                 file = QPATHTOFOLDER(functions\Revive\fn_selfRevive.sqf);

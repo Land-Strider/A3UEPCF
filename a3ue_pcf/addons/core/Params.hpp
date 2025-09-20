@@ -162,6 +162,14 @@ class Params
         default  = 1;
         lockOnSave = 0;
     };
+    class PCF_enemyUnconsciousChance: PCFParams
+    {
+        title = $STR_a3ue_pcf_params_enemy_unconscious_chance;
+        values[] = {100,75,50,25,0};
+        texts[]  = {"100%","75%","50%","25%","0%"};
+        default  = 100;
+        lockOnSave = 0;
+    };
     // PCF Params end
 
     class BasicParams
