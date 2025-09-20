@@ -144,7 +144,7 @@ if (side _injurer == teamPlayer) then
 			{
 				_damage = 0.9;
 				// Don't trigger unconsciousness on sub-part hits (face/pelvis etc), only the container
-				if (_part in ["head","body"]) then
+				if (_part in ["head"]) then
 				{
 					if !(_unit getVariable ["incapacitated",false] && {_unit getVariable ["canBeIncapacitated",true]}) then
 					{
