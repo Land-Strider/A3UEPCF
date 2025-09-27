@@ -93,8 +93,8 @@ class Params
     class PCF_MoreRoleSpecializations: PCFParams
     {
         title = $STR_a3ue_pcf_params_more_role_specializations;
-        values[] = {0,60,120,180};
-        texts[]  = {"5","4","3","2"};
+        values[] = {0,60,120,180,240};
+        texts[]  = {"5","4","3","2","1"};
         default  = 120;
         lockOnSave = 0;
     };

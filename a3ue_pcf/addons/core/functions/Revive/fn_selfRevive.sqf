@@ -69,7 +69,7 @@ _handle ppEffectCommit 5;
 A3A_selfRevivePPHandle = _handle;
 
 // PCF Store the timer handle so we can terminate it if needed
-A3A_selfRevivePPTimer = 300 spawn {
+A3A_selfRevivePPTimer = _timeout spawn {
     sleep _this;
     [false] call A3A_fnc_selfReviveReset;
     A3A_selfRevivePPTimer = nil;
