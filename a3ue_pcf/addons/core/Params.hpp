@@ -170,6 +170,14 @@ class Params
         default  = 100;
         lockOnSave = 0;
     };
+    class PCF_hrGainMultiplier: PCFParams
+    {
+        title = $STR_a3ue_pcf_params_hr_gain_multiplier;
+        values[] = {25,50,75,100,125,150,200};
+        texts[]  = {"25%","50%","75%","100%","125%","150%","200%"};
+        default  = 100;
+        lockOnSave = 0;
+    };
     // PCF Params end
 
     class BasicParams

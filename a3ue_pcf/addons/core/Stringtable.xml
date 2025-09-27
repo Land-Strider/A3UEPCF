@@ -106,6 +106,13 @@
                 <Spanish>Probabilidad de que las unidades enemigas se vuelvan inconscientes en lugar de muertas</Spanish>
                 <Turkish>Düşman birliklerinin ölmek yerine bayılma şansı</Turkish>
             </Key>
+            <Key ID="STR_a3ue_pcf_params_hr_gain_multiplier">
+                <Original>Global HR gain multiplier</Original>
+                <German>Globaler HR-Gewinnmultiplikator</German>
+                <French>Multiplicateur global de gain de HR</French>
+                <Spanish>Multiplicador global de ganancia de HR</Spanish>
+                <Turkish>Global IK kazanım çarpanı</Turkish>
+            </Key>
         </Container>
         <Container name="a3ue_pcf_roleTraits">
             <Key ID="STR_a3ue_pcf_role_medic_with_traits">

@@ -52,7 +52,7 @@ private _conditions = [
 ];
 
 while {true} do {
-	nextTick = time + 600;
+	nextTick = time + 30;
 	waitUntil {sleep 15; time >= nextTick};
     waitUntil {sleep 10; A3A_activePlayerCount > 0};
 
@@ -165,7 +165,7 @@ while {true} do {
 
 	_resAdd = [_resAdd] call SCRT_fnc_common_rebelSalary;
 
-	_hrAdd = ceil _hrAdd;
+	_hrAdd = ceil (_hrAdd * (PCF_hrGainMultiplier / 100));	// PCF Apply HR gain multiplier from params
 	_resAdd = ceil _resAdd;
 	server setVariable ["hr", _hrAdd + (server getVariable "hr"), true];
 	server setVariable ["resourcesFIA", _resAdd + (server getVariable "resourcesFIA"), true];
