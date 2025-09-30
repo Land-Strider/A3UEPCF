@@ -17,14 +17,15 @@ git remote add upstream https://github.com/Antistasi-Ultimate-Community/A3-Antis
 git fetch upstream
 ```
 
-### 4. Run the sync script
-```bash
-sh ./scripts/sync_a3u.sh
-```
-### 5. Configure VSCode as your Git difftool:
+### 4. Configure VSCode as your Git difftool:
 ```bash
 git config --global diff.tool vscode
 git config --global difftool.vscode.cmd "code --wait --diff \$LOCAL \$REMOTE"
+```
+
+### 5. Run the sync script
+```bash
+sh ./scripts/sync_a3u.sh
 ```
 
 ### 6. Use the difftool to review changes
