@@ -1071,6 +1071,13 @@ class Params
     };
 
     // PCF Params start
+    class TitlePCF: ExtenderParams
+    {
+        title = $STR_a3ue_pcf_dialogs_setup_params_pcf_label;
+        values[] = {""};
+        texts[] = {""};
+        default = "";
+    };
     class PCF_LimitedFTDepartureDistance: ExtenderParams
     {
         title = $STR_a3ue_pcf_params_limitedFT_departure_distance;

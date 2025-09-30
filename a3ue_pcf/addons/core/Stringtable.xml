@@ -3,12 +3,12 @@
     <Package name="A3UE PCF - Core">
         <Container name="a3ue_pcf_parameters">
             <Key ID="STR_a3ue_pcf_dialogs_setup_params_pcf_label">
-                <Original>PCF Parameters</Original>
-                <Russian>Параметры PCF</Russian>
-                <Chinesesimp>PCF 参数</Chinesesimp>
-                <Korean>PCF 매개변수</Korean>
-                <French>Paramètres PCF</French>
-                <Turkish>PCF Parametreleri</Turkish>
+                <Original>Point Campfire Parameters</Original>
+                <Russian>Параметры Point Campfire</Russian>
+                <Chinesesimp>Point Campfire 参数</Chinesesimp>
+                <Korean>Point Campfire 매개변수</Korean>
+                <French>Paramètres Point Campfire</French>
+                <Turkish>Point Campfire Parametreleri</Turkish>
             </Key>
             <Key ID="STR_a3ue_pcf_params_allowFT_3">
                 <Original>Only between strongholds and watchposts</Original>
