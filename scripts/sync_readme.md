@@ -6,25 +6,20 @@ This script helps update your extender repository with upstream changes from the
 
 ## Usage
 
-### 1. Make sure you have the upstream remote set
-```bash
-git remote add upstream https://github.com/Antistasi-Ultimate-Community/A3-Antistasi-Ultimate.git
-```
-
-### 2. Switch to your updatecompat branch
+### 1. Switch to your updatecompat branch
 ```bash
 git pull origin updatecompat
 git switch updatecompat
-git remote add upstream https://github.com/Antistasi-Ultimate-Community/A3-Antistasi-Ultimate.git
 ```
-### 3. Fetch the latest changes from upstream
+### 3. Add upstream repo as a new remote and fetch the latest changes from upstream
 ```bash
+git remote add upstream https://github.com/Antistasi-Ultimate-Community/A3-Antistasi-Ultimate.git
 git fetch upstream
 ```
 
 ### 4. Run the sync script
 ```bash
-sh ./scripts/sync_readme.sh
+sh ./scripts/sync_a3u.sh
 ```
 ### 5. Configure VSCode as your Git difftool:
 ```bash
