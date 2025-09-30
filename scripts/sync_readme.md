@@ -29,5 +29,5 @@ git config --global difftool.vscode.cmd "code --wait --diff \$LOCAL \$REMOTE"
 
 ### 6. Use the difftool to review changes
 ```bash
-git difftool origin/main
+git difftool origin/updatecompat
 ```
