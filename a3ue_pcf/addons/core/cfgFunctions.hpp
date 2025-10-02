@@ -31,13 +31,9 @@ class CfgFunctions
             class rebuildAssets {
                 file = QPATHTOFOLDER(functions\Base\fn_rebuildAssets.sqf);
             };
-            
-            class rebuildResource {
-                file = QPATHTOFOLDER(functions\Base\fn_rebuildResource.sqf);
-            };
 
-            class rebuildFactory {
-                file = QPATHTOFOLDER(functions\Base\fn_rebuildFactory.sqf);
+            class rebuildEconomicAssets {
+                file = QPATHTOFOLDER(functions\Base\fn_rebuildEconomicAssets.sqf);
             };
 
             class upgradeAssets {
