@@ -267,8 +267,8 @@ class Params
     class distanceSPWN: BasicParams
     {
         title = $STR_params_spawnDistance;
-        values[] = {700,800,900,1000,1100,1200,1300,1400,1500};
-        texts[] = {"700","800","900","1000","1100","1200", "1300" ,"1400", "1500"};
+        values[] = {700,800,900,1000,1100,1200,1300,1400,1500,2000,2500,3000};
+        texts[] = {"700","800","900","1000","1100","1200", "1300" ,"1400", "1500","2000","2500","3000"};
         default = 1100;
     };
     class enemyNearDistance: BasicParams
