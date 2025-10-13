@@ -5,7 +5,7 @@ set -e
 MY_ROOT="a3ue_pcf/addons"        # your repo path
 UPSTREAM_ROOT="A3A/addons"       # upstream path
 BRANCH_OLD="stable"
-BRANCH_NEW="unstable"
+BRANCH_NEW="11_8_pt"
 
 # Fetch latest from upstream
 git fetch upstream
