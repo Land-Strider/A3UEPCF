@@ -5,7 +5,7 @@ params ["_site", "_position"];
 
 private _leave = false;
 private _antennaDead = objNull;
-private _economyDead = ""; // PCF Rebuild Factories and Resources Variables Definition
+private _economyDead = ""; // Rebuild Factories and Resources Variables Definition
 
 if (_site in outposts) then {
 	_antennasDead = antennasDead select {_x inArea _site};
@@ -14,13 +14,11 @@ if (_site in outposts) then {
 	};
 };
 
-// PCF Start
 // Check if the site is a destroyed economy site
 if ((_site in factories || _site in resourcesX) && _site in destroyedSites) then {
 	_economyDead = _site;
 	Debug_1("Rebuilding Economic Site %1", _economyDead);
 };
-// PCF END
 
 switch (true) do {
 	case (_site in citiesX): {
@@ -39,8 +37,8 @@ switch (true) do {
 			30
 		] spawn SCRT_fnc_ui_showMessage;
 	};
-	// PCF Repair Economy Site Start
-	case (PCF_EnableResourceRebuild && _economyDead != ""): {
+	// Rebuild Economic Assets and building repair start
+	case (_economyDead != ""): {
 		Debug_1("Calling A3A_fnc_rebuildEconomicAssets for %1", _economyDead);
 		[_economyDead] remoteExec ["A3A_fnc_rebuildEconomicAssets", 2]; // Call the actual function that rebuilds the economic site
 
@@ -52,7 +50,7 @@ switch (true) do {
 			30
 		] spawn SCRT_fnc_ui_showMessage;
 	};
-	// PCF Repair Economy Site Start
+	// Rebuild Economic Assets and building repair end
 
 	case (!isNull _antennaDead): {
 		private _militaryBuildings = nearestObjects [_position, A3A_buildingWhitelist, 500,  true];

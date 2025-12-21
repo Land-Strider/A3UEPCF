@@ -38,7 +38,8 @@ class Params
             case (0): { ["Basic"] };
             case (1): { ["Ultimate", "Script", "Plus", "Member", "Builder", "Balance", "Equipment", "Loot", "SuperDuperCool"] }; // Generally, new sections can probably be added here to show up as a section under "Advanced Params"
             case (2): { ["Experimental"] };
-            case (3): { ["Development"] };
+            case (3): { ["Extender"] };
+            case (4): { ["Development"] };
         };
 
         * if you want your section to show up as an entirely new option in the Parameter Types Dropdown ComboBox,
@@ -48,14 +49,16 @@ class Params
         private _basicParamsIndex =  _paramsType lbAdd (localize "STR_antistasi_dialogs_setup_params_basic_label");
         private _advParamsIndex = _paramsType lbAdd (localize "STR_antistasi_dialogs_setup_params_adv_label");
         private _expParamsIndex = _paramsType lbAdd (localize "STR_antistasi_dialogs_setup_params_exp_label");
+        private _extParamsIndex = _paramsType lbAdd (localize "STR_antistasi_dialogs_setup_params_ext_label");
         private _devParamsIndex = _paramsType lbAdd (localize "STR_antistasi_dialogs_setup_params_dev_label");
         private _sdcParamsIndex = _paramsType lbAdd (localize "STR_antistasi_dialogs_setup_params_sdc_label"); // give it a text value here
 
         _paramsType lbSetValue [_basicParamsIndex, 0];
         _paramsType lbSetValue [_advParamsIndex, 1];
         _paramsType lbSetValue [_expParamsIndex, 2];
-        _paramsType lbSetValue [_devParamsIndex, 3];
-        _paramsType lbSetValue [_sdcParamsIndex, 4]; // and give it an integer value here
+        _paramsType lbSetValue [_extParamsIndex, 3];
+        _paramsType lbSetValue [_devParamsIndex, 4];
+        _paramsType lbSetValue [_sdcParamsIndex, 5]; // and give it an integer value here
 
         _paramsType lbSetCurSel _basicParamsIndex;
 
@@ -63,122 +66,10 @@ class Params
 
         private _shownTypes = switch (lbCurSel A3A_IDC_SETUP_PARAMSTYPE) do {
             ...
-            case (4): { ["SuperDuperCool"] };
+            case (5): { ["SuperDuperCool"] };
         };
 
     */
-
-    // PCF Params start
-    class PCFParams
-    {
-        type = "PCF";        // Matches the tab name / _shownTypes entry
-        lockOnSave = 0;      // 0 = players can change it before starting
-    };
-    class PCF_LimitedFTDepartureDistance: PCFParams
-    {
-        title = $STR_a3ue_pcf_params_limitedFT_departure_distance;
-        values[] = {25,50,75,100,150};
-        texts[]  = {"25","50 (AU)","75","100","150"};
-        default  = 50;
-        lockOnSave = 0;
-    };
-    class PCF_ExtendedTraits: PCFParams
-    {
-        title = $STR_a3ue_pcf_params_extended_traits;
-        values[] = {0,1};
-        texts[]  = {"No (AU)","Yes (PCF)"};
-        default  = 1;
-        lockOnSave = 0;
-    };
-    class PCF_MoreRoleSpecializations: PCFParams
-    {
-        title = $STR_a3ue_pcf_params_more_role_specializations;
-        values[] = {0,60,120,180,240};
-        texts[]  = {"5 (AU)","4","3 (PCF)","2","1"};
-        default  = 120;
-        lockOnSave = 0;
-    };
-    class PCF_GarbageSafeBuildBox: PCFParams
-    {
-        title = $STR_a3ue_pcf_params_garbage_safe_build_box;
-        values[] = {0,1};
-        texts[]  = {"No (PCF)","Yes (AU)"};
-        default  = 0;
-        lockOnSave = 0;
-    };
-    class PCF_EnableResourceRebuild: PCFParams
-    {
-        title = $STR_a3ue_pcf_params_enable_resource_rebuild;
-        values[] = {0,1};
-        texts[]  = {"No (AU)","Yes (PCF)"};
-        default  = 1;
-        lockOnSave = 0;
-    };
-    class PCF_EnableResourceUpgrade: PCFParams
-    {
-        title = $STR_a3ue_pcf_params_enable_resource_upgrade;
-        values[] = {0,1};
-        texts[]  = {"No (AU)","Yes"};
-        default  = 0;
-        lockOnSave = 1;
-    };
-    class PCF_ResourceUpgradeCost: PCFParams
-    {
-        title = $STR_a3ue_pcf_params_resource_upgrade_cost;
-        values[] = {3000,5000,10000,15000,20000};
-        texts[]  = {"3000","5000","10000 (PCF)","15000","20000"};
-        default  = 10000;
-        lockOnSave = 0;
-    };
-    class PCF_ConvoyStartDelay: PCFParams
-    {
-        title = $STR_a3ue_pcf_params_convoy_start_delay;
-        values[] = {1,2,3,4,5};
-        texts[]  = {"5 /10 (AU)","10 / 15 (PCF)","15 / 20","20 / 25","25 / 30"};
-        default  = 2;
-        lockOnSave = 0;
-    };
-    class PCF_AAPostSpawnDistance: PCFParams
-    {
-        title = $STR_a3ue_pcf_params_aa_post_spawn_distance;
-        values[] = {1,2,3,4,5};
-        texts[]  = {"1x (AU)","2x (PCF)","3x","4x","5x"};
-        default  = 2;
-        lockOnSave = 0;
-    };
-    class PCF_MapMarkerVerboseName: PCFParams
-    {
-        title = $STR_a3ue_pcf_params_map_marker_verbose_name;
-        values[] = {0,1};
-        texts[]  = {"No (AU)","Yes (PCF)"};
-        default  = 1;
-        lockOnSave = 0;
-    };
-    class PCF_EmplacementShortName: PCFParams
-    {
-        title = $STR_a3ue_pcf_params_emplacement_short_name;
-        values[] = {0,1};
-        texts[]  = {"No (AU)","Yes (PCF)"};
-        default  = 1;
-        lockOnSave = 0;
-    };
-    class PCF_enemyUnconsciousChance: PCFParams
-    {
-        title = $STR_a3ue_pcf_params_enemy_unconscious_chance;
-        values[] = {100,75,50,25,0};
-        texts[]  = {"100% (AU)","75%","50%","25%","0%"};
-        default  = 100;
-        lockOnSave = 0;
-    };
-    class PCF_hrGainMultiplier: PCFParams
-    {
-        title = $STR_a3ue_pcf_params_hr_gain_multiplier;
-        values[] = {25,50,75,100,125,150,200};
-        texts[]  = {"25%","50% (PCF)","75%","100% (AU)","125%","150%","200%"};
-        default  = 50;
-        lockOnSave = 0;
-    };
-    // PCF Params end
 
     class BasicParams
     {
@@ -598,8 +489,8 @@ class Params
     class deathPenalty: PlusParams
     {
         title = $STR_params_deathPenalty;
-        values[] = {15, 30, 50, 75, 100};
-        texts[] = {"15%", "30%", "50%", "75%", "100%"};
+        values[] = {0, 15, 30, 50, 75, 100};
+        texts[] = {"0%", "15%", "30%", "50%", "75%", "100%"};
         default = 30;
     };
     class saveZeusBuildings: PlusParams
@@ -833,6 +724,13 @@ class Params
         texts[] = {"5", "10", "15", "20"};
         default = 5;
     };
+    class A3U_HelipadTerrainSmoothing: ExperimentalParams
+    {
+        title = $STR_params_helipadTerrainSmoothing;
+        values[] = {0, 1};
+        texts[] = {$STR_antistasi_dialogs_generic_button_no_text, $STR_antistasi_dialogs_generic_button_yes_text};
+        default = 0;
+    };
 
     class BalanceParams
     {
@@ -928,6 +826,14 @@ class Params
         values[] = {-1, 16, 24, 32};
         texts[] = {"∞", "16", "24", "32"};
         default = 24;
+    };
+    class A3A_rebelGarrisonGroupSize: BalanceParams
+    {
+        title = $STR_params_rebelGarrisonGroupSize;
+        tooltip = $STR_params_rebelGarrisonGroupSize_desc;
+        values[] = {2, 4, 6, 8, 10, 12, 14, 16};
+        texts[] = {"2", "4", "6", "8", "10", "12", "14", "16"};
+        default = 8;
     };
     class A3A_UAVSpawnChance: BalanceParams
     {
@@ -1165,6 +1071,126 @@ class Params
         default = 3;
     };
 
+    class ExtenderParams
+    {
+        type = "Extender";
+        lockOnSave = 0;
+    };
+
+    // PCF Params start
+    class TitlePCF: ExtenderParams
+    {
+        title = $STR_a3ue_pcf_dialogs_setup_params_pcf_label;
+        values[] = {""};
+        texts[] = {""};
+        default = "";
+    };
+    class PCF_LimitedFTDepartureDistance: ExtenderParams
+    {
+        title = $STR_a3ue_pcf_params_limitedFT_departure_distance;
+        values[] = {25,50,75,100,150};
+        texts[]  = {"25","50","75","100","150"};
+        default  = 50;
+        lockOnSave = 0;
+    };
+    class PCF_ExtendedTraits: ExtenderParams
+    {
+        title = $STR_a3ue_pcf_params_extended_traits;
+        values[] = {0,1};
+        texts[]  = {"No","Yes"};
+        default  = 1;
+        lockOnSave = 0;
+    };
+    class PCF_MoreRoleSpecializations: ExtenderParams
+    {
+        title = $STR_a3ue_pcf_params_more_role_specializations;
+        values[] = {0,60,120,180,240};
+        texts[]  = {"5","4","3","2","1"};
+        default  = 120;
+        lockOnSave = 0;
+    };
+    class PCF_GarbageSafeBuildBox: ExtenderParams
+    {
+        title = $STR_a3ue_pcf_params_garbage_safe_build_box;
+        values[] = {0,1};
+        texts[]  = {"No","Yes"};
+        default  = 1;
+        lockOnSave = 0;
+    };
+    class PCF_EnableResourceRebuild: ExtenderParams
+    {
+        title = $STR_a3ue_pcf_params_enable_resource_rebuild;
+        values[] = {0,1};
+        texts[]  = {"No","Yes"};
+        default  = 1;
+        lockOnSave = 0;
+    };
+    class PCF_EnableResourceUpgrade: ExtenderParams
+    {
+        title = $STR_a3ue_pcf_params_enable_resource_upgrade;
+        values[] = {0,1};
+        texts[]  = {"No","Yes"};
+        default  = 1;
+        lockOnSave = 1;
+    };
+    class PCF_ResourceUpgradeCost: ExtenderParams
+    {
+        title = $STR_a3ue_pcf_params_resource_upgrade_cost;
+        values[] = {3000,5000,10000,15000,20000};
+        texts[]  = {"3000","5000","10000","15000","20000"};
+        default  = 10000;
+        lockOnSave = 0;
+    };
+    class PCF_ConvoyStartDelay: ExtenderParams
+    {
+        title = $STR_a3ue_pcf_params_convoy_start_delay;
+        values[] = {1,2,3,4,5};
+        texts[]  = {"5 /10 (Default)","10 / 15","15 / 20","20 / 25","25 / 30"};
+        default  = 2;
+        lockOnSave = 0;
+    };
+    class PCF_AAPostSpawnDistance: ExtenderParams
+    {
+        title = $STR_a3ue_pcf_params_aa_post_spawn_distance;
+        values[] = {1,2,3,4,5};
+        texts[]  = {"1x","2x","3x","4x","5x"};
+        default  = 2;
+        lockOnSave = 0;
+    };
+    class PCF_MapMarkerVerboseName: ExtenderParams
+    {
+        title = $STR_a3ue_pcf_params_map_marker_verbose_name;
+        values[] = {0,1};
+        texts[]  = {"No","Yes"};
+        default  = 1;
+        lockOnSave = 0;
+    };
+    class PCF_EmplacementShortName: ExtenderParams
+    {
+        title = $STR_a3ue_pcf_params_emplacement_short_name;
+        values[] = {0,1};
+        texts[]  = {"No","Yes"};
+        default  = 1;
+        lockOnSave = 0;
+    };
+    class PCF_enemyUnconsciousChance: ExtenderParams
+    {
+        title = $STR_a3ue_pcf_params_enemy_unconscious_chance;
+        values[] = {100,75,50,25,0};
+        texts[]  = {"100%","75%","50%","25%","0%"};
+        default  = 100;
+        lockOnSave = 0;
+    };
+    class PCF_hrGainMultiplier: ExtenderParams
+    {
+        title = $STR_a3ue_pcf_params_hr_gain_multiplier;
+        values[] = {25,50,75,100,125,150,200};
+        texts[]  = {"25%","50%","75%","100%","125%","150%","200%"};
+        default  = 100;
+        lockOnSave = 0;
+    };
+    // PCF Params end
+    
     class DevelopmentParams
     {
         type = "Development";
