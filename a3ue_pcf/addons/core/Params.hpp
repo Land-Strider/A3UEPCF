@@ -78,7 +78,7 @@ class Params
     {
         title = $STR_a3ue_pcf_params_limitedFT_departure_distance;
         values[] = {25,50,75,100,150};
-        texts[]  = {"25","50","75","100","150"};
+        texts[]  = {"25","50 (AU)","75","100","150"};
         default  = 50;
         lockOnSave = 0;
     };
@@ -86,7 +86,7 @@ class Params
     {
         title = $STR_a3ue_pcf_params_extended_traits;
         values[] = {0,1};
-        texts[]  = {"No","Yes"};
+        texts[]  = {"No (AU)","Yes (PCF)"};
         default  = 1;
         lockOnSave = 0;
     };
@@ -94,7 +94,7 @@ class Params
     {
         title = $STR_a3ue_pcf_params_more_role_specializations;
         values[] = {0,60,120,180,240};
-        texts[]  = {"5","4","3","2","1"};
+        texts[]  = {"5 (AU)","4","3 (PCF)","2","1"};
         default  = 120;
         lockOnSave = 0;
     };
@@ -102,15 +102,15 @@ class Params
     {
         title = $STR_a3ue_pcf_params_garbage_safe_build_box;
         values[] = {0,1};
-        texts[]  = {"No","Yes"};
-        default  = 1;
+        texts[]  = {"No (PCF)","Yes (AU)"};
+        default  = 0;
         lockOnSave = 0;
     };
     class PCF_EnableResourceRebuild: PCFParams
     {
         title = $STR_a3ue_pcf_params_enable_resource_rebuild;
         values[] = {0,1};
-        texts[]  = {"No","Yes"};
+        texts[]  = {"No (AU)","Yes (PCF)"};
         default  = 1;
         lockOnSave = 0;
     };
@@ -118,15 +118,15 @@ class Params
     {
         title = $STR_a3ue_pcf_params_enable_resource_upgrade;
         values[] = {0,1};
-        texts[]  = {"No","Yes"};
-        default  = 1;
+        texts[]  = {"No (AU)","Yes"};
+        default  = 0;
         lockOnSave = 1;
     };
     class PCF_ResourceUpgradeCost: PCFParams
     {
         title = $STR_a3ue_pcf_params_resource_upgrade_cost;
         values[] = {3000,5000,10000,15000,20000};
-        texts[]  = {"3000","5000","10000","15000","20000"};
+        texts[]  = {"3000","5000","10000 (PCF)","15000","20000"};
         default  = 10000;
         lockOnSave = 0;
     };
@@ -134,7 +134,7 @@ class Params
     {
         title = $STR_a3ue_pcf_params_convoy_start_delay;
         values[] = {1,2,3,4,5};
-        texts[]  = {"5 /10 (Default)","10 / 15","15 / 20","20 / 25","25 / 30"};
+        texts[]  = {"5 /10 (AU)","10 / 15 (PCF)","15 / 20","20 / 25","25 / 30"};
         default  = 2;
         lockOnSave = 0;
     };
@@ -142,7 +142,7 @@ class Params
     {
         title = $STR_a3ue_pcf_params_aa_post_spawn_distance;
         values[] = {1,2,3,4,5};
-        texts[]  = {"1x","2x","3x","4x","5x"};
+        texts[]  = {"1x (AU)","2x (PCF)","3x","4x","5x"};
         default  = 2;
         lockOnSave = 0;
     };
@@ -150,7 +150,7 @@ class Params
     {
         title = $STR_a3ue_pcf_params_map_marker_verbose_name;
         values[] = {0,1};
-        texts[]  = {"No","Yes"};
+        texts[]  = {"No (AU)","Yes (PCF)"};
         default  = 1;
         lockOnSave = 0;
     };
@@ -158,7 +158,7 @@ class Params
     {
         title = $STR_a3ue_pcf_params_emplacement_short_name;
         values[] = {0,1};
-        texts[]  = {"No","Yes"};
+        texts[]  = {"No (AU)","Yes (PCF)"};
         default  = 1;
         lockOnSave = 0;
     };
@@ -166,7 +166,7 @@ class Params
     {
         title = $STR_a3ue_pcf_params_enemy_unconscious_chance;
         values[] = {100,75,50,25,0};
-        texts[]  = {"100%","75%","50%","25%","0%"};
+        texts[]  = {"100% (AU)","75%","50%","25%","0%"};
         default  = 100;
         lockOnSave = 0;
     };
@@ -174,8 +174,8 @@ class Params
     {
         title = $STR_a3ue_pcf_params_hr_gain_multiplier;
         values[] = {25,50,75,100,125,150,200};
-        texts[]  = {"25%","50%","75%","100%","125%","150%","200%"};
-        default  = 100;
+        texts[]  = {"25%","50% (PCF)","75%","100% (AU)","125%","150%","200%"};
+        default  = 50;
         lockOnSave = 0;
     };
     // PCF Params end
