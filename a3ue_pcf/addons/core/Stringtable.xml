@@ -3,7 +3,7 @@
     <Package name="A3UE PCF - Core">
         <Container name="a3ue_pcf_parameters">
             <Key ID="STR_a3ue_pcf_dialogs_setup_params_pcf_label">
-                <Original>Point Campfire Parameters</Original>
+                <Original>[A3UE] Point Campfire Parameters</Original>
                 <Russian>Параметры Point Campfire</Russian>
                 <Chinesesimp>Point Campfire 参数</Chinesesimp>
                 <Korean>Point Campfire 매개변수</Korean>

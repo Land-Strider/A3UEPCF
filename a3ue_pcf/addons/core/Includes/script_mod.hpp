@@ -4,7 +4,6 @@
 #include "common.inc"
 
 #include "script_version.hpp"
-
 #if PATCHLVL > 0
     #define VERSION MAJOR.MINOR.PATCHLVL
     #define VERSION_AR MAJOR,MINOR,PATCHLVL
@@ -32,17 +31,10 @@
 #endif
 #ifndef AUTHORS
 // sepperate authors with a comma
-    #define AUTHORS "Antistasi Dev Team"
+    #define AUTHORS "Antistasi Dev Team, Barbolani"
 #endif
 
 #include "script_macros.hpp"
-
-#define CPATHTO_SYS(var1,var2,var3) MAINPREFIX\##var1\SUBPREFIX\##var2\##var3
-#define CPATHTO(var1) CPATHTO_SYS(MODFOLDER,COMPONENT,var1)
-#define QCPATHTO(var1) QUOTE(CPATHTO(var1))
-
-#define ECPATHTO(var1,var2) CPATHTO_SYS(MODFOLDER,var1,var2)
-#define EQCPATHTO(var1,var2) QUOTE(ECPATHTO(var1,var2))
 
 #define PATHTOFOLDER_SYS(var1,var2,var3) \MAINPREFIX\##var1\SUBPREFIX\##var2\##var3
 #define PATHTOFOLDER(var1) PATHTOFOLDER_SYS(MODFOLDER,COMPONENT,var1)

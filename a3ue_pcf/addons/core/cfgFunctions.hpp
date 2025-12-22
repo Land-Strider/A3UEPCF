@@ -1,74 +1,48 @@
 class CfgFunctions 
 {
     //be careful when overwriting functions as version updates can break your extension
-    class A3A 
-    {
-        class Base 
-        {
-            class distance 
-            {
+    class A3A {
+        class Base {
+            class distance {
                 file = QPATHTOFOLDER(functions\Base\fn_distance.sqf);
             };
-
-            class garbageCleaner 
-            {
+            class garbageCleaner {
                 file = QPATHTOFOLDER(functions\Base\fn_garbageCleaner.sqf);
             };
-
-            class localizar 
-            {
+            class localizar {
                 file = QPATHTOFOLDER(functions\Base\fn_localizar.sqf);
             };
-
             class markerChange {
                 file = QPATHTOFOLDER(functions\Base\fn_markerChange.sqf);
             };
-
             class mrkUpdate {
                 file = QPATHTOFOLDER(functions\Base\fn_mrkUpdate.sqf);
             };
-
-            class rebuildAssets {
-                file = QPATHTOFOLDER(functions\Base\fn_rebuildAssets.sqf);
-            };
-
-            class rebuildEconomicAssets {
-                file = QPATHTOFOLDER(functions\Base\fn_rebuildEconomicAssets.sqf);
-            };
-
             class upgradeAssets {
                 file = QPATHTOFOLDER(functions\Base\fn_upgradeAssets.sqf);
             };
-
             class upgradeFactory {
                 file = QPATHTOFOLDER(functions\Base\fn_upgradeFactory.sqf);
             };
-
             class upgradeResource {
                 file = QPATHTOFOLDER(functions\Base\fn_upgradeResource.sqf);
             };
         };
-        class Dialogs 
-        {
-            class fastTravelRadio 
-            {
+
+        class Dialogs {
+            class fastTravelRadio {
                 file = QPATHTOFOLDER(functions\Dialogs\fn_fastTravelRadio.sqf);
             };
         };
-        class init 
-        {
-            class initVarServer 
-            {
+
+        class init {
+            class initVarServer {
                 file = QPATHTOFOLDER(functions\init\fn_initVarServer.sqf);
             };
-            
-            class initClient
-            {
+            class initClient {
                 file = QPATHTOFOLDER(functions\init\fn_initClient.sqf);
             };
-
-            class resourcecheck
-            {
+            class resourcecheck {
                 file = QPATHTOFOLDER(functions\init\fn_resourcecheck.sqf);
             };
         };
@@ -85,33 +59,20 @@ class CfgFunctions
             };
         };
 
-        class Revive
-        {
-            class handleDamageAAF 
-            {
-                file = QPATHTOFOLDER(functions\Revive\fn_handleDamageAAF.sqf);
-            };
-
-            class selfRevive 
-            {
+        class Revive {
+            class selfRevive {
                 file = QPATHTOFOLDER(functions\Revive\fn_selfRevive.sqf);
             };
         };
 
-        class Save 
-        {
-            class loadServer 
-            {
+        class Save {
+            class loadServer {
                 file = QPATHTOFOLDER(functions\Save\fn_loadServer.sqf);
             };
-
-            class loadStat 
-            {
+            class loadStat {
                 file = QPATHTOFOLDER(functions\Save\fn_loadStat.sqf);
             };
-
-            class saveLoop 
-            {
+            class saveLoop {
                 file = QPATHTOFOLDER(functions\Save\fn_saveLoop.sqf);
             };
         };

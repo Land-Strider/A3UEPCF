@@ -397,19 +397,18 @@ if (_varName in specialVarLoads) then {
                 // TODO: Check whether various buyable items turn up as "Building"
                 if (isNil {_veh getVariable "A3A_canGarage"}) then {        // Buyable items should set this
                     switch true do {
-                        case ((_veh isKindOf  "LandVehicle") || {(_veh isKindOf "Ship") || {(_veh isKindOf "StaticWeapon")}}): {
+                        case (_veh isKindOf "StaticWeapon");
+                        case (_veh isKindOf "LandVehicle");
+                        case (_veh isKindOf "Ship"): {
                             staticsToSave pushBack _veh;
                         };
 
                         case (_veh isKindOf "Building"): {
                             _veh setVariable ["A3A_building", true, true];
-                            if (typeOf _veh in ["A3AU_RebHelipad_Square_F","A3AU_RebHelipad_Circle_F"]) then {
-                                [_veh] call A3A_fnc_terrainCleaner;
-                            };
                             A3A_buildingsToSave pushBack _veh;
                         };
                     };
-                    
+
                     if isText(configOf _veh >> QGVAR(onBuildingLoaded)) then {
                         Debug_3("calling %1 on %2 with params %3", QGVAR(onBuildingLoaded), typeOf _veh, [_veh]);
                         [_veh] call compile getText(configOf _veh >> QGVAR(onBuildingLoaded));

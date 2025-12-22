@@ -39,7 +39,7 @@ if(roleDescription player isEqualTo "@STR_role_default_commander_role_name" || {
     _text = localize "STR_role_default_commander";
 } else {
     switch (_type) do {
-		case "I_G_medic_F":  {
+    	case "I_G_medic_F":  {
 			player setUnitTrait ["camouflageCoef",0.8]; 
 			player setUnitTrait ["audibleCoef",0.8]; 
 			player setUnitTrait ["loadCoef",1.2]; 
@@ -57,7 +57,7 @@ if(roleDescription player isEqualTo "@STR_role_default_commander_role_name" || {
 				};
 			
 		}; 
-		case "I_G_Soldier_TL_F": {
+    	case "I_G_Soldier_TL_F": {
 			player setUnitTrait ["camouflageCoef",0.8]; 
 			player setUnitTrait ["audibleCoef",0.8]; 
 			player setUnitTrait ["loadCoef",1.4]; 
@@ -74,7 +74,7 @@ if(roleDescription player isEqualTo "@STR_role_default_commander_role_name" || {
 					_text = localize "STR_a3ue_pcf_role_teamleader";
 				};
 		}; 
-		case "I_G_Soldier_F":  {
+    	case "I_G_Soldier_F":  {
 			player setUnitTrait ["audibleCoef",1.15]; 
 			player setUnitTrait ["camouflageCoef",1.15]; 
 			player setUnitTrait ["loadCoef",0.7]; 
@@ -91,7 +91,7 @@ if(roleDescription player isEqualTo "@STR_role_default_commander_role_name" || {
 					_text = localize "STR_a3ue_pcf_role_rifleman"
 				};
 		}; 
-		case "I_G_Soldier_GL_F": {
+    	case "I_G_Soldier_GL_F": {
             player setUnitTrait ["camouflageCoef",1.2];
             player setUnitTrait ["loadCoef",0.8];
 
@@ -107,7 +107,7 @@ if(roleDescription player isEqualTo "@STR_role_default_commander_role_name" || {
 					_text = localize "STR_a3ue_pcf_role_grenadier"
 				};
         };
-		case "I_G_Soldier_AR_F": {
+    	case "I_G_Soldier_AR_F": {
             player setUnitTrait ["audibleCoef",1.2];
             player setUnitTrait ["loadCoef",0.8];
 
@@ -123,7 +123,7 @@ if(roleDescription player isEqualTo "@STR_role_default_commander_role_name" || {
 					_text = localize "STR_a3ue_pcf_role_autorifleman"
 				};
         };
-		case "I_G_engineer_F":  {
+    	case "I_G_engineer_F":  {
 			player setUnitTrait ["UAVHacker",true]; 
 			player setUnitTrait ["explosiveSpecialist", true]; ///why not?
 

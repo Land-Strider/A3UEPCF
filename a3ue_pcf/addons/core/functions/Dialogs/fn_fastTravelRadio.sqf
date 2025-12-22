@@ -185,7 +185,7 @@ if (_checkForPlayer && limitedFT == 3 && (!_isValidTargetLocation or !_withinBou
 	[localize "STR_A3A_Dialogs_fast_travel_header", localize "STR_a3ue_pcf_Dialogs_fast_travel_limited_to_between_military_destinations"] call SCRT_fnc_misc_deniedHint;
 };
 
-if (_positionTel distance getMarkerPos _base < 50) then {
+if (_positionTel distance getMarkerPos _base < 500) then {
 	private _positionX = [getMarkerPos _base, 10, random 360] call BIS_Fnc_relPos;
 	private _distanceX = round (((position _boss) distance _positionX)/200);
 	private _forcedX = false;
