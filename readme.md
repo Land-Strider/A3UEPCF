@@ -46,7 +46,6 @@ This project also introduces quality-of-life features we found useful, like addi
 -  **CLS Shorter Self-Revive**: A parameter option allowing Combat Life Saver roles to have shorter self-revive cooldowns, while retaining the same "You are not feeling great" duration.
 
 ### Enhanced Persistent Saving
--   **Persistent Build Box Saving:** Persistently save constructions from the Build Box anywhere on the map, not just near bases or mission areas. This helps small teams fortify frequently contested locations like convoy ambush spots without repetitive setup.
 -   **Persistent Zeus Saving:** Save more types of Zeus-placed objects (Buildings, Things, Statics) and in much larger quantities (up to 5000). Perfect for adding character to your bases with details like coffee shops or barbecue grills.
 
 ### Better Rebel AA Emplacements
@@ -56,12 +55,7 @@ This project also introduces quality-of-life features we found useful, like addi
 ### Mission Improvements
 -   **Customizable Convoy Departure Delay:** A parameter option to increase convoy departure delay times with 5 minute steps, up to 35 minutes. More time to prepare for convoy ambushes.
 
-### Enemy Unconscious Chance: 
--   Added a new parameter to set the chance for enemy units to become unconscious instead of dead. 
--   Head shots are more likely to cause immediate death when the base chance is below 100%.
-
 ### Factory & Resource Management
--   **Rebuilding:** Reconstruct destroyed rebel factories and resources for a flat cost of 5,000 money units using the "Rebuild Assets" button in the Commander Menu (`Y` > Commander > HQ Tab). You no longer have to wait for the enemy to retake the location before you can rebuild.
 -   **Upgrading:** A new "Upgrade Assets" feature allows you to increase the yield of your factories and resources, making a "tall" gameplay strategy (holding a few highly-developed locations) more viable.
     -   **Mechanics:**
         -   Factories and resources start at Level 0 and can be upgraded to Level 3. Each level adds a 100% yield bonus, up to a 400% total yield.
