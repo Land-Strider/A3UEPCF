@@ -248,17 +248,6 @@ _rebMarkers pushBack "Synd_HQ";
 	_arrayEst pushBack [typeOf _x,getPosWorld _x,vectorUp _x, vectorDir _x];
 } forEach A3A_buildingsToSave;
 
-//PCF logdump for _arrayEst above for saved objects during save loop
-{
-    private _classname = _x select 0;
-    private _pos       = _x select 1;
-    private _up        = _x select 2;
-    private _dir       = _x select 3;
-
-    diag_log format ["DEBUG :: Saved object: %1 at %2 | up=%3 | dir=%4", _classname, _pos, _up, _dir];
-} forEach _arrayEst;
-
-
 reverse _arrayEst;
 ["staticsX", _arrayEst] call A3A_fnc_setStatVariable;
 

@@ -6,9 +6,6 @@ class CfgFunctions
             class distance {
                 file = QPATHTOFOLDER(functions\Base\fn_distance.sqf);
             };
-            class garbageCleaner {
-                file = QPATHTOFOLDER(functions\Base\fn_garbageCleaner.sqf);
-            };
             class localizar {
                 file = QPATHTOFOLDER(functions\Base\fn_localizar.sqf);
             };
