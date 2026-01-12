@@ -245,9 +245,6 @@ if (!("outpostTask" in A3A_activeTasks)) then {
 	(_display displayCtrl 2790) ctrlShow false;
 };
 
-[] call SCRT_fnc_ui_updateSupportMenu;
-["ADD"] call SCRT_fnc_ui_manageSupportTabEventHandler;
-
 //PCF Factory and Resource Upgrade button visibility tie to parameter
 if (!PCF_EnableResourceUpgrade) then {
     (_display displayCtrl 3300) ctrlShow false; // hides the button
