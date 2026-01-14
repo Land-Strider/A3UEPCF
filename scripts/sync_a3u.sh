@@ -2,16 +2,37 @@
 set -e
 
 # Config
-MY_ROOT="a3ue_pcf/addons"        # your repo path
-UPSTREAM_ROOT="A3A/addons"       # upstream path
-BRANCH_OLD="stable"
-BRANCH_NEW="11_8_pt"
+MY_ROOT="a3ue_pcf/addons"
+UPSTREAM_ROOT="A3A/addons"
 
-# Fetch latest from upstream
+# These can now be Tag names (v11.8.7) OR Branch names (main, dev)
+REF_OLD="v11.8.7"
+REF_NEW="v11.8.8"
+
+# 1. Fetch everything from upstream to ensure local metadata is current
+echo "Fetching updates from upstream..."
 git fetch upstream
 
-# Find changed files between branches
-changed_files=$(git diff --name-only upstream/$BRANCH_OLD upstream/$BRANCH_NEW -- "$UPSTREAM_ROOT")
+# 2. Helper function to resolve the best "path" for the reference
+resolve_ref() {
+    local rev=$1
+    # Check if it's a tag first, then a remote branch, then a local branch
+    if git rev-parse --verify "refs/tags/$rev" >/dev/null 2>&1; then
+        echo "refs/tags/$rev"
+    elif git rev-parse --verify "upstream/$rev" >/dev/null 2>&1; then
+        echo "upstream/$rev"
+    else
+        echo "$rev"
+    fi
+}
+
+REAL_OLD=$(resolve_ref "$REF_OLD")
+REAL_NEW=$(resolve_ref "$REF_NEW")
+
+echo "Syncing changes from $REAL_OLD to $REAL_NEW"
+
+# 3. Find changed files using the resolved references
+changed_files=$(git diff --name-only "$REAL_OLD" "$REAL_NEW" -- "$UPSTREAM_ROOT")
 
 for upstream_file in $changed_files; do
     # Compute relative path
