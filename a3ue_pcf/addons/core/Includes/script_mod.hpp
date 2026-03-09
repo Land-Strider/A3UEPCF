@@ -1,7 +1,7 @@
 #define MAINPREFIX x
 #define MODFOLDER a3ue_pcf
 #ifndef PREFIX
-    #define PREFIX a3ue_pcf
+    #define PREFIX A3A
 #endif
 
 #include "common.inc"
@@ -24,9 +24,9 @@
 #define REQUIRED_VERSION 2.06
 
 #ifdef COMPONENT_BEAUTIFIED
-    #define COMPONENT_NAME QUOTE(PREFIX - COMPONENT_BEAUTIFIED)
+    #define COMPONENT_NAME QUOTE(MODFOLDER - COMPONENT_BEAUTIFIED)
 #else
-    #define COMPONENT_NAME QUOTE(PREFIX - COMPONENT)
+    #define COMPONENT_NAME QUOTE(MODFOLDER - COMPONENT)
 #endif
 
 #ifndef AUTHOR
