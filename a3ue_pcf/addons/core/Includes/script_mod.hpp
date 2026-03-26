@@ -1,6 +1,6 @@
 #define MAINPREFIX x
 #ifndef PREFIX
-    #define PREFIX A3A
+    #define PREFIX A3APCF
 #endif
 
 #include "script_version.hpp"

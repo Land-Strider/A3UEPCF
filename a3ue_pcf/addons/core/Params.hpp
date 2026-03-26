@@ -1,6 +1,6 @@
 class Params
 {
-    class AllParams {};
+    class AllParams;
 
     // class AIParams : AllParams { type = "AI"; };
     // class RebelBalanceParams : AIParams { type = "RebelBalance"; };
@@ -55,7 +55,17 @@ class Params
     //         default = 100;
     //     };
 
-    class ExtenderParams : AllParams {};
+    class BuilderParams;
+    class maxConstructions: BuilderParams
+    {
+        title = $STR_params_maxConstructions;
+        tooltip = $STR_params_maxConstructions_desc;
+        values[] = {0,50,100,250,355,500,750,1000,5000};                    //PCF added 500, 750, 1000 and 5000.
+        texts[] = {"0","50","100","250","355","500","750","1000","5000"};   //PCF added 500, 750, 1000 and 5000.
+        default = 100;
+    };
+
+    class ExtenderParams;
         // PCF Params start
         class PCF_ParametersSpacer1 : AllParams {};
         class TitlePCF : ExtenderParams
