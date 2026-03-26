@@ -121,6 +121,7 @@ DECLARE_SERVER_VAR(A3A_activePlayerCount, 1);
 DECLARE_SERVER_VAR(difficultyCoef, 0);
 
 //Mostly state variables, used by various parts of Antistasi.
+DECLARE_SERVER_VAR(HQAttackInProgress, false);
 DECLARE_SERVER_VAR(bigAttackInProgress, false);
 DECLARE_SERVER_VAR(AAFpatrols,0);
 
@@ -146,7 +147,6 @@ DECLARE_SERVER_VAR(A3A_taskCount, 0);
 //List of statics (MGs, AA, etc) that will be saved and loaded.
 DECLARE_SERVER_VAR(staticsToSave, []);
 DECLARE_SERVER_VAR(staticsToFlip, []);
-DECLARE_SERVER_VAR(ungaragedVehicles, []);
 //Whether the players have access to radios.
 DECLARE_SERVER_VAR(haveRadio, false);
 //Initial HR
@@ -242,7 +242,7 @@ savingServer = true;					// lock out saves until this is changed
 
 prestigeIsChanging = false;
 
-zoneCheckInProgress = false;
+zoneChecksMutex = createHashMap;
 garrisonIsChanging = false;
 movingMarker = false;
 markersChanging = [];

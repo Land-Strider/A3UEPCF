@@ -16,7 +16,7 @@ Dependencies:
     <NULL>
 
 Example:
-    [] spawn A3A_fnc_unitTraits;
+    [] call A3A_fnc_unitTraits;
 */
 
 #include "..\..\script_component.hpp"
@@ -148,7 +148,11 @@ if (isDiscordRichPresenceActive) then {
 	};
 };
 
-if (_text isNotEqualTo "") then {
-    sleep 5;
-	[localize "STR_role_unit_traits", _text] call A3A_fnc_customHint;
+private _enableInitMessages = profileNamespace getVariable ["A3U_setting_enableInitMessages", true];
+if (_enableInitMessages && {_text isNotEqualTo ""}) then {
+	[{
+		[localize "STR_role_unit_traits", _this] call A3A_fnc_customHint;
+	}, _text, 5] call CBA_fnc_waitAndExecute;
 };
+
+nil;
