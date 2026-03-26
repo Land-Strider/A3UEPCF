@@ -14,10 +14,8 @@ class CfgPatches {
     };
 };
 
-#include "defines.hpp"
+#include "\x\A3A\addons\scrt\defines.hpp"
 #include "UILayouts\commanderMenu.hpp"
-#include "UILayouts\rebelMenu.hpp"
-#include "UILayouts\menu.hpp"
 
 #if __A3_DEBUG__
     class A3A {

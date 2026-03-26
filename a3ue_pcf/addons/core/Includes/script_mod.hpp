@@ -44,5 +44,5 @@
     #define SKIP_SCRIPT_NAME // [Enable for release]
 #endif // __A3_DEBUG__
 
-#include "script_macros.hpp"
-#include "common.inc"
+#include "\x\A3A\addons\core\Includes\script_macros.hpp"
+#include "\x\A3A\addons\core\Includes\common.inc"

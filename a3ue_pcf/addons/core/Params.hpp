@@ -2,62 +2,58 @@ class Params
 {
     class AllParams {};
 
-    class AIParams : AllParams { type = "AI"; };
-    class RebelBalanceParams : AIParams { type = "RebelBalance"; };
+    // class AIParams : AllParams { type = "AI"; };
+    // class RebelBalanceParams : AIParams { type = "RebelBalance"; };
 
-        class limitedFT: RebelBalanceParams
-        {
-            title = $STR_params_allowFT;
-            tooltip = $STR_params_allowFT_desc;
-            values[] = {0,1,2,3,4}; // PCF 3rd option added as strongholds and watchposts only
-            texts[] = {$STR_params_allowFT_0, $STR_params_allowFT_1, $STR_params_allowFT_2, $STR_a3ue_pcf_params_allowFT_3, $STR_params_civ_traffic_none};
-            class difficulty
-            {
-                class solo
-                {
-                    easy = 0;
-                    medium = 1;
-                    hard = 3;
-                };
-                class small
-                {
-                    easy = 0;
-                    medium = 2;
-                    hard = 3;
-                };
-                class medium : small {};
-                class large
-                {
-                    easy = 1;
-                    medium = 2;
-                    hard = 3;
-                };
-            };
-            default = 0;
-            lockInGame = 1;
-            class dependencies
-            {
-                class fastTravelEnemyCheck
-                {
-                    value = 3;
-                    lockedByDependency = 1;
-                };
-            };
-    };
+    //     class limitedFT: RebelBalanceParams
+    //     {
+    //         title = $STR_params_allowFT;
+    //         tooltip = $STR_params_allowFT_desc;
+    //         values[] = {0,1,2,3,4}; // PCF 3rd option added as strongholds and watchposts only
+    //         texts[] = {$STR_params_allowFT_0, $STR_params_allowFT_1, $STR_params_allowFT_2, $STR_a3ue_pcf_params_allowFT_3, $STR_params_civ_traffic_none};
+    //         class difficulty
+    //         {
+    //             class solo
+    //             {
+    //                 easy = 0;
+    //                 medium = 1;
+    //                 hard = 3;
+    //             };
+    //             class small
+    //             {
+    //                 easy = 0;
+    //                 medium = 2;
+    //                 hard = 3;
+    //             };
+    //             class medium : small {};
+    //             class large
+    //             {
+    //                 easy = 1;
+    //                 medium = 2;
+    //                 hard = 3;
+    //             };
+    //         };
+    //         default = 0;
+    //         lockInGame = 1;
+    //         class dependencies
+    //         {
+    //             class fastTravelEnemyCheck
+    //             {
+    //                 value = 3;
+    //                 lockedByDependency = 1;
+    //             };
+    //         };
+    // };
 
-    class BuilderParams : AllParams
-    { 
-        type = "Builder";
-        title = $STR_params_builder;
-    };
-        class maxConstructions: BuilderParams
-        {
-            title = $STR_params_maxConstructions;
-            values[] = {0,50,100,250,355,500,750,1000,5000};                    //PCF added 500, 750, 1000 and 5000.
-            texts[] = {"0","50","100","250","355","500","750","1000","5000"};   //PCF added 500, 750, 1000 and 5000.
-            default = 100;
-        };
-        
+    // class BuilderParams : AllParams { type = "Builder"; };
+    //     class maxConstructions: BuilderParams
+    //     {
+    //         title = $STR_params_maxConstructions;
+    //         tooltip = $STR_params_maxConstructions_desc;
+    //         values[] = {0,50,100,250,355,500,750,1000,5000};                    //PCF added 500, 750, 1000 and 5000.
+    //         texts[] = {"0","50","100","250","355","500","750","1000","5000"};   //PCF added 500, 750, 1000 and 5000.
+    //         default = 100;
+    //     };
 
     class ExtenderParams : AllParams {};
         // PCF Params start
@@ -90,29 +86,6 @@ class Params
             default  = 120;
             lockOnSave = 0;
         };
-        /* Garbage Collector no longer destroys build box buildings depending on distance or area. Kept here until confirmed.
-
-        class PCF_GarbageSafeBuildBox : ExtenderParams
-        {
-            title = $STR_a3ue_pcf_params_garbage_safe_build_box;
-            values[] = {0,1};
-            texts[]  = {"No","Yes"};
-            default  = 1;
-            lockOnSave = 0;
-        };
-        */
-
-        /* Rebuild Assets functionality for rebuilding factories and resources has been merged into the main AU mod. Kept here until confirmed.
-
-        class PCF_EnableResourceRebuild : ExtenderParams
-        {
-            title = $STR_a3ue_pcf_params_enable_resource_rebuild;
-            values[] = {0,1};
-            texts[]  = {"No","Yes"};
-            default  = 1;
-            lockOnSave = 0;
-        };
-        */
         class PCF_EnableResourceUpgrade : ExtenderParams
         {
             title = $STR_a3ue_pcf_params_enable_resource_upgrade;
@@ -161,17 +134,6 @@ class Params
             default  = 1;
             lockOnSave = 0;
         };
-        /* PCF_enemyUnconsciousChance parameter has been replaced by Experimental Params unconChanceEny and unconChanceReb. Kept here until confirmed.
-
-        class PCF_enemyUnconsciousChance : ExtenderParams
-        {
-            title = $STR_a3ue_pcf_params_enemy_unconscious_chance;
-            values[] = {100,75,50,25,0};
-            texts[]  = {"100%","75%","50%","25%","0%"};
-            default  = 100;
-            lockOnSave = 0;
-        };
-        */
         class PCF_hrGainMultiplier : ExtenderParams
         {
             title = $STR_a3ue_pcf_params_hr_gain_multiplier;
