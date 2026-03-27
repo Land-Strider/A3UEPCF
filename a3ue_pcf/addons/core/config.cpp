@@ -1,7 +1,7 @@
 #include "script_component.hpp"
 
 class CfgPatches {
-    class ADDON {
+    class a3ue {
         name = COMPONENT_NAME;
         units[] = {};
         weapons[] = {};

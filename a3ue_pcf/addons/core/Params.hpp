@@ -1,59 +1,57 @@
 class Params
 {
-    class AllParams {};
+    class AllParams;
 
-    // class AIParams : AllParams { type = "AI"; };
-    // class RebelBalanceParams : AIParams { type = "RebelBalance"; };
+    class AIParams : AllParams {};
+    class RebelBalanceParams : AIParams {};
 
-    //     class limitedFT: RebelBalanceParams
-    //     {
-    //         title = $STR_params_allowFT;
-    //         tooltip = $STR_params_allowFT_desc;
-    //         values[] = {0,1,2,3,4}; // PCF 3rd option added as strongholds and watchposts only
-    //         texts[] = {$STR_params_allowFT_0, $STR_params_allowFT_1, $STR_params_allowFT_2, $STR_a3ue_pcf_params_allowFT_3, $STR_params_civ_traffic_none};
-    //         class difficulty
-    //         {
-    //             class solo
-    //             {
-    //                 easy = 0;
-    //                 medium = 1;
-    //                 hard = 3;
-    //             };
-    //             class small
-    //             {
-    //                 easy = 0;
-    //                 medium = 2;
-    //                 hard = 3;
-    //             };
-    //             class medium : small {};
-    //             class large
-    //             {
-    //                 easy = 1;
-    //                 medium = 2;
-    //                 hard = 3;
-    //             };
-    //         };
-    //         default = 0;
-    //         lockInGame = 1;
-    //         class dependencies
-    //         {
-    //             class fastTravelEnemyCheck
-    //             {
-    //                 value = 3;
-    //                 lockedByDependency = 1;
-    //             };
-    //         };
-    // };
+        class limitedFT: RebelBalanceParams
+        {
+            title = $STR_params_allowFT;
+            tooltip = $STR_params_allowFT_desc;
+            values[] = {0,1,2,3,4}; // PCF 3rd option added as strongholds and watchposts only
+            texts[] = {$STR_params_allowFT_0, $STR_params_allowFT_1, $STR_params_allowFT_2, $STR_a3ue_pcf_params_allowFT_3, $STR_params_civ_traffic_none};
+            class difficulty
+            {
+                class solo
+                {
+                    easy = 0;
+                    medium = 1;
+                    hard = 3;
+                };
+                class small
+                {
+                    easy = 0;
+                    medium = 2;
+                    hard = 3;
+                };
+                class medium : small {};
+                class large
+                {
+                    easy = 1;
+                    medium = 2;
+                    hard = 3;
+                };
+            };
+            default = 0;
+            lockInGame = 1;
+            class dependencies
+            {
+                class fastTravelEnemyCheck
+                {
+                    value = 4;
+                    lockedByDependency = 1;
+                };
+            };
+    };
 
-    // class BuilderParams : AllParams { type = "Builder"; };
-    //     class maxConstructions: BuilderParams
-    //     {
-    //         title = $STR_params_maxConstructions;
-    //         tooltip = $STR_params_maxConstructions_desc;
-    //         values[] = {0,50,100,250,355,500,750,1000,5000};                    //PCF added 500, 750, 1000 and 5000.
-    //         texts[] = {"0","50","100","250","355","500","750","1000","5000"};   //PCF added 500, 750, 1000 and 5000.
-    //         default = 100;
-    //     };
+    class BuilderParams : AllParams {};
+
+        class maxConstructions : BuilderParams
+        {
+            values[] = {0,50,100,250,300,500,750,1000,5000};
+            texts[] = {"0", "50", "100", "250", "300", "500", "750", "1000", "5000"};
+        };
 
     class ExtenderParams : AllParams {};
         // PCF Params start
