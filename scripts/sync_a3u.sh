@@ -5,52 +5,61 @@ set -e
 MY_ROOT="a3ue_pcf/addons"
 UPSTREAM_ROOT="A3A/addons"
 
-# These can now be Tag names (v11.8.7) OR Branch names (main, dev)
-REF_OLD="v11.8.7"
-REF_NEW="v11.8.8"
+# Define the tags/branches
+REF_OLD="v11.9.8"
+REF_NEW="v11.9.12"
 
-# 1. Fetch everything from upstream to ensure local metadata is current
 echo "Fetching updates from upstream..."
 git fetch upstream
 
-# 2. Helper function to resolve the best "path" for the reference
+# Helper to get standard ref names
 resolve_ref() {
     local rev=$1
-    # Check if it's a tag first, then a remote branch, then a local branch
-    if git rev-parse --verify "refs/tags/$rev" >/dev/null 2>&1; then
-        echo "refs/tags/$rev"
-    elif git rev-parse --verify "upstream/$rev" >/dev/null 2>&1; then
-        echo "upstream/$rev"
-    else
-        echo "$rev"
-    fi
+    if git rev-parse --verify "refs/tags/$rev" >/dev/null 2>&1; then echo "tags/$rev";
+    elif git rev-parse --verify "upstream/$rev" >/dev/null 2>&1; then echo "upstream/$rev";
+    else echo "$rev"; fi
 }
 
 REAL_OLD=$(resolve_ref "$REF_OLD")
 REAL_NEW=$(resolve_ref "$REF_NEW")
 
-echo "Syncing changes from $REAL_OLD to $REAL_NEW"
+echo "Comparing local files against upstream $REAL_OLD -> $REAL_NEW"
+echo "----------------------------------------------------------------------------------"
+printf "%-50s | %s\n" "File Path" "Changes"
+echo "----------------------------------------------------------------------------------"
 
-# 3. Find changed files using the resolved references
-changed_files=$(git diff --name-only "$REAL_OLD" "$REAL_NEW" -- "$UPSTREAM_ROOT")
+# Iterate over all files in your local directory
+find "$MY_ROOT" -type f | while read -r my_file; do
+    
+    # Extract the relative path to map it to the upstream structure
+    rel_path=${my_file#"$MY_ROOT/"}
+    upstream_file="$UPSTREAM_ROOT/$rel_path"
 
-for upstream_file in $changed_files; do
-    # Compute relative path
-    rel_path=${upstream_file#"$UPSTREAM_ROOT/"}
-    my_file="$MY_ROOT/$rel_path"
-
-    # Only update if the file exists in your repo
-    if [ -f "$my_file" ]; then
-        echo "Updating $my_file ..."
-
-        # Create directory if needed
-        mkdir -p "$(dirname "$my_file")"
-
-        # Copy contents from upstream version
-        git show "upstream/$BRANCH_NEW:$upstream_file" > "$my_file"
-
-        git add "$my_file"
+    # Check if the corresponding file exists in the upstream repo at NEW tag
+    if git rev-parse --verify "$REAL_NEW:$upstream_file" >/dev/null 2>&1; then
+        
+        # Get diff stats between tags
+        raw_stat=$(git diff --shortstat "$REAL_OLD" "$REAL_NEW" -- "$upstream_file" | xargs)
+        
+        if [ -n "$raw_stat" ]; then
+            # Clean the output to remove "1 file changed," prefix
+            clean_stat=$(echo "$raw_stat" | sed 's/^[0-9]* file[^,]*, //')
+            
+            # Apply update
+            mkdir -p "$(dirname "$my_file")"
+            git show "$REAL_NEW:$upstream_file" > "$my_file"
+            git add "$my_file" 2>/dev/null
+            
+            printf "%-50s | %s\n" "$rel_path" "$clean_stat"
+        else
+            printf "%-50s | %s\n" "$rel_path" "No changes"
+        fi
+    else
+        # File exists locally but not in upstream
+        printf "%-50s | %s\n" "$rel_path" "Not in upstream"
     fi
 done
 
+echo "----------------------------------------------------------------------------------"
 echo "✅ Done. Review and commit your changes."
+read -p "Press any key to close this window..."
