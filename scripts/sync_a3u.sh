@@ -5,14 +5,22 @@ set -e
 MY_ROOT="a3ue_pcf/addons"
 UPSTREAM_ROOT="A3A/addons"
 
-# Define the tags/branches
-REF_OLD="v11.9.8"
-REF_NEW="v11.9.12"
+# Define the tags/branches to compare
+REF_OLD="v11.9.12"
+REF_NEW="v12.0.0-rc"
+
+# Exact relative file paths starting from the project root to ignore completely
+IGNORE_LIST=(
+    "a3ue_pcf/addons/core/cfgFunctions.hpp"
+    "a3ue_pcf/addons/core/Params.hpp"
+    "a3ue_pcf/addons/core/Stringtable.xml"
+    "a3ue_pcf/addons/scrt/CfgFunctions.hpp"
+    # Add any other extender-exclusive files using their exact path
+)
 
 echo "Fetching updates from upstream..."
 git fetch upstream
 
-# Helper to get standard ref names
 resolve_ref() {
     local rev=$1
     if git rev-parse --verify "refs/tags/$rev" >/dev/null 2>&1; then echo "tags/$rev";
@@ -28,38 +36,47 @@ echo "--------------------------------------------------------------------------
 printf "%-50s | %s\n" "File Path" "Changes"
 echo "----------------------------------------------------------------------------------"
 
-# Iterate over all files in your local directory
 find "$MY_ROOT" -type f | while read -r my_file; do
     
-    # Extract the relative path to map it to the upstream structure
     rel_path=${my_file#"$MY_ROOT/"}
+
+    # 1. Exact path equality check (No regex, no wildcard matching)
+    is_ignored=false
+    for ignored_file in "${IGNORE_LIST[@]}"; do
+        if [ "$my_file" = "$ignored_file" ]; then
+            is_ignored=true
+            break
+        fi
+    done
+
+    if [ "$is_ignored" = true ]; then
+        printf "%-50s | %s\n" "$rel_path" "Skipped (Ignored)"
+        continue
+    fi
+
     upstream_file="$UPSTREAM_ROOT/$rel_path"
 
-    # Check if the corresponding file exists in the upstream repo at NEW tag
+    # 2. Check if the corresponding file exists in upstream target reference
     if git rev-parse --verify "$REAL_NEW:$upstream_file" >/dev/null 2>&1; then
         
-        # Get diff stats between tags
         raw_stat=$(git diff --shortstat "$REAL_OLD" "$REAL_NEW" -- "$upstream_file" | xargs)
         
         if [ -n "$raw_stat" ]; then
-            # Clean the output to remove "1 file changed," prefix
             clean_stat=$(echo "$raw_stat" | sed 's/^[0-9]* file[^,]*, //')
             
-            # Apply update
+            # Overwrite local file with upstream target contents
             mkdir -p "$(dirname "$my_file")"
             git show "$REAL_NEW:$upstream_file" > "$my_file"
-            git add "$my_file" 2>/dev/null
-            
+
             printf "%-50s | %s\n" "$rel_path" "$clean_stat"
         else
             printf "%-50s | %s\n" "$rel_path" "No changes"
         fi
     else
-        # File exists locally but not in upstream
         printf "%-50s | %s\n" "$rel_path" "Not in upstream"
     fi
 done
 
 echo "----------------------------------------------------------------------------------"
-echo "✅ Done. Review and commit your changes."
+echo "✅ Done. Review unstaged changes in VS Code."
 read -p "Press any key to close this window..."

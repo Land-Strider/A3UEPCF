@@ -116,23 +116,23 @@ class Params
             default  = 2;
             lockOnSave = 0;
         };
-        class PCF_MapMarkerVerboseName : ExtenderParams
+        /* class PCF_MapMarkerVerboseName : ExtenderParams
         {
             title = $STR_a3ue_pcf_params_map_marker_verbose_name;
             values[] = {0,1};
             texts[]  = {"No","Yes"};
             default  = 1;
             lockOnSave = 0;
-        };
-        class PCF_EmplacementShortName : ExtenderParams
+        }; */
+        /* class PCF_EmplacementShortName : ExtenderParams
         {
             title = $STR_a3ue_pcf_params_emplacement_short_name;
             values[] = {0,1};
             texts[]  = {"No","Yes"};
             default  = 1;
             lockOnSave = 0;
-        };
-        class PCF_hrGainMultiplier : ExtenderParams
+        }; */
+        /* class PCF_hrGainMultiplier : ExtenderParams
         {
             title = $STR_a3ue_pcf_params_hr_gain_multiplier;
             values[] = {25,50,75,100,125,150,200};
@@ -140,6 +140,6 @@ class Params
             default  = 100;
             lockOnSave = 0;
         };
-        class PCF_ParametersSpacer2 : AllParams {};
+        class PCF_ParametersSpacer2 : AllParams {}; */
         // PCF Params end
 };

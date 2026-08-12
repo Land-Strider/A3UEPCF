@@ -66,9 +66,6 @@ class CfgFunctions
             class loadServer {
                 file = \x\a3ue_pcf\addons\core\functions\Save\fn_loadServer.sqf;
             };
-            class loadStat {
-                file = \x\a3ue_pcf\addons\core\functions\Save\fn_loadStat.sqf;
-            };
             class saveLoop {
                 file = \x\a3ue_pcf\addons\core\functions\Save\fn_saveLoop.sqf;
             };
