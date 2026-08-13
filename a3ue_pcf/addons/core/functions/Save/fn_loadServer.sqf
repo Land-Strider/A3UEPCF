@@ -76,38 +76,38 @@ if (isServer) then {
 		["A3UE_ResourceLevels"] call A3A_fnc_getStatVariable;
 		["A3UE_FactoryLevels"] call A3A_fnc_getStatVariable;
 		
-		// Restore individual resource upgrade level variables from the loaded array
+		// Restore individual resource levels and calculate total
 		private _loadedResourceLevels = missionNamespace getVariable ["A3UE_ResourceLevels", []];
+		private _totalRes = 0;
 		if (_loadedResourceLevels isEqualType []) then {
 			{
 				_x params ["_markerName", "_level"];
-				missionNamespace setVariable [format["A3UE_ResourceUpgradeLevel_%1", _markerName], _level, true];
+				missionNamespace setVariable [format ["A3UE_ResourceUpgradeLevel_%1", _markerName], _level, true];
+				_totalRes = _totalRes + _level;
 			} forEach _loadedResourceLevels;
 			Info_1("PCF: Restored %1 resource upgrade levels from main array", count _loadedResourceLevels);
-		} else {
-			Info("PCF: No valid resource levels found, will use initialization defaults");
 		};
 		
-		// Restore individual factory upgrade level variables from the loaded array
+		// Restore individual factory levels and calculate total
 		private _loadedFactoryLevels = missionNamespace getVariable ["A3UE_FactoryLevels", []];
+		private _totalFac = 0;
 		if (_loadedFactoryLevels isEqualType []) then {
 			{
 				_x params ["_markerName", "_level"];
-				missionNamespace setVariable [format["A3UE_FactoryUpgradeLevel_%1", _markerName], _level, true];
+				missionNamespace setVariable [format ["A3UE_FactoryUpgradeLevel_%1", _markerName], _level, true];
+				_totalFac = _totalFac + _level;
 			} forEach _loadedFactoryLevels;
 			Info_1("PCF: Restored %1 factory upgrade levels from main array", count _loadedFactoryLevels);
-		} else {
-			Info("PCF: No valid factory levels found, will use initialization defaults");
 		};
 		
-		// Load total upgrade counters
-		["A3UE_TotalRebelResourceUpgrades"] call A3A_fnc_getStatVariable;
-		["A3UE_TotalRebelFactoryUpgrades"] call A3A_fnc_getStatVariable; 
-		["A3UE_TotalRebelUpgrades"] call A3A_fnc_getStatVariable;
+		// Set and broadcast true totals globally to all clients
+		missionNamespace setVariable ["A3UE_TotalRebelResourceUpgrades", _totalRes, true];
+		missionNamespace setVariable ["A3UE_TotalRebelFactoryUpgrades", _totalFac, true];
+		missionNamespace setVariable ["A3UE_TotalRebelUpgrades", _totalRes + _totalFac, true];
 		
 		Info("PCF: Resource and Factory Upgrade data loaded successfully");
 	} else {
-		Info("PCF: Resource and Factory Upgrading disabled, skipping load");
+		Info("PCF: Resource and Factory Upgrades disabled, skipping load");
 	};
 	// PCF Resource and Factory Upgrade System Load End
 

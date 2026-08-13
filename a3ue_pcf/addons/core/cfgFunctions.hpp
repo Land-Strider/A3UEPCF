@@ -12,17 +12,8 @@ class CfgFunctions
             class markerChange {
                 file = \x\a3ue_pcf\addons\core\functions\Base\fn_markerChange.sqf;
             };
-            class mrkUpdate {
-                file = \x\a3ue_pcf\addons\core\functions\Base\fn_mrkUpdate.sqf;
-            };
-            class upgradeAssets {
-                file = \x\a3ue_pcf\addons\core\functions\Base\fn_upgradeAssets.sqf;
-            };
-            class upgradeFactory {
-                file = \x\a3ue_pcf\addons\core\functions\Base\fn_upgradeFactory.sqf;
-            };
-            class upgradeResource {
-                file = \x\a3ue_pcf\addons\core\functions\Base\fn_upgradeResource.sqf;
+            class upgradeSite {
+                file = \x\a3ue_pcf\addons\core\functions\Base\fn_upgradeSite.sqf;
             };
         };
 

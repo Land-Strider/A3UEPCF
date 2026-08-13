@@ -231,7 +231,7 @@
                 <Turkish>Geçerli bir hızlı seyahat çıkış noktasına yakın değilsiniz!</Turkish>
             </Key>
         </Container>
-        <Container name="a3ue_pcf_markers">
+        <Container name="a3ue_pcf_localizar">
             <Key ID="STR_a3ue_pcf_localizar_Synd_HQ">
                 <Original>Rebel HQ</Original>
                 <Russian>Штаб повстанцев</Russian>
@@ -240,106 +240,6 @@
                 <French>QG des rebelles</French>
                 <Turkish>İsyancı Karargâhı</Turkish>
             </Key>
-            <Key ID="STR_a3ue_pcf_airbase">
-                <Original>%1 %2 Airbase</Original>
-                <Russian>Авиабаза %1 %2</Russian>
-                <Chinesesimp>%1 %2 空军基地</Chinesesimp>
-                <Korean>%1 %2 공군 기지</Korean>
-                <French>Base aérienne %1 %2</French>
-            </Key>
-            <Key ID="STR_a3ue_pcf_milbase">
-                <Original>%1 %2 Military Base</Original>
-                <Russian>Военная база %1</Russian>
-                <Chinesesimp>%1 军事基地</Chinesesimp>
-                <Korean>%1 군사 기지</Korean>
-                <French>%1 Base militaire</French>
-            </Key>
-            <Key ID="STR_a3ue_pcf_outpost">
-                <Original>%1 %2 Outpost</Original>
-                <Russian>Аванпост %1</Russian>
-                <Chinesesimp>%1 哨站</Chinesesimp>
-                <Korean>%1 전초 기지</Korean>
-                <French>%1 Avant-poste</French>
-            </Key>
-            <Key ID="STR_a3ue_pcf_factory">
-                <Original>%1 Factory %2</Original>
-                <Russian>Фабрика %1</Russian>
-                <Chinesesimp>%1 工厂</Chinesesimp>
-                <Korean>%1 공장</Korean>
-                <French>Usine %1</French>
-            </Key>
-            <Key ID="STR_a3ue_pcf_resources">
-                <Original>%1 Resources %2</Original>
-                <Russian>Штаб повстанцев %1 %2</Russian>
-                <Chinesesimp>%1 反叛者总部 %2</Chinesesimp>
-                <Korean>%1 반군 본부 %2</Korean>
-                <French>%1 QG des rebelles %2</French>
-                <Turkish>%1 İsyancı Karargâhı %2</Turkish>
-            </Key>
-            <Key ID="STR_a3ue_pcf_port_sea">
-                <Original>%1 Sea Port</Original>
-                <Russian>Морской порт</Russian>
-                <Chinesesimp>海港</Chinesesimp>
-                <Korean>항구</Korean>
-                <French>Port maritime</French>
-            </Key>
-            <Key ID="STR_a3ue_pcf_port_river">
-                <Original>%1 River Port</Original>
-                <Russian>Речной порт</Russian>
-                <Chinesesimp>河港</Chinesesimp>
-                <Korean>강항</Korean>
-                <French>Port fluvial</French>
-            </Key>
-            <Key ID="STR_a3ue_pcf_marker_aa_empl_short">
-                <Original>AA</Original>
-                <Russian>ЗА</Russian>
-                <Chinesesimp>防空</Chinesesimp>
-                <Korean>대공</Korean>
-                <French>AA</French>
-                <Turkish>US</Turkish>
-            </Key>
-            <Key ID="STR_a3ue_pcf_marker_at_empl_short">
-                <Original>AT</Original>
-                <Russian>ПТ</Russian>
-                <Chinesesimp>反坦克</Chinesesimp>
-                <Korean>대전차</Korean>
-                <French>AT</French>
-                <Turkish>AT</Turkish>
-            </Key>
-            <Key ID="STR_a3ue_pcf_marker_hmg_empl_short">
-                <Original>HMG</Original>
-                <Russian>КПВТ</Russian>
-                <Chinesesimp>重机枪</Chinesesimp>
-                <Korean>중기관총</Korean>
-                <French>Mitrailleuse lourde</French>
-                <Turkish>AMT</Turkish>
-            </Key>
-            <Key ID="STR_a3ue_pcf_marker_mortar_empl_short">
-                <Original>Mortar</Original>
-                <Russian>Миномёт</Russian>
-                <Chinesesimp>迫击炮</Chinesesimp>
-                <Korean>박격포</Korean>
-                <French>Mortier</French>
-                <Turkish>Havan</Turkish>
-            </Key>
-            <Key ID="STR_a3ue_pcf_marker_roadblock_short">
-                <Original>Roadblock</Original>
-                <Russian>Блокпост</Russian>
-                <Chinesesimp>路障</Chinesesimp>
-                <Korean>도로 차단물</Korean>
-                <French>Barrage routier</French>
-                <Turkish>Çevirme</Turkish>
-            </Key>
-            <Key ID="STR_a3ue_pcf_marker_watchpost_short">
-                <Original>OP</Original>
-                <Russian>НП</Russian>
-                <Chinesesimp>观察哨</Chinesesimp>
-                <Korean>관측소</Korean>
-                <French>PO</French>
-                <Turkish>GN</Turkish>
-            </Key>
-        </Container>
-        <Container name="a3ue_pcf_localizar">
             <Key ID="STR_a3ue_pcf_localizar_airbase">
                 <Original>%1 Airbase</Original>
                 <Russian>Авиабаза %1</Russian>
@@ -422,31 +322,10 @@
             </Key>
         </Container>
         <Container name="a3ue_pcf_commander_menu">
-            <Key ID="STR_antistasi_dialogs_hq_button_upgrade_assets_text">
-                <Original>Upgrade Assets</Original>
-                <Russian>Улучшить активы</Russian>
-                <Chinesesimp>升级资产</Chinesesimp>
-                <Korean>자산 업그레이드</Korean>
-                <French>Améliorer les ressources</French>
-                <Turkish>Varlıkları Yükselt</Turkish>
-            </Key>
-            <Key ID="STR_antistasi_dialogs_hq_button_upgrade_assets_tooltip">
-                <Original>Upgrades factories or resources on selected marker.</Original>
-                <Russian>Улучшает фабрики или ресурсы на выбранном маркере.</Russian>
-                <Chinesesimp>在选定的标记上升级工厂或资源。</Chinesesimp>
-                <Korean>선택한 마커에 있는 공장이나 자원을 업그레이드합니다.</Korean>
-                <French>Améliore les usines ou les ressources sur le marqueur sélectionné.</French>
-                <Turkish>Seçilen işaretçi üzerinde fabrikaları veya kaynakları yükseltir.</Turkish>
-            </Key>
-            <Key ID="STR_notifiers_upgrade_assets_header">
-                <Original>Upgrade Assets</Original>
-                <Russian>Улучшить активы</Russian>
-                <Chinesesimp>升级资产</Chinesesimp>
-                <Korean>자산 업그레이드</Korean>
-                <French>Améliorer les ressources</French>
-                <Turkish>Varlıkları Yükselt</Turkish>
-            </Key>
-            <Key ID="STR_notifiers_upgrade_assets_success">
+            
+        </Container>
+        <Container name="a3ue_pcf_markerContextMenu">
+            <Key ID="STR_a3ue_pcf_mrkMenu_upgrade_assets_success">
                 <Original>%1 upgraded.</Original>
                 <Russian>%1 восстановлен.</Russian>
                 <Chinesesimp>重建 %1。</Chinesesimp>
@@ -454,29 +333,125 @@
                 <French>%1 reconstruit.</French>
                 <Turkish>%1 yükseltildi.</Turkish>
             </Key>
-            <Key ID="STR_notifiers_upgrade_assets_already_max">
-                <Original>%1 is already at max upgrade level.</Original>
-                <Russian>%1 уже имеет максимальный уровень улучшения.</Russian>
-                <Chinesesimp>%1 已经达到最高升级等级。</Chinesesimp>
-                <Korean>%1은(는) 이미 최대 업그레이드 단계에 있습니다.</Korean>
-                <French>%1 est déjà au niveau de mise à niveau maximum.</French>
-                <Turkish>%1 zaten en yüksek yükseltme seviyesinde.</Turkish>
+            <Key ID="STR_a3ue_pcf_mrkMenu_upgrade_assets_not_enough_money">
+                <Original>Not enough money to upgrade assets.</Original>
+                <Russian>Недостаточно денег для улучшения активов.</Russian>
+                <Chinesesimp>没有足够的钱来升级资产。</Chinesesimp>
+                <Korean>자산을 업그레이드할 돈이 부족합니다.</Korean>
+                <French>Pas assez d'argent pour améliorer les actifs.</French>
+                <Turkish>Varlıkları yükseltmek için yeterli para yok.</Turkish>
             </Key>
-            <Key ID="STR_notifiers_upgrade_assets_info">
-                <Original>Click on friendly factory or resource markers to increase yield from them.&lt;br/&gt;Cost: %1%2.</Original>
-                <Russian>Нажмите на дружественные маркеры фабрик или ресурсов, чтобы увеличить их производительность.&lt;br/&gt;Стоимость: %1%2.</Russian>
-                <Chinesesimp>点击友军工厂或资源标记以提高它们的产量。&lt;br/&gt;成本：%1%2。</Chinesesimp>
-                <Korean>아군 공장이나 자원 마커를 클릭하여 생산량을 증가시킵니다.&lt;br/&gt;비용: %1%2.</Korean>
-                <French>Cliquez sur les marqueurs d'usines ou de ressources alliées pour augmenter leur rendement.&lt;br/&gt;Coût : %1%2.</French>
-                <Turkish>Üretimi artırmak için dost fabrika veya kaynak işaretlerine tıklayın.&lt;br/&gt;Maliyet: %1%2.</Turkish>
+            <Key ID="STR_a3ue_pcf_mrkMenu_upgradeAssetsTooltip">
+                <Original>Upgrade Assets</Original>
+                <Russian>Улучшить активы</Russian>
+                <Chinesesimp>升级资产</Chinesesimp>
+                <Korean>자산 업그레이드</Korean>
+                <French>Améliorer les actifs</French>
+                <Turkish>Varlıkları Yükselt</Turkish>
             </Key>
-            <Key ID="STR_notifiers_upgrade_assets_not_enough_money">
-                <Original>Not enough money to upgrade assets.&lt;br/&gt;Cost: %1%2</Original>
-                <Russian>Недостаточно денег для улучшения активов.&lt;br/&gt;Стоимость: %1%2</Russian>
-                <Chinesesimp>没有足够的钱来升级资产。&lt;br/&gt;成本：%1%2</Chinesesimp>
-                <Korean>자산을 업그레이드할 돈이 부족합니다.&lt;br/&gt;비용: %1%2</Korean>
-                <French>Pas assez d'argent pour améliorer les actifs.&lt;br/&gt;Coût : %1%2</French>
-                <Turkish>Varlıkları yükseltmek için yeterli para yok.&lt;br/&gt;Maliyet: %1%2</Turkish>
+            <Key ID="STR_a3ue_pcf_mrkMenu_assetUpgradeTitle">
+                <Original>Asset Upgrade</Original>
+                <Russian>Улучшение актива</Russian>
+                <Chinesesimp>资产升级</Chinesesimp>
+                <Korean>자산 업그레이드</Korean>
+                <French>Amélioration d'actif</French>
+                <Turkish>Varlık Yükseltme</Turkish>
+            </Key>
+            <Key ID="STR_a3ue_pcf_mrkMenu_level">
+                <Original>Level</Original>
+                <Russian>Уровень</Russian>
+                <Chinesesimp>等级</Chinesesimp>
+                <Korean>레벨</Korean>
+                <French>Niveau</French>
+                <Turkish>Seviye</Turkish>
+            </Key>
+            <Key ID="STR_a3ue_pcf_mrkMenu_maxedOut">
+                <Original>Maxed Out</Original>
+                <Russian>Макс. уровень</Russian>
+                <Chinesesimp>已达上限</Chinesesimp>
+                <Korean>최고 레벨</Korean>
+                <French>Niveau Max</French>
+                <Turkish>Maksimum Seviye</Turkish>
+            </Key>
+            <Key ID="STR_a3ue_pcf_mrkMenu_cost">
+                <Original>Cost</Original>
+                <Russian>Стоимость</Russian>
+                <Chinesesimp>成本</Chinesesimp>
+                <Korean>비용</Korean>
+                <French>Coût</French>
+                <Turkish>Maliyet</Turkish>
+            </Key>
+            <Key ID="STR_a3ue_pcf_mrkMenu_totalUpgrades">
+                <Original>Total Upgrades</Original>
+                <Russian>Всего улучшений</Russian>
+                <Chinesesimp>总升级数</Chinesesimp>
+                <Korean>총 업그레이드</Korean>
+                <French>Améliorations totales</French>
+                <Turkish>Toplam Yükseltmeler</Turkish>
+            </Key>
+            <Key ID="STR_a3ue_pcf_mrkMenu_resShort">
+                <Original>Resources</Original>
+                <Russian>Ресурсы</Russian>
+                <Chinesesimp>资源</Chinesesimp>
+                <Korean>자원</Korean>
+                <French>Ressources</French>
+                <Turkish>Kaynaklar</Turkish>
+            </Key>
+            <Key ID="STR_a3ue_pcf_mrkMenu_facShort">
+                <Original>Factories</Original>
+                <Russian>Заводы</Russian>
+                <Chinesesimp>工厂</Chinesesimp>
+                <Korean>공장</Korean>
+                <French>Usine</French>
+                <Turkish>Fabrikalar</Turkish>
+            </Key>
+            <Key ID="STR_a3ue_pcf_mrkMenu_incomeMultiplier">
+                <Original>Income Multiplier</Original>
+                <Russian>Множитель дохода</Russian>
+                <Chinesesimp>收入倍率</Chinesesimp>
+                <Korean>수입 배율</Korean>
+                <French>Multiplicateur de revenu</French>
+                <Turkish>Gelir Çarpanı</Turkish>
+            </Key>
+            <Key ID="STR_a3ue_pcf_mrkMenu_fromUpgrades">
+                <Original>from upgrades</Original>
+                <Russian>от улучшений</Russian>
+                <Chinesesimp>来自升级</Chinesesimp>
+                <Korean>업그레이드로 인한</Korean>
+                <French>par améliorations</French>
+                <Turkish>yükseltmelerden</Turkish>
+            </Key>
+            <Key ID="STR_a3ue_pcf_mrkMenu_upgradeBonusIncome">
+                <Original>Upgrade Bonus Income</Original>
+                <Russian>Бонусный доход</Russian>
+                <Chinesesimp>升级加成收入</Chinesesimp>
+                <Korean>업그레이드 보너스 수입</Korean>
+                <French>Revenu bonus d'amélioration</French>
+                <Turkish>Yükseltme Bonus Geliri</Turkish>
+            </Key>
+            <Key ID="STR_a3ue_pcf_mrkMenu_perTick">
+                <Original>tick</Original>
+                <Russian>такт</Russian>
+                <Chinesesimp>周期</Chinesesimp>
+                <Korean>틱</Korean>
+                <French>tick</French>
+                <Turkish>tur</Turkish>
+            </Key>
+            <Key ID="STR_a3ue_pcf_mrkMenu_btnUpgrade">
+                <Original>UPGRADE</Original>
+                <Russian>УЛУЧШИТЬ</Russian>
+                <Chinesesimp>升级</Chinesesimp>
+                <Korean>업그레이드</Korean>
+                <French>AMÉLIORER</French>
+                <Turkish>YÜKSELT</Turkish>
+            </Key>
+            <Key ID="STR_a3ue_pcf_mrkMenu_btnMaxed">
+                <Original>MAXED</Original>
+                <Russian>МАКСИМУМ</Russian>
+                <Chinesesimp>已满级</Chinesesimp>
+                <Korean>최고레벨</Korean>
+                <French>MAXIMUM</French>
+                <Turkish>MAKSİMUM</Turkish>
             </Key>
         </Container>
     </Package>

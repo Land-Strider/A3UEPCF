@@ -415,16 +415,61 @@ if (_canShowGarrisonPanel) then {
     }];
 };
 
-// PCF: Upgrade Assets button details
+// PCF Upgrade Assets Button Start
+// Declare client response callback globally if not already initialized
+if (isNil "A3U_fnc_upgradeSiteResponse") then {
+    A3U_fnc_upgradeSiteResponse = {
+        params [["_success", false], ["_msg", ""]];
+
+        private _mapDisplay = findDisplay 12;
+        if (isNull _mapDisplay) then { _mapDisplay = findDisplay 46; };
+
+        private _panelGroup = if (!isNull _mapDisplay) then {
+            _mapDisplay getVariable ["A3U_mrkMenu_upgradeGrp", controlNull]
+        } else {
+            controlNull
+        };
+
+        if (!isNull _panelGroup) then {
+            private _statusText = _panelGroup getVariable ["A3U_statusTextCtrl", controlNull];
+            
+            if (!_success) then {
+                playSound "FD_CP_Not_Clear_F";
+                if (!isNull _statusText) then {
+                    private _failMsg = if (_msg != "") then { _msg } else { localize "STR_a3ue_pcf_mrkMenu_upgrade_assets_not_enough_money" };
+                    _statusText ctrlSetStructuredText parseText format [
+                        "<t size='0.80' color='#FF4444' align='center'>%1</t>", 
+                        _failMsg
+                    ];
+                };
+            } else {
+                if (!isNull _statusText) then {
+                    private _successMsg = if (_msg != "") then { _msg } else { localize "STR_a3ue_pcf_mrkMenu_upgrade_assets_success" };
+                    _statusText ctrlSetStructuredText parseText format [
+                        "<t size='0.80' color='#00FF00' align='center'>%1</t>", 
+                        _successMsg
+                    ];
+                };
+                private _fnc_refresh = _panelGroup getVariable ["A3U_fnc_refreshUI", {}];
+                [_panelGroup] call _fnc_refresh;
+            };
+        } else {
+            if (!_success && _msg != "") then {
+                [localize "STR_a3ue_pcf_mrkMenu_assetUpgradeTitle", _msg] call A3A_fnc_customHint;
+            };
+        };
+    };
+};
+
 // --- HEADER BUTTON: UPGRADE ASSETS (EXTENDER) ---
-if (_canShowUpgradePanel) then {
-    private _upgradeSlot = if (_canShowGarrisonPanel) then { 2 } else { 1 };
+if (!isNil "_canShowUpgradePanel" && { _canShowUpgradePanel }) then {
+    private _upgradeSlot = if (!isNil "_canShowGarrisonPanel" && { _canShowGarrisonPanel }) then { 2 } else { 1 };
     private _upgradeBtnX = _groupWidth - (_upgradeSlot * (_toggleBtnSize + _toggleBtnPadding));
 
     private _upgradeToggleBtn = _mapDisplay ctrlCreate ["RscActivePictureKeepAspect", -1, _menuGroup];
     _upgradeToggleBtn ctrlSetPosition [_upgradeBtnX, _toggleBtnPadding, _toggleBtnSize, _toggleBtnSize];
     _upgradeToggleBtn ctrlSetText "\a3\ui_f\data\gui\Rsc\RscDisplayArcadeMap\icon_config_ca.paa"; 
-    _upgradeToggleBtn ctrlSetTooltip "Upgrade Assets";
+    _upgradeToggleBtn ctrlSetTooltip (localize "STR_a3ue_pcf_mrkMenu_upgradeAssetsTooltip");
     _upgradeToggleBtn ctrlCommit 0;
 
     _upgradeToggleBtn ctrlAddEventHandler ["ButtonClick", {
@@ -442,10 +487,17 @@ if (_canShowUpgradePanel) then {
         private _markerName = _display getVariable ["A3U_mrkMenu_markerOrig", ""];
         if (isNull _menuGroup || _markerName == "") exitWith {};
 
+        private _profileBgColor = [
+            profileNamespace getVariable ["GUI_BCG_RGB_R", 0.376],
+            profileNamespace getVariable ["GUI_BCG_RGB_G", 0.125],
+            profileNamespace getVariable ["GUI_BCG_RGB_B", 0.043],
+            1
+        ];
+
         // Position directly ABOVE main menu
         private _menuPos = ctrlPosition _menuGroup;
         private _panelWidth = _menuPos # 2;
-        private _panelHeight = 0.14 * safeZoneH;
+        private _panelHeight = 0.175 * safeZoneH;
         private _panelX = _menuPos # 0;
         private _panelY = (_menuPos # 1) - _panelHeight - (0.004 * safeZoneH);
 
@@ -458,49 +510,107 @@ if (_canShowUpgradePanel) then {
         // Background
         private _bg = _display ctrlCreate ["RscText", -1, _panelGroup];
         _bg ctrlSetPosition [0, 0, _panelWidth, _panelHeight];
-        _bg ctrlSetBackgroundColor [0.1, 0.1, 0.1, 0.92];
+        _bg ctrlSetBackgroundColor [0, 0, 0, 0.55];
         _bg ctrlCommit 0;
 
-        // Header Bar (Antistasi Orange Theme)
+        // Header Bar
         private _panelTitleBg = _display ctrlCreate ["RscText", -1, _panelGroup];
         _panelTitleBg ctrlSetPosition [0, 0, _panelWidth, 0.028 * safeZoneH];
-        _panelTitleBg ctrlSetBackgroundColor [0.88, 0.47, 0, 0.9];
+        _panelTitleBg ctrlSetBackgroundColor _profileBgColor;
         _panelTitleBg ctrlCommit 0;
 
+        // Panel Title Text
         private _panelTitle = _display ctrlCreate ["RscStructuredText", -1, _panelGroup];
-        _panelTitle ctrlSetPosition [0, 0.002 * safeZoneH, _panelWidth, 0.025 * safeZoneH];
-        _panelTitle ctrlSetStructuredText parseText "<t size='0.95' color='#FFFFFF' align='center' valign='middle'><b>Asset Upgrade</b></t>";
+        _panelTitle ctrlSetPosition [0, 0.003 * safeZoneH, _panelWidth, 0.028 * safeZoneH];
+        _panelTitle ctrlSetStructuredText parseText format ["<t align='left' font='RobotoCondensedBold' color='#FFFFFF'>%1</t>", localize "STR_a3ue_pcf_mrkMenu_assetUpgradeTitle"];
         _panelTitle ctrlCommit 0;
-
-        // Fetch upgrade level safely
-        private _currentLevel = missionNamespace getVariable [format ["A3U_upgradeLevel_%1", _markerName], missionNamespace getVariable [_markerName + "_upgradeLevel", 0]];
-        if (isNil "_currentLevel" || {!(_currentLevel isEqualType 0)}) then { _currentLevel = 0; };
-        
-        private _maxLevel = 3;
-        private _upgradeCost = (_currentLevel + 1) * 2500;
 
         // Information Text
         private _infoText = _display ctrlCreate ["RscStructuredText", -1, _panelGroup];
-        _infoText ctrlSetPosition [0.006 * safeZoneW, 0.032 * safeZoneH, _panelWidth - (0.012 * safeZoneW), 0.065 * safeZoneH];
-        
-        private _bodyString = if (_currentLevel >= _maxLevel) then {
-            format ["<t size='0.85' color='#FFFFFF'>Current Level: <t color='#FFD700'>%1 / %2</t><br/><t color='#00FF00' align='center'>Maximum Level Reached</t></t>", _currentLevel, _maxLevel];
-        } else {
-            format ["<t size='0.85' color='#FFFFFF'>Current Level: <t color='#FFD700'>%1 / %2</t><br/>Upgrade Cost: <t color='#85bb65'>$%3</t></t>", _currentLevel, _maxLevel, _upgradeCost];
-        };
-        _infoText ctrlSetStructuredText parseText _bodyString;
+        _infoText ctrlSetPosition [0.006 * safeZoneW, 0.032 * safeZoneH, _panelWidth - (0.012 * safeZoneW), 0.070 * safeZoneH];
         _infoText ctrlCommit 0;
 
-        _panelGroup setVariable ["A3U_infoTextCtrl", _infoText];
+        // Status / Warning Text (In space directly above UPGRADE button)
+        private _statusText = _display ctrlCreate ["RscStructuredText", -1, _panelGroup];
+        _statusText ctrlSetPosition [0.006 * safeZoneW, 0.104 * safeZoneH, _panelWidth - (0.012 * safeZoneW), 0.028 * safeZoneH];
+        _statusText ctrlSetStructuredText parseText "";
+        _statusText ctrlCommit 0;
 
         // Action Button
         private _btnUpgrade = _display ctrlCreate ["A3U_RscContextButton", -1, _panelGroup];
         _btnUpgrade ctrlSetPosition [0.006 * safeZoneW, _panelHeight - (0.032 * safeZoneH) - (0.006 * safeZoneH), _panelWidth - (0.012 * safeZoneW), 0.032 * safeZoneH];
-        _btnUpgrade ctrlSetText (if (_currentLevel >= _maxLevel) then {"MAXED"} else {"UPGRADE"});
-        _btnUpgrade ctrlEnable (_currentLevel < _maxLevel);
         _btnUpgrade ctrlCommit 0;
 
-        // Action Handler: Sequential upgrading without closing panel
+        // --- UI STATS REFRESH CODE BLOCK ---
+        private _fnc_refreshUI = {
+            params [["_panelGroup", controlNull], ["_markerName", ""]];
+            if (isNull _panelGroup) exitWith {};
+
+            private _display = ctrlParent _panelGroup;
+            if (_markerName == "") then { _markerName = _display getVariable ["A3U_mrkMenu_markerOrig", ""]; };
+            if (_markerName == "") exitWith {};
+
+            private _resArray = missionNamespace getVariable ["A3UE_ResourceLevels", []];
+            private _facArray = missionNamespace getVariable ["A3UE_FactoryLevels", []];
+
+            private _resTotal = 0;
+            { _resTotal = _resTotal + (_x select 1); } forEach _resArray;
+
+            private _facTotal = 0;
+            { _facTotal = _facTotal + (_x select 1); } forEach _facArray;
+
+            private _totalUpgrades = _resTotal + _facTotal;
+            private _ownedFactories = { (sidesX getVariable [_x, sideUnknown] == teamPlayer) && !(_x in destroyedSites) } count factories;
+            private _facUpgradeBoost = _facTotal * 0.25;
+            private _totalMultiplier = 1 + (_ownedFactories * 0.25) + _facUpgradeBoost;
+            private _upgradeBonusIncome = (300 * _resTotal) * _totalMultiplier;
+
+            private _isResource = _markerName in resourcesX;
+            private _varPrefix = if (_isResource) then { "A3UE_Resource" } else { "A3UE_Factory" };
+            private _currentLevel = missionNamespace getVariable [format ["%1UpgradeLevel_%2", _varPrefix, _markerName], 0];
+            private _maxLevel = 3;
+
+            private _costMultiplier = missionNamespace getVariable ["PCF_ResourceUpgradeCost", 10000];
+            private _upgradeCost = (1 + _totalUpgrades) * _costMultiplier;
+
+            private _civFaction = missionNamespace getVariable ["A3A_faction_civ", createHashMap];
+            private _currencySymbol = _civFaction getOrDefault ["currencySymbol", "$"];
+
+            private _infoText = _panelGroup getVariable ["A3U_infoTextCtrl", controlNull];
+            if (!isNull _infoText) then {
+                private _costOrMax = if (_currentLevel >= _maxLevel) then {
+                    format ["<t color='#00FF00'>%1</t>", localize "STR_a3ue_pcf_mrkMenu_maxedOut"]
+                } else {
+                    format ["%1: <t color='#85bb65'>%2%3</t>", localize "STR_a3ue_pcf_mrkMenu_cost", _currencySymbol, _upgradeCost]
+                };
+
+                private _bodyString = format [
+                    "<t size='0.80' color='#FFFFFF'>%1: <t color='#FFD700'>%2 / %3</t> | %4<br/><t color='#AAAAAA'>%5: <t color='#FFFFFF'>%6 %7</t> / <t color='#FFFFFF'>%8 %9</t><br/>%10: <t color='#FFD700'>x%11</t> <t color='#888888' size='0.75'>(+%12x %13)</t><br/>%14: <t color='#85bb65'>+%15%16 / %17</t></t></t>",
+                    localize "STR_a3ue_pcf_mrkMenu_level", _currentLevel, _maxLevel, _costOrMax,
+                    localize "STR_a3ue_pcf_mrkMenu_totalUpgrades", _resTotal, localize "STR_a3ue_pcf_mrkMenu_resShort", _facTotal, localize "STR_a3ue_pcf_mrkMenu_facShort",
+                    localize "STR_a3ue_pcf_mrkMenu_incomeMultiplier", _totalMultiplier toFixed 2, _facUpgradeBoost toFixed 2, localize "STR_a3ue_pcf_mrkMenu_fromUpgrades",
+                    localize "STR_a3ue_pcf_mrkMenu_upgradeBonusIncome", _currencySymbol, _upgradeBonusIncome toFixed 0, localize "STR_a3ue_pcf_mrkMenu_perTick"
+                ];
+                _infoText ctrlSetStructuredText parseText _bodyString;
+            };
+
+            private _btnUpgrade = _panelGroup getVariable ["A3U_btnUpgradeCtrl", controlNull];
+            if (!isNull _btnUpgrade) then {
+                _btnUpgrade ctrlSetText (if (_currentLevel >= _maxLevel) then {localize "STR_a3ue_pcf_mrkMenu_btnMaxed"} else {localize "STR_a3ue_pcf_mrkMenu_btnUpgrade"});
+                _btnUpgrade ctrlEnable (_currentLevel < _maxLevel);
+            };
+        };
+
+        // Bind references to panelGroup
+        _panelGroup setVariable ["A3U_infoTextCtrl", _infoText];
+        _panelGroup setVariable ["A3U_statusTextCtrl", _statusText];
+        _panelGroup setVariable ["A3U_btnUpgradeCtrl", _btnUpgrade];
+        _panelGroup setVariable ["A3U_fnc_refreshUI", _fnc_refreshUI];
+
+        // Initial render
+        [_panelGroup, _markerName] call _fnc_refreshUI;
+
+        // Action Handler: Forward request to server
         _btnUpgrade ctrlAddEventHandler ["ButtonClick", {
             params ["_control"];
             private _panelGroup = ctrlParentControlsGroup _control;
@@ -508,38 +618,14 @@ if (_canShowUpgradePanel) then {
             private _markerName = _display getVariable ["A3U_mrkMenu_markerOrig", ""];
             if (_markerName == "") exitWith {};
 
-            // Execute upgrade logic
-            [_markerName] spawn SCRT_fnc_ui_setUpgradeAssetMode;
+            private _statusText = _panelGroup getVariable ["A3U_statusTextCtrl", controlNull];
+            if (!isNull _statusText) then { _statusText ctrlSetStructuredText parseText ""; };
 
-            // Refresh UI state in panel after variable updates
-            [_panelGroup, _control, _markerName] spawn {
-                params ["_panelGroup", "_btnUpgrade", "_markerName"];
-                uiSleep 0.15;
-                if (isNull _panelGroup) exitWith {};
-
-                private _currentLevel = missionNamespace getVariable [format ["A3U_upgradeLevel_%1", _markerName], missionNamespace getVariable [_markerName + "_upgradeLevel", 0]];
-                if (isNil "_currentLevel" || {!(_currentLevel isEqualType 0)}) then { _currentLevel = 0; };
-                
-                private _maxLevel = 3;
-                private _upgradeCost = (_currentLevel + 1) * 2500;
-
-                private _infoText = _panelGroup getVariable ["A3U_infoTextCtrl", controlNull];
-                if (!isNull _infoText) then {
-                    private _bodyString = if (_currentLevel >= _maxLevel) then {
-                        format ["<t size='0.85' color='#FFFFFF'>Current Level: <t color='#FFD700'>%1 / %2</t><br/><t color='#00FF00' align='center'>Maximum Level Reached</t></t>", _currentLevel, _maxLevel];
-                    } else {
-                        format ["<t size='0.85' color='#FFFFFF'>Current Level: <t color='#FFD700'>%1 / %2</t><br/>Upgrade Cost: <t color='#85bb65'>$%3</t></t>", _currentLevel, _maxLevel, _upgradeCost];
-                    };
-                    _infoText ctrlSetStructuredText parseText _bodyString;
-                };
-
-                _btnUpgrade ctrlSetText (if (_currentLevel >= _maxLevel) then {"MAXED"} else {"UPGRADE"});
-                _btnUpgrade ctrlEnable (_currentLevel < _maxLevel);
-            };
+            [_markerName, player] remoteExecCall ["A3A_fnc_upgradeSite", 2];
         }];
     }];
 };
-// PCF
+// PCF Upgrade Assets Button End
 
 [_mapDisplay] call _deleteGarrisonPanel;
 
