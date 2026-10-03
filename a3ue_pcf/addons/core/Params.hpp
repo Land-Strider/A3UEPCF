@@ -9,8 +9,8 @@ class Params
         {
             title = $STR_params_allowFT;
             tooltip = $STR_params_allowFT_desc;
-            values[] = {0,1,2,3,4}; // PCF 3rd option added as strongholds and watchposts only
-            texts[] = {$STR_params_allowFT_0, $STR_params_allowFT_1, $STR_params_allowFT_2, $STR_a3ue_pcf_params_allowFT_3, $STR_params_civ_traffic_none};
+            values[] = {0,1,2,3,4}; // PCF 4th option added as strongholds and watchposts only
+            texts[] = {$STR_params_allowFT_0, $STR_params_allowFT_1, $STR_params_allowFT_2, $STR_params_civ_traffic_none, $STR_a3ue_pcf_params_allowFT_4};
             class difficulty
             {
                 class solo
@@ -39,7 +39,7 @@ class Params
             {
                 class fastTravelEnemyCheck
                 {
-                    value = 4;
+                    value = 3;
                     lockedByDependency = 1;
                 };
             };
@@ -116,30 +116,6 @@ class Params
             default  = 2;
             lockOnSave = 0;
         };
-        /* class PCF_MapMarkerVerboseName : ExtenderParams
-        {
-            title = $STR_a3ue_pcf_params_map_marker_verbose_name;
-            values[] = {0,1};
-            texts[]  = {"No","Yes"};
-            default  = 1;
-            lockOnSave = 0;
-        }; */
-        /* class PCF_EmplacementShortName : ExtenderParams
-        {
-            title = $STR_a3ue_pcf_params_emplacement_short_name;
-            values[] = {0,1};
-            texts[]  = {"No","Yes"};
-            default  = 1;
-            lockOnSave = 0;
-        }; */
-        /* class PCF_hrGainMultiplier : ExtenderParams
-        {
-            title = $STR_a3ue_pcf_params_hr_gain_multiplier;
-            values[] = {25,50,75,100,125,150,200};
-            texts[]  = {"25%","50%","75%","100%","125%","150%","200%"};
-            default  = 100;
-            lockOnSave = 0;
-        };
-        class PCF_ParametersSpacer2 : AllParams {}; */
+        class PCF_ParametersSpacer2 : AllParams {};
         // PCF Params end
 };

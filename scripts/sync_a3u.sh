@@ -6,15 +6,16 @@ MY_ROOT="a3ue_pcf/addons"
 UPSTREAM_ROOT="A3A/addons"
 
 # Define the tags/branches to compare
-REF_OLD="v12.0.1-rc"
-REF_NEW="v12.0.2rc"
+REF_OLD="v12.0.3"
+REF_NEW="v12.1.0rc"
 
 # Exact relative file paths starting from the project root to ignore completely
 IGNORE_LIST=(
+    "a3ue_pcf/addons/core/config.cpp"
     "a3ue_pcf/addons/core/cfgFunctions.hpp"
     "a3ue_pcf/addons/core/Params.hpp"
     "a3ue_pcf/addons/core/Stringtable.xml"
-    "a3ue_pcf/addons/scrt/CfgFunctions.hpp"
+    "a3ue_pcf/addons/ultimate/CfgFunctions.hpp"
     # Add any other extender-exclusive files using their exact path
 )
 
