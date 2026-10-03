@@ -2,13 +2,13 @@
 
 class CfgPatches {
     class a3ue {
-        name = COMPONENT_NAME;
+        name = "Point Campfire";
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
         requiredAddons[] = {"A3A_core", "A3A_ultimate"};
-        author = AUTHOR;
-        authors[] = { AUTHORS };
+        author = "Land_Strider";
+        authors[] = { AUTHORS, "Land_Strider" };
         authorUrl = "";
         VERSION_CONFIG;
         A3A_compatibility[] = {12, 1};
