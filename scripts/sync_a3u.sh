@@ -6,8 +6,8 @@ MY_ROOT="a3ue_pcf/addons"
 UPSTREAM_ROOT="A3A/addons"
 
 # Define the tags/branches to compare
-REF_OLD="v12.0.3"
-REF_NEW="v12.1.0rc"
+REF_OLD="v12.1.0rc"
+REF_NEW="v12.1.1rc"
 
 # Exact relative file paths starting from the project root to ignore completely
 IGNORE_LIST=(
